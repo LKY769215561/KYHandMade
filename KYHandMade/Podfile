@@ -1,0 +1,11 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'KYHandMade' do
+
+  use_frameworks!
+ pod 'SwiftyJSON', '~> 3.1.4'
+ pod 'Alamofire', '~> 4.4.0'
+ pod 'Kingfisher', '~> 3.9.1'
+ pod 'SnapKit', '~> 3.2.0'
+end

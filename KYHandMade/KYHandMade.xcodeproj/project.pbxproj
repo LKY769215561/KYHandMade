@@ -7,19 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		547E167C1EE94D7B0020E0A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547E167B1EE94D7B0020E0A7 /* AppDelegate.swift */; };
-		547E167E1EE94D7B0020E0A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547E167D1EE94D7B0020E0A7 /* ViewController.swift */; };
-		547E16811EE94D7B0020E0A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 547E167F1EE94D7B0020E0A7 /* Main.storyboard */; };
+		159062A3ADBE88F9C4AC91D7 /* Pods_KYHandMade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C164B324D2D51207744875E1 /* Pods_KYHandMade.framework */; };
+		543085EF1EEE6F590093E766 /* KYAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085BE1EEE6F590093E766 /* KYAdViewController.swift */; };
+		543085F01EEE6F590093E766 /* KYAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 543085BF1EEE6F590093E766 /* KYAdViewController.xib */; };
+		543085F11EEE6F590093E766 /* KYFairTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085C41EEE6F590093E766 /* KYFairTableViewController.swift */; };
+		543085F21EEE6F590093E766 /* KYHandTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085C91EEE6F590093E766 /* KYHandTableViewController.swift */; };
+		543085F31EEE6F590093E766 /* KYHomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085CE1EEE6F590093E766 /* KYHomController.swift */; };
+		543085F41EEE6F590093E766 /* KYNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085D31EEE6F590093E766 /* KYNavgationController.swift */; };
+		543085F51EEE6F590093E766 /* KYTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085D41EEE6F590093E766 /* KYTabBarController.swift */; };
+		543085F61EEE6F590093E766 /* KYMyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085D91EEE6F590093E766 /* KYMyTableViewController.swift */; };
+		543085F71EEE6F590093E766 /* KYNewFeatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085DE1EEE6F590093E766 /* KYNewFeatureController.swift */; };
+		543085F81EEE6F590093E766 /* KYNewFeatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085E11EEE6F590093E766 /* KYNewFeatureCell.swift */; };
+		543085F91EEE6F590093E766 /* KYNewFeatureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 543085E21EEE6F590093E766 /* KYNewFeatureCell.xib */; };
+		543085FA1EEE6F590093E766 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085E41EEE6F590093E766 /* AppDelegate.swift */; };
+		543085FB1EEE6F590093E766 /* KYGuideTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085E91EEE6F590093E766 /* KYGuideTool.swift */; };
+		543085FC1EEE6F590093E766 /* KYTutorialTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085EC1EEE6F590093E766 /* KYTutorialTableViewController.swift */; };
 		547E16831EE94D7B0020E0A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 547E16821EE94D7B0020E0A7 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		543085BE1EEE6F590093E766 /* KYAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYAdViewController.swift; sourceTree = "<group>"; };
+		543085BF1EEE6F590093E766 /* KYAdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYAdViewController.xib; sourceTree = "<group>"; };
+		543085C41EEE6F590093E766 /* KYFairTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFairTableViewController.swift; sourceTree = "<group>"; };
+		543085C91EEE6F590093E766 /* KYHandTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYHandTableViewController.swift; sourceTree = "<group>"; };
+		543085CE1EEE6F590093E766 /* KYHomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYHomController.swift; sourceTree = "<group>"; };
+		543085D31EEE6F590093E766 /* KYNavgationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYNavgationController.swift; sourceTree = "<group>"; };
+		543085D41EEE6F590093E766 /* KYTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYTabBarController.swift; sourceTree = "<group>"; };
+		543085D91EEE6F590093E766 /* KYMyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYMyTableViewController.swift; sourceTree = "<group>"; };
+		543085DE1EEE6F590093E766 /* KYNewFeatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYNewFeatureController.swift; sourceTree = "<group>"; };
+		543085E11EEE6F590093E766 /* KYNewFeatureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYNewFeatureCell.swift; sourceTree = "<group>"; };
+		543085E21EEE6F590093E766 /* KYNewFeatureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYNewFeatureCell.xib; sourceTree = "<group>"; };
+		543085E41EEE6F590093E766 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		543085E91EEE6F590093E766 /* KYGuideTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYGuideTool.swift; sourceTree = "<group>"; };
+		543085EC1EEE6F590093E766 /* KYTutorialTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYTutorialTableViewController.swift; sourceTree = "<group>"; };
 		547E16781EE94D7B0020E0A7 /* KYHandMade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KYHandMade.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		547E167B1EE94D7B0020E0A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		547E167D1EE94D7B0020E0A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		547E16801EE94D7B0020E0A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		547E16821EE94D7B0020E0A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		547E16871EE94D7B0020E0A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FC183425314ED4C1FE5D2E7 /* Pods-KYHandMade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KYHandMade.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KYHandMade/Pods-KYHandMade.debug.xcconfig"; sourceTree = "<group>"; };
+		BCC62D6337226E72EE2A3997 /* Pods-KYHandMade.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KYHandMade.release.xcconfig"; path = "Pods/Target Support Files/Pods-KYHandMade/Pods-KYHandMade.release.xcconfig"; sourceTree = "<group>"; };
+		C164B324D2D51207744875E1 /* Pods_KYHandMade.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KYHandMade.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +53,337 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				159062A3ADBE88F9C4AC91D7 /* Pods_KYHandMade.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		543085BB1EEE6F590093E766 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				543085BC1EEE6F590093E766 /* Ad(广告) */,
+				543085C21EEE6F590093E766 /* Fair(市集) */,
+				543085C71EEE6F590093E766 /* Hand(手工圈) */,
+				543085CC1EEE6F590093E766 /* Home(首页) */,
+				543085D11EEE6F590093E766 /* Main(主要) */,
+				543085D71EEE6F590093E766 /* My(我的) */,
+				543085DC1EEE6F590093E766 /* NewFeature(新特性) */,
+				543085E31EEE6F590093E766 /* Other(其他) */,
+				543085E81EEE6F590093E766 /* Tools */,
+				543085EA1EEE6F590093E766 /* Tutorial(教程) */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		543085BC1EEE6F590093E766 /* Ad(广告) */ = {
+			isa = PBXGroup;
+			children = (
+				543085BD1EEE6F590093E766 /* Controller */,
+				543085C01EEE6F590093E766 /* Model */,
+				543085C11EEE6F590093E766 /* View */,
+			);
+			path = "Ad(广告)";
+			sourceTree = "<group>";
+		};
+		543085BD1EEE6F590093E766 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				543085BE1EEE6F590093E766 /* KYAdViewController.swift */,
+				543085BF1EEE6F590093E766 /* KYAdViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		543085C01EEE6F590093E766 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		543085C11EEE6F590093E766 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		543085C21EEE6F590093E766 /* Fair(市集) */ = {
+			isa = PBXGroup;
+			children = (
+				543085C31EEE6F590093E766 /* Controller */,
+				543085C51EEE6F590093E766 /* Model */,
+				543085C61EEE6F590093E766 /* View */,
+			);
+			path = "Fair(市集)";
+			sourceTree = "<group>";
+		};
+		543085C31EEE6F590093E766 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				543085C41EEE6F590093E766 /* KYFairTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		543085C51EEE6F590093E766 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		543085C61EEE6F590093E766 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		543085C71EEE6F590093E766 /* Hand(手工圈) */ = {
+			isa = PBXGroup;
+			children = (
+				543085C81EEE6F590093E766 /* Controller */,
+				543085CA1EEE6F590093E766 /* Model */,
+				543085CB1EEE6F590093E766 /* View */,
+			);
+			path = "Hand(手工圈)";
+			sourceTree = "<group>";
+		};
+		543085C81EEE6F590093E766 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				543085C91EEE6F590093E766 /* KYHandTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		543085CA1EEE6F590093E766 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		543085CB1EEE6F590093E766 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		543085CC1EEE6F590093E766 /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				543085CD1EEE6F590093E766 /* Controller */,
+				543085CF1EEE6F590093E766 /* Model */,
+				543085D01EEE6F590093E766 /* View */,
+			);
+			path = "Home(首页)";
+			sourceTree = "<group>";
+		};
+		543085CD1EEE6F590093E766 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				543085CE1EEE6F590093E766 /* KYHomController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		543085CF1EEE6F590093E766 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		543085D01EEE6F590093E766 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		543085D11EEE6F590093E766 /* Main(主要) */ = {
+			isa = PBXGroup;
+			children = (
+				543085D21EEE6F590093E766 /* Controller */,
+				543085D51EEE6F590093E766 /* Model */,
+				543085D61EEE6F590093E766 /* View */,
+			);
+			path = "Main(主要)";
+			sourceTree = "<group>";
+		};
+		543085D21EEE6F590093E766 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				543085D31EEE6F590093E766 /* KYNavgationController.swift */,
+				543085D41EEE6F590093E766 /* KYTabBarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		543085D51EEE6F590093E766 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		543085D61EEE6F590093E766 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		543085D71EEE6F590093E766 /* My(我的) */ = {
+			isa = PBXGroup;
+			children = (
+				543085D81EEE6F590093E766 /* Controller */,
+				543085DA1EEE6F590093E766 /* Model */,
+				543085DB1EEE6F590093E766 /* View */,
+			);
+			path = "My(我的)";
+			sourceTree = "<group>";
+		};
+		543085D81EEE6F590093E766 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				543085D91EEE6F590093E766 /* KYMyTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		543085DA1EEE6F590093E766 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		543085DB1EEE6F590093E766 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		543085DC1EEE6F590093E766 /* NewFeature(新特性) */ = {
+			isa = PBXGroup;
+			children = (
+				543085DD1EEE6F590093E766 /* Controller */,
+				543085DF1EEE6F590093E766 /* Model */,
+				543085E01EEE6F590093E766 /* View */,
+			);
+			path = "NewFeature(新特性)";
+			sourceTree = "<group>";
+		};
+		543085DD1EEE6F590093E766 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				543085DE1EEE6F590093E766 /* KYNewFeatureController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		543085DF1EEE6F590093E766 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		543085E01EEE6F590093E766 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				543085E11EEE6F590093E766 /* KYNewFeatureCell.swift */,
+				543085E21EEE6F590093E766 /* KYNewFeatureCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		543085E31EEE6F590093E766 /* Other(其他) */ = {
+			isa = PBXGroup;
+			children = (
+				543085E41EEE6F590093E766 /* AppDelegate.swift */,
+				543085E51EEE6F590093E766 /* Controller */,
+				543085E61EEE6F590093E766 /* Model */,
+				543085E71EEE6F590093E766 /* View */,
+			);
+			path = "Other(其他)";
+			sourceTree = "<group>";
+		};
+		543085E51EEE6F590093E766 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		543085E61EEE6F590093E766 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		543085E71EEE6F590093E766 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		543085E81EEE6F590093E766 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				543085E91EEE6F590093E766 /* KYGuideTool.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		543085EA1EEE6F590093E766 /* Tutorial(教程) */ = {
+			isa = PBXGroup;
+			children = (
+				543085EB1EEE6F590093E766 /* Controller */,
+				543085ED1EEE6F590093E766 /* Model */,
+				543085EE1EEE6F590093E766 /* View */,
+			);
+			path = "Tutorial(教程)";
+			sourceTree = "<group>";
+		};
+		543085EB1EEE6F590093E766 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				543085EC1EEE6F590093E766 /* KYTutorialTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		543085ED1EEE6F590093E766 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		543085EE1EEE6F590093E766 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		547E166F1EE94D7B0020E0A7 = {
 			isa = PBXGroup;
 			children = (
 				547E167A1EE94D7B0020E0A7 /* KYHandMade */,
 				547E16791EE94D7B0020E0A7 /* Products */,
+				F2A229EF591A363B009F6A94 /* Pods */,
+				EC879C8DB671CE6F51E5DC5E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,13 +398,28 @@
 		547E167A1EE94D7B0020E0A7 /* KYHandMade */ = {
 			isa = PBXGroup;
 			children = (
-				547E167B1EE94D7B0020E0A7 /* AppDelegate.swift */,
-				547E167D1EE94D7B0020E0A7 /* ViewController.swift */,
-				547E167F1EE94D7B0020E0A7 /* Main.storyboard */,
+				543085BB1EEE6F590093E766 /* Class */,
 				547E16821EE94D7B0020E0A7 /* Assets.xcassets */,
 				547E16871EE94D7B0020E0A7 /* Info.plist */,
 			);
 			path = KYHandMade;
+			sourceTree = "<group>";
+		};
+		EC879C8DB671CE6F51E5DC5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C164B324D2D51207744875E1 /* Pods_KYHandMade.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2A229EF591A363B009F6A94 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5FC183425314ED4C1FE5D2E7 /* Pods-KYHandMade.debug.xcconfig */,
+				BCC62D6337226E72EE2A3997 /* Pods-KYHandMade.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,9 +429,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 547E168A1EE94D7B0020E0A7 /* Build configuration list for PBXNativeTarget "KYHandMade" */;
 			buildPhases = (
+				A828974091C74004E08FE205 /* [CP] Check Pods Manifest.lock */,
 				547E16741EE94D7B0020E0A7 /* Sources */,
 				547E16751EE94D7B0020E0A7 /* Frameworks */,
 				547E16761EE94D7B0020E0A7 /* Resources */,
+				3FCF9890E1F024E5F3D66D4B /* [CP] Embed Pods Frameworks */,
+				1CFF4A05022470BDF27A418B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -121,34 +485,82 @@
 			buildActionMask = 2147483647;
 			files = (
 				547E16831EE94D7B0020E0A7 /* Assets.xcassets in Resources */,
-				547E16811EE94D7B0020E0A7 /* Main.storyboard in Resources */,
+				543085F01EEE6F590093E766 /* KYAdViewController.xib in Resources */,
+				543085F91EEE6F590093E766 /* KYNewFeatureCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1CFF4A05022470BDF27A418B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KYHandMade/Pods-KYHandMade-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FCF9890E1F024E5F3D66D4B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KYHandMade/Pods-KYHandMade-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A828974091C74004E08FE205 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		547E16741EE94D7B0020E0A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				547E167E1EE94D7B0020E0A7 /* ViewController.swift in Sources */,
-				547E167C1EE94D7B0020E0A7 /* AppDelegate.swift in Sources */,
+				543085F61EEE6F590093E766 /* KYMyTableViewController.swift in Sources */,
+				543085FC1EEE6F590093E766 /* KYTutorialTableViewController.swift in Sources */,
+				543085F31EEE6F590093E766 /* KYHomController.swift in Sources */,
+				543085F81EEE6F590093E766 /* KYNewFeatureCell.swift in Sources */,
+				543085EF1EEE6F590093E766 /* KYAdViewController.swift in Sources */,
+				543085F21EEE6F590093E766 /* KYHandTableViewController.swift in Sources */,
+				543085F41EEE6F590093E766 /* KYNavgationController.swift in Sources */,
+				543085F71EEE6F590093E766 /* KYNewFeatureController.swift in Sources */,
+				543085F11EEE6F590093E766 /* KYFairTableViewController.swift in Sources */,
+				543085FA1EEE6F590093E766 /* AppDelegate.swift in Sources */,
+				543085FB1EEE6F590093E766 /* KYGuideTool.swift in Sources */,
+				543085F51EEE6F590093E766 /* KYTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		547E167F1EE94D7B0020E0A7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				547E16801EE94D7B0020E0A7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		547E16881EE94D7B0020E0A7 /* Debug */ = {
@@ -246,6 +658,7 @@
 		};
 		547E168B1EE94D7B0020E0A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FC183425314ED4C1FE5D2E7 /* Pods-KYHandMade.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -261,6 +674,7 @@
 		};
 		547E168C1EE94D7B0020E0A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCC62D6337226E72EE2A3997 /* Pods-KYHandMade.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
