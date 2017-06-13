@@ -23,6 +23,8 @@ extension KYNavgationController : UINavigationBarDelegate{
         
         
         viewController.view.backgroundColor = UIColor.white
+        viewController.automaticallyAdjustsScrollViewInsets = false
+        
         
         if childViewControllers.count >= 1
         {

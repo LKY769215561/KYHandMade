@@ -8,4 +8,8 @@ target 'KYHandMade' do
  pod 'Alamofire', '~> 4.4.0'
  pod 'Kingfisher', '~> 3.9.1'
  pod 'SnapKit', '~> 3.2.0'
+ pod 'SVProgressHUD', '~> 2.0.3'
+ pod 'SDCycleScrollView','~> 1.64'
+ pod 'MJRefresh', '~> 3.1.0'
+ pod 'FMDB'
 end

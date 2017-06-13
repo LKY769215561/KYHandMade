@@ -7,29 +7,38 @@
 //
 
 import UIKit
+import Kingfisher
 
 class KYHomController: UIViewController {
 
+    var pageView : KYPageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
+        let pageFrame = CGRect(x:0,y:64,width:view.bounds.width,height:view.bounds.height-64-44)
+        let titles = ["精选","关注","达人","活动"]
+        var pageStyle = KYPageStyle()
+        pageStyle.isScrollEnable = false
+        
+        pageView = KYPageView(frame:pageFrame,titles:titles,style:pageStyle)
+        pageView.delegate = self
+        view.addSubview(pageView)
+        
+     
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+}
 
-    /*
-    // MARK: - Navigation
+extension KYHomController : KYPageViewDelegate{
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func pageViewDidShowContentView(currentIndex: Int, title: String) -> UIView {
+        
+        let homeView = KYFeaturedView(frame:CGRect(x:0, y:0, width:view.bounds.width, height:pageView.frame.height-pageView.style.tabHeight))
+        return homeView
     }
-    */
 
 }
