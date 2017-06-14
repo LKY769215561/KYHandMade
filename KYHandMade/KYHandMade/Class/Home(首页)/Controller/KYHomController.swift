@@ -37,8 +37,21 @@ extension KYHomController : KYPageViewDelegate{
 
     func pageViewDidShowContentView(currentIndex: Int, title: String) -> UIView {
         
-        let homeView = KYFeaturedView(frame:CGRect(x:0, y:0, width:view.bounds.width, height:pageView.frame.height-pageView.style.tabHeight))
-        return homeView
+        
+        let contentFrame = CGRect(x:0, y:0, width:view.bounds.width, height:pageView.frame.height-pageView.style.tabHeight)
+        
+        switch currentIndex {
+        case 0:
+            return KYFeaturedView(frame:contentFrame)
+        case 1:
+            return KYFocusView(frame:contentFrame)
+        case 2:
+            return KYDaRenView(frame:contentFrame)
+        case 3:
+            return KYEventView(frame:contentFrame)
+        default :
+            return UIView()
+        }
     }
 
 }

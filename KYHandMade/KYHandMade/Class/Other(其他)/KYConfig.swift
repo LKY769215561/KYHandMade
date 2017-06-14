@@ -9,6 +9,13 @@
 import UIKit
 import MJRefresh
 
+
+let SCREEN_BOUNDS = UIScreen.main.bounds
+let SCREEN_WIDTH = SCREEN_BOUNDS.width
+let SCREEN_HEIGHT = SCREEN_BOUNDS.height
+let APP = UIApplication.shared.delegate as! AppDelegate
+
+
 /**
  RGB颜色构造
  */
@@ -45,3 +52,34 @@ func setupHeaderRefresh(_ target: AnyObject, action: Selector) -> MJRefreshNorma
     
     return headerRefresh!
 }
+
+/**
+ 快速创建下拉加载最新控件
+ */
+func setupJianDaoHeaderRefresh(_ target: AnyObject, action: Selector) -> MJRefreshGifHeader {
+    let headerRefresh = MJRefreshGifHeader(refreshingTarget: target, refreshingAction: action)
+    headerRefresh?.lastUpdatedTimeLabel.isHidden = true
+    headerRefresh?.isAutomaticallyChangeAlpha = true
+    headerRefresh?.setTitle("下拉刷新", for: .idle)
+    headerRefresh?.setTitle("松开刷新", for: .pulling)
+    headerRefresh?.setTitle("小客正在为你刷新", for: .refreshing)
+    
+    headerRefresh?.stateLabel.font = UIFont.systemFont(ofSize: 15)
+    headerRefresh?.stateLabel.textColor = UIColor.darkGray
+    
+    var idleImages = [UIImage]()
+    
+    for i in 1...10 {
+        let imageName = "loading_\(i)"
+        idleImages.append(UIImage(named:imageName)!)
+    }
+    
+    headerRefresh?.setImages(idleImages, for: .idle)
+    headerRefresh?.setImages(idleImages, for: .pulling)
+    headerRefresh?.setImages(idleImages, for: .refreshing)
+    
+    
+    return headerRefresh!
+}
+
+
