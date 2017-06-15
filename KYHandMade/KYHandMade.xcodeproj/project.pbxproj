@@ -29,7 +29,6 @@
 		545EA4F71EEFCD7F004C5CB3 /* KYFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA4F61EEFCD7F004C5CB3 /* KYFocusView.swift */; };
 		545EA4F91EEFCD98004C5CB3 /* KYDaRenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA4F81EEFCD98004C5CB3 /* KYDaRenView.swift */; };
 		545EA4FB1EEFCDAA004C5CB3 /* KYEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA4FA1EEFCDAA004C5CB3 /* KYEventView.swift */; };
-		545EA4FD1EEFCFB8004C5CB3 /* KYFeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA4FC1EEFCFB8004C5CB3 /* KYFeaturedCell.swift */; };
 		545EA5011EEFD6BA004C5CB3 /* KYNetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA5001EEFD6BA004C5CB3 /* KYNetWorkTool.swift */; };
 		545EA5031EEFDD3A004C5CB3 /* KYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA5021EEFDD3A004C5CB3 /* KYCommon.swift */; };
 		545EA5051EEFDF2B004C5CB3 /* KYProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA5041EEFDF2B004C5CB3 /* KYProgressHUD.swift */; };
@@ -46,6 +45,13 @@
 		5470E22F1EF0F75300282FA0 /* KYPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5470E22E1EF0F75300282FA0 /* KYPageRouter.swift */; };
 		5470E2311EF10E4C00282FA0 /* KYLessonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5470E2301EF10E4C00282FA0 /* KYLessonData.swift */; };
 		547E16831EE94D7B0020E0A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 547E16821EE94D7B0020E0A7 /* Assets.xcassets */; };
+		54EB17D61EF263EE005D6791 /* KYAdvanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54EB17D51EF263EE005D6791 /* KYAdvanceView.xib */; };
+		54EB17D81EF2641B005D6791 /* KYAdvanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB17D71EF2641B005D6791 /* KYAdvanceView.swift */; };
+		54EB17DA1EF2647E005D6791 /* KYNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB17D91EF2647E005D6791 /* KYNavigationView.swift */; };
+		54EB17DC1EF26489005D6791 /* KYNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54EB17DB1EF26489005D6791 /* KYNavigationView.xib */; };
+		54EB17DE1EF2684D005D6791 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB17DD1EF2684D005D6791 /* UIViewExtension.swift */; };
+		54EB17E51EF27E41005D6791 /* KYFeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB17E31EF27E41005D6791 /* KYFeaturedCell.swift */; };
+		54EB17E61EF27E41005D6791 /* KYFeaturedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54EB17E41EF27E41005D6791 /* KYFeaturedCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,7 +76,6 @@
 		545EA4F61EEFCD7F004C5CB3 /* KYFocusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFocusView.swift; sourceTree = "<group>"; };
 		545EA4F81EEFCD98004C5CB3 /* KYDaRenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYDaRenView.swift; sourceTree = "<group>"; };
 		545EA4FA1EEFCDAA004C5CB3 /* KYEventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYEventView.swift; sourceTree = "<group>"; };
-		545EA4FC1EEFCFB8004C5CB3 /* KYFeaturedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFeaturedCell.swift; sourceTree = "<group>"; };
 		545EA5001EEFD6BA004C5CB3 /* KYNetWorkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYNetWorkTool.swift; sourceTree = "<group>"; };
 		545EA5021EEFDD3A004C5CB3 /* KYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCommon.swift; sourceTree = "<group>"; };
 		545EA5041EEFDF2B004C5CB3 /* KYProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYProgressHUD.swift; sourceTree = "<group>"; };
@@ -90,6 +95,13 @@
 		547E16781EE94D7B0020E0A7 /* KYHandMade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KYHandMade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		547E16821EE94D7B0020E0A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		547E16871EE94D7B0020E0A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54EB17D51EF263EE005D6791 /* KYAdvanceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYAdvanceView.xib; sourceTree = "<group>"; };
+		54EB17D71EF2641B005D6791 /* KYAdvanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYAdvanceView.swift; sourceTree = "<group>"; };
+		54EB17D91EF2647E005D6791 /* KYNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYNavigationView.swift; sourceTree = "<group>"; };
+		54EB17DB1EF26489005D6791 /* KYNavigationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYNavigationView.xib; sourceTree = "<group>"; };
+		54EB17DD1EF2684D005D6791 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		54EB17E31EF27E41005D6791 /* KYFeaturedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFeaturedCell.swift; sourceTree = "<group>"; };
+		54EB17E41EF27E41005D6791 /* KYFeaturedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYFeaturedCell.xib; sourceTree = "<group>"; };
 		5FC183425314ED4C1FE5D2E7 /* Pods-KYHandMade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KYHandMade.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KYHandMade/Pods-KYHandMade.debug.xcconfig"; sourceTree = "<group>"; };
 		BCC62D6337226E72EE2A3997 /* Pods-KYHandMade.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KYHandMade.release.xcconfig"; path = "Pods/Target Support Files/Pods-KYHandMade/Pods-KYHandMade.release.xcconfig"; sourceTree = "<group>"; };
 		C164B324D2D51207744875E1 /* Pods_KYHandMade.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KYHandMade.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -261,6 +273,12 @@
 				545EA4F61EEFCD7F004C5CB3 /* KYFocusView.swift */,
 				545EA4F81EEFCD98004C5CB3 /* KYDaRenView.swift */,
 				545EA4FA1EEFCDAA004C5CB3 /* KYEventView.swift */,
+				54EB17D51EF263EE005D6791 /* KYAdvanceView.xib */,
+				54EB17D71EF2641B005D6791 /* KYAdvanceView.swift */,
+				54EB17D91EF2647E005D6791 /* KYNavigationView.swift */,
+				54EB17DB1EF26489005D6791 /* KYNavigationView.xib */,
+				54EB17E31EF27E41005D6791 /* KYFeaturedCell.swift */,
+				54EB17E41EF27E41005D6791 /* KYFeaturedCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -297,7 +315,6 @@
 		543085D61EEE6F590093E766 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				545EA4FC1EEFCFB8004C5CB3 /* KYFeaturedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -371,6 +388,7 @@
 		543085E31EEE6F590093E766 /* Other(其他) */ = {
 			isa = PBXGroup;
 			children = (
+				54EB17DD1EF2684D005D6791 /* UIViewExtension.swift */,
 				543085E41EEE6F590093E766 /* AppDelegate.swift */,
 				543085E51EEE6F590093E766 /* Controller */,
 				543085E61EEE6F590093E766 /* Model */,
@@ -575,7 +593,10 @@
 			files = (
 				547E16831EE94D7B0020E0A7 /* Assets.xcassets in Resources */,
 				543085F01EEE6F590093E766 /* KYAdViewController.xib in Resources */,
+				54EB17D61EF263EE005D6791 /* KYAdvanceView.xib in Resources */,
 				5470E22D1EF0F69A00282FA0 /* KYWebViewController.storyboard in Resources */,
+				54EB17DC1EF26489005D6791 /* KYNavigationView.xib in Resources */,
+				54EB17E61EF27E41005D6791 /* KYFeaturedCell.xib in Resources */,
 				543085F91EEE6F590093E766 /* KYNewFeatureCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -637,12 +658,13 @@
 			files = (
 				543085F61EEE6F590093E766 /* KYMyTableViewController.swift in Sources */,
 				543085FC1EEE6F590093E766 /* KYTutorialTableViewController.swift in Sources */,
+				54EB17E51EF27E41005D6791 /* KYFeaturedCell.swift in Sources */,
 				5470E22F1EF0F75300282FA0 /* KYPageRouter.swift in Sources */,
 				543085F31EEE6F590093E766 /* KYHomController.swift in Sources */,
 				545EA50E1EEFEFF2004C5CB3 /* KYHotModel.swift in Sources */,
-				545EA4FD1EEFCFB8004C5CB3 /* KYFeaturedCell.swift in Sources */,
 				5470E22B1EF0F62500282FA0 /* KYSlideLessonController.swift in Sources */,
 				545EA4F51EEFC6D7004C5CB3 /* KYFeaturedView.swift in Sources */,
+				54EB17DA1EF2647E005D6791 /* KYNavigationView.swift in Sources */,
 				545EA50C1EEFEFD7004C5CB3 /* KYSlideModel.swift in Sources */,
 				543085F81EEE6F590093E766 /* KYNewFeatureCell.swift in Sources */,
 				545EA4FB1EEFCDAA004C5CB3 /* KYEventView.swift in Sources */,
@@ -659,6 +681,7 @@
 				5470E2311EF10E4C00282FA0 /* KYLessonData.swift in Sources */,
 				545EA4F11EEFC4D0004C5CB3 /* KYPageCollectionViewCell.swift in Sources */,
 				543085F41EEE6F590093E766 /* KYNavgationController.swift in Sources */,
+				54EB17D81EF2641B005D6791 /* KYAdvanceView.swift in Sources */,
 				545EA4F71EEFCD7F004C5CB3 /* KYFocusView.swift in Sources */,
 				543085F71EEE6F590093E766 /* KYNewFeatureController.swift in Sources */,
 				543085F11EEE6F590093E766 /* KYFairTableViewController.swift in Sources */,
@@ -669,6 +692,7 @@
 				543085F51EEE6F590093E766 /* KYTabBarController.swift in Sources */,
 				545EA5011EEFD6BA004C5CB3 /* KYNetWorkTool.swift in Sources */,
 				545EA4F91EEFCD98004C5CB3 /* KYDaRenView.swift in Sources */,
+				54EB17DE1EF2684D005D6791 /* UIViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

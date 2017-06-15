@@ -49,12 +49,10 @@ class KYWebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         webView.scalesPageToFit = true
         webView.backgroundColor = UIColor.white
         webView.scrollView.delegate = self
-        
-        
+
     }
     
     

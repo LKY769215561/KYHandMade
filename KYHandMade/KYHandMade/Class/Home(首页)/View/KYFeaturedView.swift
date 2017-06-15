@@ -13,35 +13,102 @@ import SDCycleScrollView
 let KYFeaturedViewCellId = "KYFeaturedViewCellId"
 class KYFeaturedView: UIView {
 
-
+    // 头部
     lazy var featureHeader : UIView = {
-    
-        let header = UIView()
-        
-    header.backgroundColor = UIColor.blue
-          return header
+      
+        let headerHeight = SCREEN_HEIGHT * 0.25 + SCREEN_WIDTH/4 + SCREEN_WIDTH/2 + 40
+        let header = UIView(frame:CGRect(x:0, y:0, width: SCREEN_WIDTH, height:headerHeight))
+        return header
     }()
     
-    var cycleScorllView : SDCycleScrollView?
+    // 轮播图  高度 SCREEN_HEIGHT * 0.25
+    lazy var cycleScorllView : SDCycleScrollView = {
+        let featureModel = self.featureDataModel!
+       let  cycleView = SDCycleScrollView(frame: CGRect(x:0, y:0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT * 0.25), delegate: self, placeholderImage: UIImage(named: "2"))!
+  
+        var images  = [String]()
+        for slideModel in featureModel.dataSlides{
+            guard let imageURL = slideModel.host_pic else{
+                continue
+            }
+            images.append(imageURL)
+        }
+        cycleView.currentPageDotColor = UIColor.red
+        cycleView.imageURLStringsGroup = images
+        
+        return cycleView
+    }()
+ 
+    // 导航栏4个  高度 SCREEN_WIDTH/4
+    lazy var navgtionView : UIView = {
     
+        let featureModel = self.featureDataModel!
+        let navgationItemW = SCREEN_WIDTH/4
+        let navView = UIView(frame: CGRect(x:0, y:self.cycleScorllView.bottom, width: SCREEN_WIDTH, height:navgationItemW))
+        for ( i,navgationModel) in featureModel.dataNavigationArray.enumerated() {
+            
+ 
+            let navgationItem = Bundle.main.loadNibNamed("KYNavigationView", owner: nil, options: nil)?.first as! KYNavigationView
+            navgationItem.tag = i
+            navgationItem.frame = CGRect(x:CGFloat(i)*navgationItemW, y:0, width: navgationItemW, height:navgationItemW)
+            navgationItem.navgationModel = navgationModel
+            navView.addSubview(navgationItem)
+        }
+        return navView
+    }()
+    
+    // 提示框两个 SCREEN_WIDTH/2
+    lazy var advanceView : UIView = {
+    
+        let adView = UIView(frame:CGRect(x:0, y:self.navgtionView.bottom, width: SCREEN_WIDTH, height:SCREEN_HEIGHT * 0.25))
+    
+        let featureModel = self.featureDataModel!
+        let advanceItemW = SCREEN_WIDTH/2
+        let navView = UIView(frame: CGRect(x:0, y:self.cycleScorllView.bottom, width: SCREEN_WIDTH, height:advanceItemW))
+
+        for ( i,advanceModel) in featureModel.dataAdvanceArray.enumerated() {
+            let advanceItem = Bundle.main.loadNibNamed("KYAdvanceView", owner: nil, options: nil)?.first as! KYAdvanceView
+            advanceItem.tag = i
+            advanceItem.frame = CGRect(x:CGFloat(i)*advanceItemW, y:0, width: advanceItemW, height:advanceItemW)
+            advanceItem.advanceModel = advanceModel
+            adView.addSubview(advanceItem)
+        }
+        return adView
+        
+    
+    }()
+    
+    // 热门专题   高度40
+    lazy var hotTopicView : UIView = {
+    
+        let hotView = UIView(frame:CGRect(x:0, y:self.advanceView.bottom, width: SCREEN_WIDTH, height:40))
+        hotView.backgroundColor = UIColor.white
+        let centerLabel = UILabel(frame:CGRect(x:0, y:24, width: SCREEN_WIDTH, height:1))
+        centerLabel.backgroundColor = UIColor.lightGray
+        hotView.addSubview(centerLabel)
+        
+        let labelText = "热门专题"
+        let textLabel = UILabel(frame:CGRect(x:150, y:10, width:100, height:30))
+        textLabel.textColor = UIColor.black
+        textLabel.backgroundColor = UIColor.white
+        textLabel.textAlignment = .center
+        textLabel.text = labelText
+        hotView.addSubview(textLabel)
+        return hotView
+    }()
     
     
     var featureDataModel : KYFeaturedModel?
-    
-    
     
       fileprivate lazy var tableView : UITableView = {
      
       let tabView = UITableView(frame: self.bounds, style: .plain)
       tabView.mj_header = setupJianDaoHeaderRefresh(self, action: #selector(loadNewData))
-      tabView.mj_footer = setupFooterRefresh(self, action: #selector(loadMoreData))
-      
-      
-      
+      tabView.tableHeaderView = self.featureHeader    //防止头部不跟随滚动
         
       tabView.dataSource = self
       tabView.delegate = self
-      tabView.register(KYFeaturedCell.self, forCellReuseIdentifier: KYFeaturedViewCellId)
+      tabView.register(UINib(nibName:"KYFeaturedCell", bundle:nil), forCellReuseIdentifier: KYFeaturedViewCellId)
       return tabView
     
     }()
@@ -52,16 +119,9 @@ class KYFeaturedView: UIView {
         addSubview(tableView)
         
         tableView.mj_header.beginRefreshing()
+    }
+    
 
-        
-    }
-    
-    func loadMoreData() {
-        
-        
-        
-    }
-    
     
     func loadNewData() {
         
@@ -79,21 +139,23 @@ class KYFeaturedView: UIView {
             
             if success
             {
-             let data = result?["data"].dictionaryObject as [String : AnyObject]?
-             guard let featureData  = data else{
+              let data = result?["data"].dictionaryObject as [String : AnyObject]?
+              guard let featureData  = data else{
               return
             }
             
             self.featureDataModel = KYFeaturedModel(dict:featureData)
             
             
-            self.AddSDCycleView()
+            self.AddheadSubView()
+                
+            self.tableView.reloadData()
             
            }
             else
            {
             
-          }
+           }
          
             
         }
@@ -101,49 +163,23 @@ class KYFeaturedView: UIView {
         
     }
     
-    func AddSDCycleView() {
+    func AddheadSubView() {
         
-        guard let featureModel = featureDataModel else {
-            return
-        }
-        cycleScorllView = SDCycleScrollView(frame: CGRect(x:0, y:0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT * 0.25), delegate: self, placeholderImage: UIImage(named: "2"))
-        var images  = [String]()
-        for slideModel in featureModel.dataSlides{
-          
-            guard let imageURL = slideModel.host_pic else{
-              continue
-            }
-            images.append(imageURL)
-        
-        }
-        cycleScorllView?.currentPageDotColor = UIColor.red
-        cycleScorllView?.imageURLStringsGroup = images
-        featureHeader.addSubview(cycleScorllView!)
+        featureHeader.addSubview(cycleScorllView)
+        featureHeader.addSubview(navgtionView)
+        featureHeader.addSubview(advanceView)
+        featureHeader.addSubview(hotTopicView)
     }
+ 
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-}
-
-extension KYFeaturedView : UITableViewDataSource{
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let featureCell = tableView.dequeueReusableCell(withIdentifier: KYFeaturedViewCellId)!
  
-        return  featureCell
-        
-    }
-    
-    
-    
 }
+
+
 
 // MARK: - SDCycleScrollViewDelegate
 extension KYFeaturedView: SDCycleScrollViewDelegate {
@@ -186,25 +222,40 @@ extension KYFeaturedView: SDCycleScrollViewDelegate {
     }
 }
 
+// MARK:UITableViewDataSource
+extension KYFeaturedView : UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        guard let hotCount = featureDataModel?.dataHotArray.count else {
+            return 0
+        }
+        return hotCount
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let hotModel = featureDataModel?.dataHotArray[indexPath.row]
+        
+        
+        let featureCell = tableView.dequeueReusableCell(withIdentifier: KYFeaturedViewCellId)! as! KYFeaturedCell
+        featureCell.hotData = hotModel
+        return  featureCell
+        
+    }
+}
+
+// MARK:UITableViewDelegate
 
 extension KYFeaturedView : UITableViewDelegate{
   
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 200
-    }
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return featureHeader
-    }
-    
-    
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
-        var rotation = CATransform3DMakeRotation(CGFloat(M_PI_4), 0.0, 0.7, 0.4)
+        var rotation = CATransform3DMakeRotation( CGFloat(Double.pi/4), 0.0, 0.7, 0.4)
         
         rotation = CATransform3DScale(rotation, 0.8, 0.8, 1)
         
@@ -225,6 +276,11 @@ extension KYFeaturedView : UITableViewDelegate{
         cell.layer.shadowOffset = CGSize(width: 0, height:0)
         
         UIView.commitAnimations()
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return SCREEN_HEIGHT * 0.25
     }
     
 
