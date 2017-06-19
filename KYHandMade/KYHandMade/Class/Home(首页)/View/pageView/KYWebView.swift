@@ -11,6 +11,21 @@ import UIKit
 class KYWebView: UIView {
 
 
+    // 秒杀
+    var _navgationModel : KYNavigationModel?
+    var navgationModel : KYNavigationModel?{
+     
+        set{
+            _navgationModel = newValue
+            loadURL(urlStr: _navgationModel?.mob_h5_url, title:"专题详情")
+        }
+        get{
+         return _navgationModel
+        }
+      
+    }
+    
+    // 活动
      var  _handId : String?
      var  handId : String?{
     
@@ -21,7 +36,7 @@ class KYWebView: UIView {
                 return
             }
           let  webURl = HomeBaseURL + "?c=Competition&cid=" + handId
-          loadURL(urlStr: webURl)
+          loadURL(urlStr: webURl, title: nil)
         }
     
         get{
@@ -29,10 +44,64 @@ class KYWebView: UIView {
         }
     }
     
+    var _advanceModel : KYAdvanceModel?
+    var advanceModel : KYAdvanceModel?{
+        
+        set{
+            _advanceModel = newValue
+            loadURL(urlStr: _advanceModel?.mob_h5_url, title: "手工课官方")
+        }
+        
+        get{
+            
+            return _advanceModel
+        }
+    }
+    
+    
+    
+      // 轮播图
+    var _slide:KYSlideModel?
+    var slide:KYSlideModel?{
+        
+        set{
+            _slide = newValue
+            
+            guard let itemType = slide?.itemtype else {
+                return
+            }
+            guard  let hand_id = slide?.hand_id else {
+                return
+            }
+            if slide?.itemtype == "class_special" {
+                let url = "http://www.shougongke.com/index.php?m=HandClass&a=\(itemType)&spec_id=\(hand_id)"
+                loadURL(urlStr: url, title: "课堂专题")
+                
+            }else if slide?.itemtype == "topic_detail_h5" {
+                
+                loadURL(urlStr: hand_id, title: "课堂专题")
+                
+            }else if slide?.itemtype == "event" {
+                 let url = HomeBaseURL + "?c=Competition&cid=" + itemType + hand_id
+                 loadURL(urlStr: url, title: "课堂专题")
+            }
+        }
+        
+        get{
+            return _slide
+        }
+        
+    }
+    
     
     private   lazy  var webView : UIWebView = {
     
-    return UIWebView(frame: self.bounds)
+        let webV = UIWebView(frame: self.bounds)
+        webV.delegate = self
+        webV.scalesPageToFit = true
+        webV.backgroundColor = UIColor.white
+        webV.scrollView.delegate = self
+        return webV
         
     }()
     
@@ -42,7 +111,7 @@ class KYWebView: UIView {
         addSubview(webView)
     }
     
-    func loadURL(urlStr : String?) {
+    func loadURL(urlStr : String?,title:String?) {
         
         guard let webUrlString = urlStr else {
             return
@@ -53,8 +122,8 @@ class KYWebView: UIView {
             return
         }
         webView.loadRequest(URLRequest(url:url2))
+
     }
-    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -62,3 +131,25 @@ class KYWebView: UIView {
     
 
 }
+
+extension KYWebView : UIScrollViewDelegate{
+
+
+}
+
+extension KYWebView : UIWebViewDelegate{
+
+    func webViewDidStartLoad(_ webView: UIWebView) {
+        KYProgressHUD.show()
+    }
+    
+    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+        KYProgressHUD.showInfoWithStatus("加载失败了")
+    }
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        KYProgressHUD.dismiss()
+    }
+    
+}
+
+

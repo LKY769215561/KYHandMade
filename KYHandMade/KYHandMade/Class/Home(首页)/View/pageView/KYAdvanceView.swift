@@ -11,13 +11,7 @@ import UIKit
 class KYAdvanceView: UIView {
 
     @IBOutlet weak var adImageView: UIImageView!
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+
 
     
     var _advanceModel : KYAdvanceModel?
@@ -46,6 +40,7 @@ class KYAdvanceView: UIView {
     
     func advanceItemAction(tap : UITapGestureRecognizer) {
         let webVC = KYWebViewController()
+        webVC.advanceModel = self.advanceModel
         KYPageRouter.getCurrentNav()?.pushViewController(webVC, animated: true)
     }
     

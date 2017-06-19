@@ -31,7 +31,6 @@ class KYNewFeatureController: UICollectionViewController {
 extension KYNewFeatureController{
     
     // MARK: UICollectionViewDataSource
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         return 5
     }

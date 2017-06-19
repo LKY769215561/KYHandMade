@@ -36,7 +36,6 @@
 		5470E2271EF0F5E700282FA0 /* KYWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5470E2261EF0F5E700282FA0 /* KYWebViewController.swift */; };
 		5470E2291EF0F60800282FA0 /* KYSlideEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5470E2281EF0F60800282FA0 /* KYSlideEventController.swift */; };
 		5470E22B1EF0F62500282FA0 /* KYSlideLessonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5470E22A1EF0F62500282FA0 /* KYSlideLessonController.swift */; };
-		5470E22D1EF0F69A00282FA0 /* KYWebViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5470E22C1EF0F69A00282FA0 /* KYWebViewController.storyboard */; };
 		5470E22F1EF0F75300282FA0 /* KYPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5470E22E1EF0F75300282FA0 /* KYPageRouter.swift */; };
 		5470E2311EF10E4C00282FA0 /* KYLessonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5470E2301EF10E4C00282FA0 /* KYLessonData.swift */; };
 		547E16831EE94D7B0020E0A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 547E16821EE94D7B0020E0A7 /* Assets.xcassets */; };
@@ -100,7 +99,6 @@
 		5470E2261EF0F5E700282FA0 /* KYWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYWebViewController.swift; sourceTree = "<group>"; };
 		5470E2281EF0F60800282FA0 /* KYSlideEventController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYSlideEventController.swift; sourceTree = "<group>"; };
 		5470E22A1EF0F62500282FA0 /* KYSlideLessonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYSlideLessonController.swift; sourceTree = "<group>"; };
-		5470E22C1EF0F69A00282FA0 /* KYWebViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KYWebViewController.storyboard; sourceTree = "<group>"; };
 		5470E22E1EF0F75300282FA0 /* KYPageRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYPageRouter.swift; sourceTree = "<group>"; };
 		5470E2301EF10E4C00282FA0 /* KYLessonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYLessonData.swift; sourceTree = "<group>"; };
 		547E16781EE94D7B0020E0A7 /* KYHandMade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KYHandMade.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -330,7 +328,6 @@
 				543085D31EEE6F590093E766 /* KYNavgationController.swift */,
 				543085D41EEE6F590093E766 /* KYTabBarController.swift */,
 				5470E2261EF0F5E700282FA0 /* KYWebViewController.swift */,
-				5470E22C1EF0F69A00282FA0 /* KYWebViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -661,7 +658,6 @@
 				543085F01EEE6F590093E766 /* KYAdViewController.xib in Resources */,
 				547EFA0C1EF7B9B00036753F /* KYSlideCollectionViewCell.xib in Resources */,
 				547EF9FA1EF7B9B00036753F /* KYAdvanceView.xib in Resources */,
-				5470E22D1EF0F69A00282FA0 /* KYWebViewController.storyboard in Resources */,
 				547EFA0A1EF7B9B00036753F /* KYFocusCell.xib in Resources */,
 				547EFA011EF7B9B00036753F /* KYNavigationView.xib in Resources */,
 				547EFA061EF7B9B00036753F /* KYEventCell.xib in Resources */,

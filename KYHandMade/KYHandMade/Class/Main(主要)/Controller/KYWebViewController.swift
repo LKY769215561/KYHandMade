@@ -9,49 +9,60 @@
 import UIKit
 
 class KYWebViewController: UIViewController {
-
-    var _slide:KYSlideModel?
-    var slide:KYSlideModel?{
     
+    // 秒杀
+    var _navgationModel : KYNavigationModel?
+    var navgationModel : KYNavigationModel?{
+        
         set{
-            _slide = newValue
-            
-            guard let itemType = slide?.itemtype else {
-                return
-            }
-            guard  let hand_id = slide?.hand_id else {
-                return
-            }
-            if slide?.itemtype == "class_special" {
-                let url = "http://www.shougongke.com/index.php?m=HandClass&a=\(itemType)&spec_id=\(hand_id)"
-                loadSlideDataType(urlString:url, title: "课堂专题")
-            }else if slide?.itemtype == "topic_detail_h5" {
-                
-                loadSlideDataType(urlString: hand_id, title: "专题详情")
-                
-            }else if slide?.itemtype == "event" {
-                
-                let BaseURL = "http://m.shougongke.com/index.php?c=Competition&cid="
-                loadSlideDataType(urlString:BaseURL+itemType+hand_id, title: "课堂专题")
-            } 
+            _navgationModel = newValue
+           webView.navgationModel = _navgationModel
         }
+        get{
+            return _navgationModel
+        }
+        
+    }
     
+    // 轮播图
+    var _slide: KYSlideModel?
+    var slide: KYSlideModel?{
+     
+        set{
+        
+        _slide = newValue
+          webView.slide = _slide
+        }
         get{
         
         return _slide
         }
+     
+    }
+    
+    var _advanceModel : KYAdvanceModel?
+    var advanceModel : KYAdvanceModel?{
         
+        set{
+            _advanceModel = newValue
+            webView.advanceModel = _advanceModel
+        }
+        
+        get{
+            
+            return _advanceModel
+        }
     }
     
     
-    
-    @IBOutlet weak var webView: UIWebView!
+    var webView: KYWebView = {
+        let web = KYWebView(frame:CGRect(x: 0, y: NAVBAR_HEIGHT, width:SCREEN_WIDTH, height: SCREEN_HEIGHT-NAVBAR_HEIGHT))
+        return web
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        webView.scalesPageToFit = true
-        webView.backgroundColor = UIColor.white
-        webView.scrollView.delegate = self
+      view.addSubview(webView)
 
     }
     
@@ -60,31 +71,8 @@ class KYWebViewController: UIViewController {
     
     
     
-    func loadSlideDataType(urlString : String,title:String) {
-        
-        
-        let url = URL(string:urlString)
-        guard let url2 = url else {
-            return
-        }
- 
-        view.addSubview(webView)
-        webView.loadRequest(URLRequest(url:url2))
-        navigationItem.title = title
-        
-    }
-    
-
-
 
 }
 
-extension KYWebViewController : UIWebViewDelegate{
-
-}
-extension KYWebViewController : UIScrollViewDelegate{
-
-
-}
 
 

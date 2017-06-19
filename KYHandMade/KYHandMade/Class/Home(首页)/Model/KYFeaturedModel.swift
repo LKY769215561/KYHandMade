@@ -13,13 +13,13 @@ class KYFeaturedModel: NSObject {
 
  
     // 轮播图
-    var dataSlides : [KYSlideModel] = []
+    var dataSlides = [KYSlideModel]()
     // 热帖
-    var dataHotArray : [KYHotModel] = []
+    var dataHotArray = [KYHotModel]()
     // 热帖
-    var dataNavigationArray : [KYNavigationModel] = []
+    var dataNavigationArray = [KYNavigationModel]()
     // 热帖
-    var dataAdvanceArray : [KYAdvanceModel] = []
+    var dataAdvanceArray = [KYAdvanceModel]()
     
     init(dict : [String : AnyObject]) {
         

@@ -188,7 +188,7 @@ extension KYFeaturedView: SDCycleScrollViewDelegate {
         
         if slideModel.itemtype == "class_special" || slideModel.itemtype == "topic_detail_h5" {
         
-         let webVC = UIStoryboard(name:"KYWebViewController", bundle: nil).instantiateInitialViewController() as! KYWebViewController
+         let webVC = KYWebViewController()
          webVC.slide = slideModel
          KYPageRouter.getCurrentNav()?.pushViewController(webVC, animated: true)
         }else if(slideModel.itemtype == "event"){
