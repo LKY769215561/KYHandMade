@@ -90,4 +90,20 @@ func setupJianDaoHeaderRefresh(_ target: AnyObject, action: Selector) -> MJRefre
     return headerRefresh!
 }
 
+extension String{
+
+    func checkNotNull() -> Bool {
+        
+        if self == "null" || self == "NSNull"
+        {
+          return false
+        }else
+        {
+          return (self as NSString).length > 0
+        }
+    }
+
+}
+
+
 

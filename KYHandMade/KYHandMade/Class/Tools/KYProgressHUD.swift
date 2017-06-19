@@ -17,7 +17,7 @@ class KYProgressHUD: NSObject {
         SVProgressHUD.setForegroundColor(UIColor.white)
         SVProgressHUD.setBackgroundColor(UIColor(white:0.0,alpha:0.8))
         SVProgressHUD.setFont(UIFont.boldSystemFont(ofSize: 16))
-        SVProgressHUD.setMinimumDismissTimeInterval(1.5)
+        SVProgressHUD.setMinimumDismissTimeInterval(1.0)
         
     }
     

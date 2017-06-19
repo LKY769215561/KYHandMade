@@ -8,4 +8,5 @@
 
 import UIKit
 
-let  HomeBaseURl = "http://m.shougongke.com/index.php"
+let  HomeBaseURL = "http://m.shougongke.com/index.php"
+let  HomeDarenURL = "http://m.shougongke.com/index.php?&c=Index&a=daren"

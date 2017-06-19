@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configApper()
         window?.makeKeyAndVisible()
         
+        KYProgressHUD.setUPHUD()
+        
         return true
     }
 

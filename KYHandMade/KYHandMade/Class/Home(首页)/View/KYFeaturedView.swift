@@ -100,10 +100,11 @@ class KYFeaturedView: UIView {
     
     var featureDataModel : KYFeaturedModel?
     
+    
       fileprivate lazy var tableView : UITableView = {
      
-    
-      let tabView = UITableView(frame: CGRect(x:0, y:0, width:SCREEN_WIDTH, height:SCREEN_HEIGHT-NAVBAR_HEIGHT-TABBAR_HEIGHT-40), style: .plain)
+     
+      let tabView = UITableView(frame:self.bounds, style: .plain)
       tabView.mj_header = setupJianDaoHeaderRefresh(self, action: #selector(loadNewData))
       tabView.tableHeaderView = self.featureHeader    //防止头部不跟随滚动
         
@@ -134,7 +135,7 @@ class KYFeaturedView: UIView {
         ]
         
         
-        KYNetWorkTool.shared.get(HomeBaseURl, parameters: paramet) { (success, result, error) in
+        KYNetWorkTool.shared.get(HomeBaseURL, parameters: paramet) { (success, result, error) in
             
             self.tableView.mj_header.endRefreshing()
             
@@ -155,7 +156,7 @@ class KYFeaturedView: UIView {
            }
             else
            {
-            
+              
            }
          
             
