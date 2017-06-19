@@ -71,6 +71,8 @@ extension KYNetWorkTool{
             finished(true, json, nil)
             
         case .failure(let error):
+        
+            KYProgressHUD.showErrorWithStatus("失败了,赶紧跑")
            finished(false,nil,error as NSError?)
         }
     }

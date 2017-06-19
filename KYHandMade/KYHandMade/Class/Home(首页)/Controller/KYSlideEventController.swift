@@ -11,27 +11,50 @@ import UIKit
 class KYSlideEventController: UIViewController {
 
      public var slide:KYSlideModel?
+     var handId : String?
+    
+  fileprivate  lazy var pageView : KYPageView = {
+        
+        let pageFrame = CGRect(x:0,y:NAVBAR_HEIGHT,width:SCREEN_WIDTH,height:(SCREEN_HEIGHT - NAVBAR_HEIGHT))
+        let titles = ["活动介绍","最新作品","投票最多"]
+        var pageStyle = KYPageStyle()
+        pageStyle.isScrollEnable = false
+        
+        let  pgView = KYPageView(frame:pageFrame,titles:titles,style:pageStyle)
+        pgView.delegate = self
+        return pgView
+    }()
+    
+  fileprivate  lazy var contentViews : [UIView] = {
+        
+        let contentFrame = CGRect(x:0, y:0, width:SCREEN_WIDTH, height:self.pageView.frame.height - self.pageView.style.tabHeight)
+        var contents = [UIView]()          //添加子控件
+        let webView = KYWebView(frame:contentFrame)
+        webView.handId = self.handId
+        contents.append(webView)
+        contents.append(KYEventNewView(frame:contentFrame,param:"new",handId :self.handId!))
+        contents.append(KYEventNewView(frame:contentFrame,param:"votes",handId :self.handId!))
+        return contents
+    }()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        title = "活动作品"
+        view.addSubview(pageView)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+extension KYSlideEventController : KYPageViewDelegate{
+
+    func pageViewDidShowContentView(currentIndex: Int, title: String) -> UIView {
+          return contentViews[currentIndex]
+    }
+}
+
+

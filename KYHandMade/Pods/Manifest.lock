@@ -13,6 +13,7 @@ PODS:
   - SnapKit (3.2.0)
   - SVProgressHUD (2.0.4)
   - SwiftyJSON (3.1.4)
+  - VCTransitionsLibrary (1.5.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4.0)
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - SnapKit (~> 3.2.0)
   - SVProgressHUD (~> 2.0.3)
   - SwiftyJSON (~> 3.1.4)
+  - VCTransitionsLibrary (~> 1.5.0)
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
@@ -34,7 +36,8 @@ SPEC CHECKSUMS:
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  VCTransitionsLibrary: d61fd9b7b6721942f0d583bcc0e7f8c31ec9271b
 
-PODFILE CHECKSUM: 81842bdf62fa44d99cf3775be296c4b2232ada4e
+PODFILE CHECKSUM: baa7c54a9b260f343a78fee27161c97ad37abae1
 
 COCOAPODS: 1.2.1

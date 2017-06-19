@@ -24,10 +24,6 @@
 		543085FC1EEE6F590093E766 /* KYTutorialTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085EC1EEE6F590093E766 /* KYTutorialTableViewController.swift */; };
 		545EA4F21EEFC4D0004C5CB3 /* KYPageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA4EF1EEFC4D0004C5CB3 /* KYPageStyle.swift */; };
 		545EA4F31EEFC4D0004C5CB3 /* KYPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA4F01EEFC4D0004C5CB3 /* KYPageView.swift */; };
-		545EA4F51EEFC6D7004C5CB3 /* KYFeaturedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA4F41EEFC6D7004C5CB3 /* KYFeaturedView.swift */; };
-		545EA4F71EEFCD7F004C5CB3 /* KYFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA4F61EEFCD7F004C5CB3 /* KYFocusView.swift */; };
-		545EA4F91EEFCD98004C5CB3 /* KYDaRenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA4F81EEFCD98004C5CB3 /* KYDaRenView.swift */; };
-		545EA4FB1EEFCDAA004C5CB3 /* KYEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA4FA1EEFCDAA004C5CB3 /* KYEventView.swift */; };
 		545EA5011EEFD6BA004C5CB3 /* KYNetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA5001EEFD6BA004C5CB3 /* KYNetWorkTool.swift */; };
 		545EA5031EEFDD3A004C5CB3 /* KYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA5021EEFDD3A004C5CB3 /* KYCommon.swift */; };
 		545EA5051EEFDF2B004C5CB3 /* KYProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA5041EEFDF2B004C5CB3 /* KYProgressHUD.swift */; };
@@ -45,21 +41,33 @@
 		5470E2311EF10E4C00282FA0 /* KYLessonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5470E2301EF10E4C00282FA0 /* KYLessonData.swift */; };
 		547E16831EE94D7B0020E0A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 547E16821EE94D7B0020E0A7 /* Assets.xcassets */; };
 		547EF9CA1EF7643D0036753F /* KYDaRenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EF9C91EF7643D0036753F /* KYDaRenModel.swift */; };
-		547EF9CC1EF766DF0036753F /* KYDarenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EF9CB1EF766DF0036753F /* KYDarenCell.swift */; };
-		547EF9CE1EF766F90036753F /* KYDarenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EF9CD1EF766F90036753F /* KYDarenCell.xib */; };
 		547EF9D01EF77CA60036753F /* KYDaRenPicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EF9CF1EF77CA60036753F /* KYDaRenPicController.swift */; };
+		547EF9D61EF798260036753F /* KYEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EF9D51EF798260036753F /* KYEventModel.swift */; };
+		547EF9E21EF7AF0E0036753F /* KYSlideShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EF9E11EF7AF0E0036753F /* KYSlideShopModel.swift */; };
+		547EF9F91EF7B9B00036753F /* KYAdvanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EF9E41EF7B9B00036753F /* KYAdvanceView.swift */; };
+		547EF9FA1EF7B9B00036753F /* KYAdvanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EF9E51EF7B9B00036753F /* KYAdvanceView.xib */; };
+		547EF9FB1EF7B9B00036753F /* KYDaRenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EF9E61EF7B9B00036753F /* KYDaRenView.swift */; };
+		547EF9FC1EF7B9B00036753F /* KYEventNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EF9E71EF7B9B00036753F /* KYEventNewView.swift */; };
+		547EF9FD1EF7B9B00036753F /* KYEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EF9E81EF7B9B00036753F /* KYEventView.swift */; };
+		547EF9FE1EF7B9B00036753F /* KYFeaturedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EF9E91EF7B9B00036753F /* KYFeaturedView.swift */; };
+		547EF9FF1EF7B9B00036753F /* KYFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EF9EA1EF7B9B00036753F /* KYFocusView.swift */; };
+		547EFA001EF7B9B00036753F /* KYNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EF9EB1EF7B9B00036753F /* KYNavigationView.swift */; };
+		547EFA011EF7B9B00036753F /* KYNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EF9EC1EF7B9B00036753F /* KYNavigationView.xib */; };
+		547EFA021EF7B9B00036753F /* KYWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EF9ED1EF7B9B00036753F /* KYWebView.swift */; };
+		547EFA031EF7B9B00036753F /* KYDarenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EF9EF1EF7B9B00036753F /* KYDarenCell.swift */; };
+		547EFA041EF7B9B00036753F /* KYDarenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EF9F01EF7B9B00036753F /* KYDarenCell.xib */; };
+		547EFA051EF7B9B00036753F /* KYEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EF9F11EF7B9B00036753F /* KYEventCell.swift */; };
+		547EFA061EF7B9B00036753F /* KYEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EF9F21EF7B9B00036753F /* KYEventCell.xib */; };
+		547EFA071EF7B9B00036753F /* KYFeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EF9F31EF7B9B00036753F /* KYFeaturedCell.swift */; };
+		547EFA081EF7B9B00036753F /* KYFeaturedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EF9F41EF7B9B00036753F /* KYFeaturedCell.xib */; };
+		547EFA091EF7B9B00036753F /* KYFocusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EF9F51EF7B9B00036753F /* KYFocusCell.swift */; };
+		547EFA0A1EF7B9B00036753F /* KYFocusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EF9F61EF7B9B00036753F /* KYFocusCell.xib */; };
+		547EFA0B1EF7B9B00036753F /* KYSlideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EF9F71EF7B9B00036753F /* KYSlideCollectionViewCell.swift */; };
+		547EFA0C1EF7B9B00036753F /* KYSlideCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EF9F81EF7B9B00036753F /* KYSlideCollectionViewCell.xib */; };
 		549BCD8C1EF3B6CB0097E916 /* KYPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549BCD8B1EF3B6CB0097E916 /* KYPageCollectionViewCell.swift */; };
 		549BCD8E1EF3BFF70097E916 /* KYLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549BCD8D1EF3BFF70097E916 /* KYLayout.swift */; };
-		549BCD901EF3C8110097E916 /* KYFocusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549BCD8F1EF3C8110097E916 /* KYFocusCell.swift */; };
-		549BCD921EF3C8200097E916 /* KYFocusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 549BCD911EF3C8200097E916 /* KYFocusCell.xib */; };
 		549BCD941EF3C8730097E916 /* KYFocusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549BCD931EF3C8730097E916 /* KYFocusModel.swift */; };
-		54EB17D61EF263EE005D6791 /* KYAdvanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54EB17D51EF263EE005D6791 /* KYAdvanceView.xib */; };
-		54EB17D81EF2641B005D6791 /* KYAdvanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB17D71EF2641B005D6791 /* KYAdvanceView.swift */; };
-		54EB17DA1EF2647E005D6791 /* KYNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB17D91EF2647E005D6791 /* KYNavigationView.swift */; };
-		54EB17DC1EF26489005D6791 /* KYNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54EB17DB1EF26489005D6791 /* KYNavigationView.xib */; };
 		54EB17DE1EF2684D005D6791 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB17DD1EF2684D005D6791 /* UIViewExtension.swift */; };
-		54EB17E51EF27E41005D6791 /* KYFeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB17E31EF27E41005D6791 /* KYFeaturedCell.swift */; };
-		54EB17E61EF27E41005D6791 /* KYFeaturedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54EB17E41EF27E41005D6791 /* KYFeaturedCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,10 +87,6 @@
 		543085EC1EEE6F590093E766 /* KYTutorialTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYTutorialTableViewController.swift; sourceTree = "<group>"; };
 		545EA4EF1EEFC4D0004C5CB3 /* KYPageStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYPageStyle.swift; sourceTree = "<group>"; };
 		545EA4F01EEFC4D0004C5CB3 /* KYPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYPageView.swift; sourceTree = "<group>"; };
-		545EA4F41EEFC6D7004C5CB3 /* KYFeaturedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFeaturedView.swift; sourceTree = "<group>"; };
-		545EA4F61EEFCD7F004C5CB3 /* KYFocusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFocusView.swift; sourceTree = "<group>"; };
-		545EA4F81EEFCD98004C5CB3 /* KYDaRenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYDaRenView.swift; sourceTree = "<group>"; };
-		545EA4FA1EEFCDAA004C5CB3 /* KYEventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYEventView.swift; sourceTree = "<group>"; };
 		545EA5001EEFD6BA004C5CB3 /* KYNetWorkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYNetWorkTool.swift; sourceTree = "<group>"; };
 		545EA5021EEFDD3A004C5CB3 /* KYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCommon.swift; sourceTree = "<group>"; };
 		545EA5041EEFDF2B004C5CB3 /* KYProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYProgressHUD.swift; sourceTree = "<group>"; };
@@ -103,21 +107,33 @@
 		547E16821EE94D7B0020E0A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		547E16871EE94D7B0020E0A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		547EF9C91EF7643D0036753F /* KYDaRenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYDaRenModel.swift; sourceTree = "<group>"; };
-		547EF9CB1EF766DF0036753F /* KYDarenCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYDarenCell.swift; sourceTree = "<group>"; };
-		547EF9CD1EF766F90036753F /* KYDarenCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYDarenCell.xib; sourceTree = "<group>"; };
 		547EF9CF1EF77CA60036753F /* KYDaRenPicController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYDaRenPicController.swift; sourceTree = "<group>"; };
+		547EF9D51EF798260036753F /* KYEventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYEventModel.swift; sourceTree = "<group>"; };
+		547EF9E11EF7AF0E0036753F /* KYSlideShopModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYSlideShopModel.swift; sourceTree = "<group>"; };
+		547EF9E41EF7B9B00036753F /* KYAdvanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYAdvanceView.swift; sourceTree = "<group>"; };
+		547EF9E51EF7B9B00036753F /* KYAdvanceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYAdvanceView.xib; sourceTree = "<group>"; };
+		547EF9E61EF7B9B00036753F /* KYDaRenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYDaRenView.swift; sourceTree = "<group>"; };
+		547EF9E71EF7B9B00036753F /* KYEventNewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYEventNewView.swift; sourceTree = "<group>"; };
+		547EF9E81EF7B9B00036753F /* KYEventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYEventView.swift; sourceTree = "<group>"; };
+		547EF9E91EF7B9B00036753F /* KYFeaturedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFeaturedView.swift; sourceTree = "<group>"; };
+		547EF9EA1EF7B9B00036753F /* KYFocusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFocusView.swift; sourceTree = "<group>"; };
+		547EF9EB1EF7B9B00036753F /* KYNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYNavigationView.swift; sourceTree = "<group>"; };
+		547EF9EC1EF7B9B00036753F /* KYNavigationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYNavigationView.xib; sourceTree = "<group>"; };
+		547EF9ED1EF7B9B00036753F /* KYWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYWebView.swift; sourceTree = "<group>"; };
+		547EF9EF1EF7B9B00036753F /* KYDarenCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYDarenCell.swift; sourceTree = "<group>"; };
+		547EF9F01EF7B9B00036753F /* KYDarenCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYDarenCell.xib; sourceTree = "<group>"; };
+		547EF9F11EF7B9B00036753F /* KYEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYEventCell.swift; sourceTree = "<group>"; };
+		547EF9F21EF7B9B00036753F /* KYEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYEventCell.xib; sourceTree = "<group>"; };
+		547EF9F31EF7B9B00036753F /* KYFeaturedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFeaturedCell.swift; sourceTree = "<group>"; };
+		547EF9F41EF7B9B00036753F /* KYFeaturedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYFeaturedCell.xib; sourceTree = "<group>"; };
+		547EF9F51EF7B9B00036753F /* KYFocusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFocusCell.swift; sourceTree = "<group>"; };
+		547EF9F61EF7B9B00036753F /* KYFocusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYFocusCell.xib; sourceTree = "<group>"; };
+		547EF9F71EF7B9B00036753F /* KYSlideCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYSlideCollectionViewCell.swift; sourceTree = "<group>"; };
+		547EF9F81EF7B9B00036753F /* KYSlideCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYSlideCollectionViewCell.xib; sourceTree = "<group>"; };
 		549BCD8B1EF3B6CB0097E916 /* KYPageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYPageCollectionViewCell.swift; sourceTree = "<group>"; };
 		549BCD8D1EF3BFF70097E916 /* KYLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYLayout.swift; sourceTree = "<group>"; };
-		549BCD8F1EF3C8110097E916 /* KYFocusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFocusCell.swift; sourceTree = "<group>"; };
-		549BCD911EF3C8200097E916 /* KYFocusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYFocusCell.xib; sourceTree = "<group>"; };
 		549BCD931EF3C8730097E916 /* KYFocusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFocusModel.swift; sourceTree = "<group>"; };
-		54EB17D51EF263EE005D6791 /* KYAdvanceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYAdvanceView.xib; sourceTree = "<group>"; };
-		54EB17D71EF2641B005D6791 /* KYAdvanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYAdvanceView.swift; sourceTree = "<group>"; };
-		54EB17D91EF2647E005D6791 /* KYNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYNavigationView.swift; sourceTree = "<group>"; };
-		54EB17DB1EF26489005D6791 /* KYNavigationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYNavigationView.xib; sourceTree = "<group>"; };
 		54EB17DD1EF2684D005D6791 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		54EB17E31EF27E41005D6791 /* KYFeaturedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFeaturedCell.swift; sourceTree = "<group>"; };
-		54EB17E41EF27E41005D6791 /* KYFeaturedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYFeaturedCell.xib; sourceTree = "<group>"; };
 		5FC183425314ED4C1FE5D2E7 /* Pods-KYHandMade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KYHandMade.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KYHandMade/Pods-KYHandMade.debug.xcconfig"; sourceTree = "<group>"; };
 		BCC62D6337226E72EE2A3997 /* Pods-KYHandMade.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KYHandMade.release.xcconfig"; path = "Pods/Target Support Files/Pods-KYHandMade/Pods-KYHandMade.release.xcconfig"; sourceTree = "<group>"; };
 		C164B324D2D51207744875E1 /* Pods_KYHandMade.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KYHandMade.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,6 +298,8 @@
 				549BCD8D1EF3BFF70097E916 /* KYLayout.swift */,
 				549BCD931EF3C8730097E916 /* KYFocusModel.swift */,
 				547EF9C91EF7643D0036753F /* KYDaRenModel.swift */,
+				547EF9D51EF798260036753F /* KYEventModel.swift */,
+				547EF9E11EF7AF0E0036753F /* KYSlideShopModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -289,20 +307,8 @@
 		543085D01EEE6F590093E766 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				545EA4F41EEFC6D7004C5CB3 /* KYFeaturedView.swift */,
-				545EA4F61EEFCD7F004C5CB3 /* KYFocusView.swift */,
-				545EA4F81EEFCD98004C5CB3 /* KYDaRenView.swift */,
-				545EA4FA1EEFCDAA004C5CB3 /* KYEventView.swift */,
-				54EB17D51EF263EE005D6791 /* KYAdvanceView.xib */,
-				54EB17D71EF2641B005D6791 /* KYAdvanceView.swift */,
-				54EB17D91EF2647E005D6791 /* KYNavigationView.swift */,
-				54EB17DB1EF26489005D6791 /* KYNavigationView.xib */,
-				54EB17E31EF27E41005D6791 /* KYFeaturedCell.swift */,
-				54EB17E41EF27E41005D6791 /* KYFeaturedCell.xib */,
-				549BCD8F1EF3C8110097E916 /* KYFocusCell.swift */,
-				549BCD911EF3C8200097E916 /* KYFocusCell.xib */,
-				547EF9CB1EF766DF0036753F /* KYDarenCell.swift */,
-				547EF9CD1EF766F90036753F /* KYDarenCell.xib */,
+				547EF9E31EF7B9B00036753F /* pageView */,
+				547EF9EE1EF7B9B00036753F /* PageViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -535,6 +541,40 @@
 			path = KYHandMade;
 			sourceTree = "<group>";
 		};
+		547EF9E31EF7B9B00036753F /* pageView */ = {
+			isa = PBXGroup;
+			children = (
+				547EF9E41EF7B9B00036753F /* KYAdvanceView.swift */,
+				547EF9E51EF7B9B00036753F /* KYAdvanceView.xib */,
+				547EF9E61EF7B9B00036753F /* KYDaRenView.swift */,
+				547EF9E71EF7B9B00036753F /* KYEventNewView.swift */,
+				547EF9E81EF7B9B00036753F /* KYEventView.swift */,
+				547EF9E91EF7B9B00036753F /* KYFeaturedView.swift */,
+				547EF9EA1EF7B9B00036753F /* KYFocusView.swift */,
+				547EF9EB1EF7B9B00036753F /* KYNavigationView.swift */,
+				547EF9EC1EF7B9B00036753F /* KYNavigationView.xib */,
+				547EF9ED1EF7B9B00036753F /* KYWebView.swift */,
+			);
+			path = pageView;
+			sourceTree = "<group>";
+		};
+		547EF9EE1EF7B9B00036753F /* PageViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				547EF9EF1EF7B9B00036753F /* KYDarenCell.swift */,
+				547EF9F01EF7B9B00036753F /* KYDarenCell.xib */,
+				547EF9F11EF7B9B00036753F /* KYEventCell.swift */,
+				547EF9F21EF7B9B00036753F /* KYEventCell.xib */,
+				547EF9F31EF7B9B00036753F /* KYFeaturedCell.swift */,
+				547EF9F41EF7B9B00036753F /* KYFeaturedCell.xib */,
+				547EF9F51EF7B9B00036753F /* KYFocusCell.swift */,
+				547EF9F61EF7B9B00036753F /* KYFocusCell.xib */,
+				547EF9F71EF7B9B00036753F /* KYSlideCollectionViewCell.swift */,
+				547EF9F81EF7B9B00036753F /* KYSlideCollectionViewCell.xib */,
+			);
+			path = PageViewCell;
+			sourceTree = "<group>";
+		};
 		EC879C8DB671CE6F51E5DC5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -616,13 +656,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				547E16831EE94D7B0020E0A7 /* Assets.xcassets in Resources */,
+				547EFA081EF7B9B00036753F /* KYFeaturedCell.xib in Resources */,
+				547EFA041EF7B9B00036753F /* KYDarenCell.xib in Resources */,
 				543085F01EEE6F590093E766 /* KYAdViewController.xib in Resources */,
-				54EB17D61EF263EE005D6791 /* KYAdvanceView.xib in Resources */,
+				547EFA0C1EF7B9B00036753F /* KYSlideCollectionViewCell.xib in Resources */,
+				547EF9FA1EF7B9B00036753F /* KYAdvanceView.xib in Resources */,
 				5470E22D1EF0F69A00282FA0 /* KYWebViewController.storyboard in Resources */,
-				549BCD921EF3C8200097E916 /* KYFocusCell.xib in Resources */,
-				54EB17DC1EF26489005D6791 /* KYNavigationView.xib in Resources */,
-				547EF9CE1EF766F90036753F /* KYDarenCell.xib in Resources */,
-				54EB17E61EF27E41005D6791 /* KYFeaturedCell.xib in Resources */,
+				547EFA0A1EF7B9B00036753F /* KYFocusCell.xib in Resources */,
+				547EFA011EF7B9B00036753F /* KYNavigationView.xib in Resources */,
+				547EFA061EF7B9B00036753F /* KYEventCell.xib in Resources */,
 				543085F91EEE6F590093E766 /* KYNewFeatureCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -684,47 +726,53 @@
 			files = (
 				543085F61EEE6F590093E766 /* KYMyTableViewController.swift in Sources */,
 				547EF9CA1EF7643D0036753F /* KYDaRenModel.swift in Sources */,
+				547EF9FE1EF7B9B00036753F /* KYFeaturedView.swift in Sources */,
+				547EF9FF1EF7B9B00036753F /* KYFocusView.swift in Sources */,
 				543085FC1EEE6F590093E766 /* KYTutorialTableViewController.swift in Sources */,
-				54EB17E51EF27E41005D6791 /* KYFeaturedCell.swift in Sources */,
 				5470E22F1EF0F75300282FA0 /* KYPageRouter.swift in Sources */,
 				543085F31EEE6F590093E766 /* KYHomController.swift in Sources */,
+				547EF9FD1EF7B9B00036753F /* KYEventView.swift in Sources */,
 				545EA50E1EEFEFF2004C5CB3 /* KYHotModel.swift in Sources */,
 				5470E22B1EF0F62500282FA0 /* KYSlideLessonController.swift in Sources */,
-				545EA4F51EEFC6D7004C5CB3 /* KYFeaturedView.swift in Sources */,
-				54EB17DA1EF2647E005D6791 /* KYNavigationView.swift in Sources */,
 				545EA50C1EEFEFD7004C5CB3 /* KYSlideModel.swift in Sources */,
 				549BCD941EF3C8730097E916 /* KYFocusModel.swift in Sources */,
+				547EF9E21EF7AF0E0036753F /* KYSlideShopModel.swift in Sources */,
 				549BCD8C1EF3B6CB0097E916 /* KYPageCollectionViewCell.swift in Sources */,
 				543085F81EEE6F590093E766 /* KYNewFeatureCell.swift in Sources */,
-				545EA4FB1EEFCDAA004C5CB3 /* KYEventView.swift in Sources */,
 				545EA5031EEFDD3A004C5CB3 /* KYCommon.swift in Sources */,
 				545EA5101EEFF007004C5CB3 /* KYNavigationModel.swift in Sources */,
 				545EA5071EEFE630004C5CB3 /* KYConfig.swift in Sources */,
-				547EF9CC1EF766DF0036753F /* KYDarenCell.swift in Sources */,
 				545EA5051EEFDF2B004C5CB3 /* KYProgressHUD.swift in Sources */,
 				545EA4F21EEFC4D0004C5CB3 /* KYPageStyle.swift in Sources */,
+				547EF9FC1EF7B9B00036753F /* KYEventNewView.swift in Sources */,
 				543085EF1EEE6F590093E766 /* KYAdViewController.swift in Sources */,
 				5470E2271EF0F5E700282FA0 /* KYWebViewController.swift in Sources */,
 				5470E2291EF0F60800282FA0 /* KYSlideEventController.swift in Sources */,
+				547EFA031EF7B9B00036753F /* KYDarenCell.swift in Sources */,
 				543085F21EEE6F590093E766 /* KYHandTableViewController.swift in Sources */,
 				545EA4F31EEFC4D0004C5CB3 /* KYPageView.swift in Sources */,
 				549BCD8E1EF3BFF70097E916 /* KYLayout.swift in Sources */,
+				547EFA0B1EF7B9B00036753F /* KYSlideCollectionViewCell.swift in Sources */,
+				547EF9F91EF7B9B00036753F /* KYAdvanceView.swift in Sources */,
+				547EFA001EF7B9B00036753F /* KYNavigationView.swift in Sources */,
 				5470E2311EF10E4C00282FA0 /* KYLessonData.swift in Sources */,
 				543085F41EEE6F590093E766 /* KYNavgationController.swift in Sources */,
-				54EB17D81EF2641B005D6791 /* KYAdvanceView.swift in Sources */,
-				545EA4F71EEFCD7F004C5CB3 /* KYFocusView.swift in Sources */,
+				547EFA091EF7B9B00036753F /* KYFocusCell.swift in Sources */,
 				543085F71EEE6F590093E766 /* KYNewFeatureController.swift in Sources */,
 				543085F11EEE6F590093E766 /* KYFairTableViewController.swift in Sources */,
+				547EFA071EF7B9B00036753F /* KYFeaturedCell.swift in Sources */,
 				545EA50A1EEFEBF9004C5CB3 /* KYFeaturedModel.swift in Sources */,
 				545EA5121EEFF016004C5CB3 /* KYAdvanceModel.swift in Sources */,
+				547EFA021EF7B9B00036753F /* KYWebView.swift in Sources */,
+				547EF9D61EF798260036753F /* KYEventModel.swift in Sources */,
 				543085FA1EEE6F590093E766 /* AppDelegate.swift in Sources */,
 				543085FB1EEE6F590093E766 /* KYCommonTool.swift in Sources */,
 				543085F51EEE6F590093E766 /* KYTabBarController.swift in Sources */,
 				545EA5011EEFD6BA004C5CB3 /* KYNetWorkTool.swift in Sources */,
+				547EFA051EF7B9B00036753F /* KYEventCell.swift in Sources */,
+				547EF9FB1EF7B9B00036753F /* KYDaRenView.swift in Sources */,
 				547EF9D01EF77CA60036753F /* KYDaRenPicController.swift in Sources */,
-				545EA4F91EEFCD98004C5CB3 /* KYDaRenView.swift in Sources */,
 				54EB17DE1EF2684D005D6791 /* UIViewExtension.swift in Sources */,
-				549BCD901EF3C8110097E916 /* KYFocusCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

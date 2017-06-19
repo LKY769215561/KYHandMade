@@ -11,5 +11,6 @@ target 'KYHandMade' do
  pod 'SVProgressHUD', '~> 2.0.3'
  pod 'SDCycleScrollView','~> 1.64'
  pod 'MJRefresh', '~> 3.1.0'
+ pod 'VCTransitionsLibrary', '~> 1.5.0'
  pod 'FMDB'
 end
