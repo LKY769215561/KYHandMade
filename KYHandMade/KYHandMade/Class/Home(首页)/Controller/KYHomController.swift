@@ -11,47 +11,41 @@ import Kingfisher
 
 class KYHomController: UIViewController {
 
-    var pageView : KYPageView!
+    lazy var pageView : KYPageView = {
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-        let pageFrame = CGRect(x:0,y:64,width:view.bounds.width,height:view.bounds.height-64-44)
+        let pageFrame = CGRect(x:0,y:NAVBAR_HEIGHT,width:SCREEN_WIDTH,height:(SCREEN_HEIGHT - NAVBAR_HEIGHT - TABBAR_HEIGHT))
         let titles = ["精选","关注","达人","活动"]
         var pageStyle = KYPageStyle()
         pageStyle.isScrollEnable = false
         
-        pageView = KYPageView(frame:pageFrame,titles:titles,style:pageStyle)
-        pageView.delegate = self
+        let  pgView = KYPageView(frame:pageFrame,titles:titles,style:pageStyle)
+        pgView.delegate = self
+        return pgView
+    }()
+    
+    lazy var contentViews : [UIView] = {
+    
+        let contentFrame = CGRect(x:0, y:0, width:SCREEN_WIDTH, height:self.pageView.frame.height - self.pageView.style.tabHeight)
+        var contents = [UIView]()          //添加子控件
+         contents.append(KYFeaturedView(frame:contentFrame))
+         contents.append(KYFocusView(frame:contentFrame))
+         contents.append(KYDaRenView(frame:contentFrame))
+         contents.append(KYEventView(frame:contentFrame))
+        
+         return contents
+    }()
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         view.addSubview(pageView)
-        
-     
-        
     }
 
 }
 
 extension KYHomController : KYPageViewDelegate{
-
     func pageViewDidShowContentView(currentIndex: Int, title: String) -> UIView {
-        
-        
-        let contentFrame = CGRect(x:0, y:0, width:view.bounds.width, height:pageView.frame.height-pageView.style.tabHeight)
-        
-        switch currentIndex {
-        case 0:
-            return KYFeaturedView(frame:contentFrame)
-        case 1:
-            return KYFocusView(frame:contentFrame)
-        case 2:
-            return KYDaRenView(frame:contentFrame)
-        case 3:
-            return KYEventView(frame:contentFrame)
-        default :
-            return UIView()
-        }
+     return contentViews[currentIndex]
     }
-
 }

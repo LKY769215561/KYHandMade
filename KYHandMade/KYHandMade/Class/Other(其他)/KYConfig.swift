@@ -9,12 +9,17 @@
 import UIKit
 import MJRefresh
 
+/// 全局常量
+let SCREEN_BOUNDS : CGRect = UIScreen.main.bounds
+let SCREEN_WIDTH  : CGFloat = SCREEN_BOUNDS.width
+let SCREEN_HEIGHT : CGFloat = SCREEN_BOUNDS.height
+let NAVBAR_HEIGHT : CGFloat = 64
+let TABBAR_HEIGHT : CGFloat = 44
 
-let SCREEN_BOUNDS = UIScreen.main.bounds
-let SCREEN_WIDTH = SCREEN_BOUNDS.width
-let SCREEN_HEIGHT = SCREEN_BOUNDS.height
+
 let APP = UIApplication.shared.delegate as! AppDelegate
-
+let authorBlog = "http://www.jianshu.com/u/28f6cc948fa1"
+let authorGithub = "https://github.com/LKY769215561"
 
 /**
  RGB颜色构造
@@ -22,6 +27,8 @@ let APP = UIApplication.shared.delegate as! AppDelegate
 func RGB(_ r: CGFloat, g: CGFloat, b: CGFloat, alpha: CGFloat) -> UIColor {
     return UIColor(red: r / 255.0, green: g/255.0, blue: b/255.0, alpha: alpha)
 }
+
+let KYCommonBgColor = RGB(206, g: 206, b: 206, alpha: 1)
 
 /**
  快速创建上拉加载更多控件
@@ -57,6 +64,7 @@ func setupHeaderRefresh(_ target: AnyObject, action: Selector) -> MJRefreshNorma
  快速创建下拉加载最新控件
  */
 func setupJianDaoHeaderRefresh(_ target: AnyObject, action: Selector) -> MJRefreshGifHeader {
+    
     let headerRefresh = MJRefreshGifHeader(refreshingTarget: target, refreshingAction: action)
     headerRefresh?.lastUpdatedTimeLabel.isHidden = true
     headerRefresh?.isAutomaticallyChangeAlpha = true

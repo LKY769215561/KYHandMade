@@ -23,8 +23,6 @@ class KYFeaturedModel: NSObject {
     
     init(dict : [String : AnyObject]) {
         
-        print(dict)
-        
         for (key,arrayData) in dict {
             
             

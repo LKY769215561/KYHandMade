@@ -102,13 +102,15 @@ class KYFeaturedView: UIView {
     
       fileprivate lazy var tableView : UITableView = {
      
-      let tabView = UITableView(frame: self.bounds, style: .plain)
+    
+      let tabView = UITableView(frame: CGRect(x:0, y:0, width:SCREEN_WIDTH, height:SCREEN_HEIGHT-NAVBAR_HEIGHT-TABBAR_HEIGHT-40), style: .plain)
       tabView.mj_header = setupJianDaoHeaderRefresh(self, action: #selector(loadNewData))
       tabView.tableHeaderView = self.featureHeader    //防止头部不跟随滚动
         
       tabView.dataSource = self
       tabView.delegate = self
       tabView.register(UINib(nibName:"KYFeaturedCell", bundle:nil), forCellReuseIdentifier: KYFeaturedViewCellId)
+      tabView.mj_header.beginRefreshing()
       return tabView
     
     }()
@@ -117,13 +119,12 @@ class KYFeaturedView: UIView {
         super.init(frame:frame)
         
         addSubview(tableView)
-        
-        tableView.mj_header.beginRefreshing()
+      
     }
     
 
     
-    func loadNewData() {
+  @objc private  func loadNewData() {
         
         let paramet : [String : AnyObject] = [
          

@@ -10,7 +10,7 @@ import UIKit
 
 let KYVersionKey = "curVersion"
 
-class KYGuideTool: NSObject {
+class KYCommonTool: NSObject {
 
     
     class func chooseRootViewController() -> UIViewController {
@@ -43,5 +43,21 @@ class KYGuideTool: NSObject {
         
     }
     
+   class func openUrl(str:String?) {
+        
+        guard let urlStr = str else {
+            return
+        }
+        let url = URL(string:urlStr)
+    
+        guard let url2 = url else {
+            return
+        }
+       UIApplication.shared.openURL(url2)
+    }
+    
     
 }
+
+
+
