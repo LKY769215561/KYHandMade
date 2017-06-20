@@ -49,10 +49,6 @@ class KYTabBarController: UITabBarController {
         kSelImgKey : "icon_wode_s"]
             
         ]
-
-
-
-        
         
         for  dict in childItemsArray {
         

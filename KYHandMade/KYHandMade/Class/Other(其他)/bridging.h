@@ -12,4 +12,7 @@
 //#import <MJRefresh/MJRefresh.h>
 
 
+
+#import "XWCoolAnimator.h"
+#import "UIViewController+XWTransition.h"
 #endif /* bridging_h */

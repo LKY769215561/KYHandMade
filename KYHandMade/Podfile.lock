@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.4.0)
+  - DOPDropDownMenu (0.1.1)
+  - DynamicColor (3.3)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
@@ -13,10 +15,11 @@ PODS:
   - SnapKit (3.2.0)
   - SVProgressHUD (2.0.4)
   - SwiftyJSON (3.1.4)
-  - VCTransitionsLibrary (1.5.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4.0)
+  - DOPDropDownMenu (~> 0.1.1)
+  - DynamicColor (~> 3.3)
   - FMDB
   - Kingfisher (~> 3.9.1)
   - MJRefresh (~> 3.1.0)
@@ -24,10 +27,11 @@ DEPENDENCIES:
   - SnapKit (~> 3.2.0)
   - SVProgressHUD (~> 2.0.3)
   - SwiftyJSON (~> 3.1.4)
-  - VCTransitionsLibrary (~> 1.5.0)
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  DOPDropDownMenu: 92edceaee75cd8703d9891b4844d48c0d0a2ae54
+  DynamicColor: 3cdaa1e01c16e93ba744e0630f768373e0fc7a7d
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   Kingfisher: 6729a0baaa458245bfb8cd5a1296c71c10d6eb6c
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
@@ -36,8 +40,7 @@ SPEC CHECKSUMS:
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
-  VCTransitionsLibrary: d61fd9b7b6721942f0d583bcc0e7f8c31ec9271b
 
-PODFILE CHECKSUM: baa7c54a9b260f343a78fee27161c97ad37abae1
+PODFILE CHECKSUM: bd478317af47dc102eef235c4f992b948f5b3647
 
 COCOAPODS: 1.2.1

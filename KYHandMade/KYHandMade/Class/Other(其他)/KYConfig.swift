@@ -8,6 +8,9 @@
 
 import UIKit
 import MJRefresh
+import DynamicColor
+
+
 
 /// 全局常量
 let SCREEN_BOUNDS : CGRect = UIScreen.main.bounds
@@ -24,11 +27,11 @@ let authorGithub = "https://github.com/LKY769215561"
 /**
  RGB颜色构造
  */
-func RGB(_ r: CGFloat, g: CGFloat, b: CGFloat, alpha: CGFloat) -> UIColor {
+func KYRGB(_ r: CGFloat, g: CGFloat, b: CGFloat, alpha: CGFloat) -> UIColor {
     return UIColor(red: r / 255.0, green: g/255.0, blue: b/255.0, alpha: alpha)
 }
 
-let KYCommonBgColor = RGB(206, g: 206, b: 206, alpha: 1)
+let KYCommonBgColor = KYRGB(206, g: 206, b: 206, alpha: 1)
 
 /**
  快速创建上拉加载更多控件

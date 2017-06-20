@@ -76,6 +76,13 @@ extension UIView {
         }
     }
     
+    public var right : CGFloat{
+    
+        get{
+        return self.frame.maxX
+        }
+    }
+    
     
     
 }

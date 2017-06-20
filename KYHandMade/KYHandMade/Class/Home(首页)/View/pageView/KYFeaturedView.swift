@@ -127,11 +127,11 @@ class KYFeaturedView: UIView {
     
   @objc private  func loadNewData() {
         
-        let paramet : [String : AnyObject] = [
+        let paramet : [String : Any] = [
          
-            "c" : "index" as AnyObject,
-            "a" : "indexNewest" as AnyObject,
-            "vid" : "18" as AnyObject
+            "c" : "index",
+            "a" : "indexNewest",
+            "vid" : "18"
         ]
         
         

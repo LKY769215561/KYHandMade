@@ -140,7 +140,7 @@ extension KYWebView : UIScrollViewDelegate{
 extension KYWebView : UIWebViewDelegate{
 
     func webViewDidStartLoad(_ webView: UIWebView) {
-        KYProgressHUD.show()
+        KYProgressHUD.showInfoWithStatus("小客正在努力加载中...")
     }
     
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {

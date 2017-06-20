@@ -12,6 +12,8 @@ private let reuseIdentifier = "Cell"
 
 class KYDaRenPicController: UICollectionViewController {
 
+        var tagCpunt :String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
