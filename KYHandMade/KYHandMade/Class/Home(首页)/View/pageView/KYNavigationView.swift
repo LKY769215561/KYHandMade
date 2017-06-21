@@ -42,6 +42,7 @@ class KYNavigationView: UIView {
     func navgationItemAction(tap : UITapGestureRecognizer) {
         let webVC = KYWebViewController()
         webVC.navgationModel = navgationModel
+        webVC.isPush = false
         KYPageRouter.getCurrentNav()?.pushViewController(webVC, animated: true)
     }
     

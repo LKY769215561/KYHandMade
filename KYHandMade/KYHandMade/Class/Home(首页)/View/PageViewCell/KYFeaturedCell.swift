@@ -10,11 +10,13 @@ import UIKit
 
 class KYFeaturedCell: UITableViewCell {
 
-
-    
     @IBOutlet weak var BGImageView: UIImageView!
     
     @IBOutlet weak var SubTitle: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
     
     var _hotData : KYHotModel?
     var hotData : KYHotModel?{
@@ -31,9 +33,4 @@ class KYFeaturedCell: UITableViewCell {
         return _hotData
         }
     }
-    
-    
-    
-    
-    
 }

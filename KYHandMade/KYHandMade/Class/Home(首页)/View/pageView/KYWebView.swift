@@ -94,12 +94,27 @@ class KYWebView: UIView {
     }
     
     
+    // 精选热帖
+    var _hotData : KYHotModel?
+    var hotData : KYHotModel?{
+        
+        set{
+            _hotData = newValue
+            loadURL(urlStr: _hotData?.mob_h5_url, title: "专题详情")
+        }
+        get{
+            
+            return _hotData
+        }
+    }
+    
+    
     private   lazy  var webView : UIWebView = {
     
         let webV = UIWebView(frame: self.bounds)
         webV.delegate = self
         webV.scalesPageToFit = true
-        webV.backgroundColor = UIColor.white
+        webV.backgroundColor = UIColor.lightGray
         webV.scrollView.delegate = self
         return webV
         

@@ -41,6 +41,7 @@ class KYAdvanceView: UIView {
     func advanceItemAction(tap : UITapGestureRecognizer) {
         let webVC = KYWebViewController()
         webVC.advanceModel = self.advanceModel
+        webVC.isPush = true
         KYPageRouter.getCurrentNav()?.pushViewController(webVC, animated: true)
     }
     

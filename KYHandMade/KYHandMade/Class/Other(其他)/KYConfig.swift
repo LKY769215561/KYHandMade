@@ -14,6 +14,7 @@ import DynamicColor
 
 /// 全局常量
 let SCREEN_BOUNDS : CGRect = UIScreen.main.bounds
+let SCREEN_SIZE   : CGSize = UIScreen.main.bounds.size
 let SCREEN_WIDTH  : CGFloat = SCREEN_BOUNDS.width
 let SCREEN_HEIGHT : CGFloat = SCREEN_BOUNDS.height
 let NAVBAR_HEIGHT : CGFloat = 64

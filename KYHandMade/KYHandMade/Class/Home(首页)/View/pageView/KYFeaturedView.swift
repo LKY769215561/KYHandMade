@@ -190,6 +190,7 @@ extension KYFeaturedView: SDCycleScrollViewDelegate {
         
          let webVC = KYWebViewController()
          webVC.slide = slideModel
+            webVC.isPush = true
          KYPageRouter.getCurrentNav()?.pushViewController(webVC, animated: true)
         }else if(slideModel.itemtype == "event"){
         
@@ -230,8 +231,6 @@ extension KYFeaturedView : UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let hotModel = featureDataModel?.dataHotArray[indexPath.row]
-        
-        
         let featureCell = tableView.dequeueReusableCell(withIdentifier: KYFeaturedViewCellId)! as! KYFeaturedCell
         featureCell.hotData = hotModel
         return  featureCell
@@ -245,7 +244,12 @@ extension KYFeaturedView : UITableViewDelegate{
   
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        
+        let animator = XWCoolAnimator.xw_animator(with: .portal)
+        let webVC = KYWebViewController()
+        webVC.isPush = false
+        webVC.hotData = featureDataModel?.dataHotArray[indexPath.row]
+        KYPageRouter.getCurrentVC()?.xw_present(webVC, with: animator)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

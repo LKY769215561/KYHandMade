@@ -8,6 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		159062A3ADBE88F9C4AC91D7 /* Pods_KYHandMade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C164B324D2D51207744875E1 /* Pods_KYHandMade.framework */; };
+		540821211EFA13F30035C2F2 /* KYDaRenStepOneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5408211F1EFA13F30035C2F2 /* KYDaRenStepOneCell.swift */; };
+		540821221EFA13F30035C2F2 /* KYDaRenStepOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 540821201EFA13F30035C2F2 /* KYDaRenStepOneCell.xib */; };
+		540821251EFA14090035C2F2 /* KYDaRenStepTwoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540821231EFA14090035C2F2 /* KYDaRenStepTwoCell.swift */; };
+		540821261EFA14090035C2F2 /* KYDaRenStepTwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 540821241EFA14090035C2F2 /* KYDaRenStepTwoCell.xib */; };
+		540821291EFA142D0035C2F2 /* DaRenStepThreeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540821271EFA142D0035C2F2 /* DaRenStepThreeCell.swift */; };
+		5408212A1EFA142D0035C2F2 /* DaRenStepThreeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 540821281EFA142D0035C2F2 /* DaRenStepThreeCell.xib */; };
+		540821321EFA26220035C2F2 /* KYDaRenToolsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540821311EFA26220035C2F2 /* KYDaRenToolsModel.swift */; };
+		540821341EFA26380035C2F2 /* KYDaRenMaterialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540821331EFA26380035C2F2 /* KYDaRenMaterialModel.swift */; };
+		540821361EFA26490035C2F2 /* KYDaRenStepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540821351EFA26490035C2F2 /* KYDaRenStepModel.swift */; };
+		540821381EFA26910035C2F2 /* KYDaRenPicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540821371EFA26910035C2F2 /* KYDaRenPicModel.swift */; };
+		5408213B1EFA5AB40035C2F2 /* KYStepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540821391EFA5AB40035C2F2 /* KYStepTableViewCell.swift */; };
+		5408213C1EFA5AB40035C2F2 /* KYStepTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5408213A1EFA5AB40035C2F2 /* KYStepTableViewCell.xib */; };
+		540821411EFA7E8A0035C2F2 /* KYPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5408213E1EFA7E8A0035C2F2 /* KYPageCollectionViewCell.swift */; };
+		540821421EFA7E8A0035C2F2 /* KYPageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5408213F1EFA7E8A0035C2F2 /* KYPageStyle.swift */; };
+		540821431EFA7E8A0035C2F2 /* KYPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540821401EFA7E8A0035C2F2 /* KYPageView.swift */; };
 		543085EF1EEE6F590093E766 /* KYAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085BE1EEE6F590093E766 /* KYAdViewController.swift */; };
 		543085F01EEE6F590093E766 /* KYAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 543085BF1EEE6F590093E766 /* KYAdViewController.xib */; };
 		543085F11EEE6F590093E766 /* KYFairTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085C41EEE6F590093E766 /* KYFairTableViewController.swift */; };
@@ -22,8 +37,6 @@
 		543085FA1EEE6F590093E766 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085E41EEE6F590093E766 /* AppDelegate.swift */; };
 		543085FB1EEE6F590093E766 /* KYCommonTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085E91EEE6F590093E766 /* KYCommonTool.swift */; };
 		543085FC1EEE6F590093E766 /* KYTutorialTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085EC1EEE6F590093E766 /* KYTutorialTableViewController.swift */; };
-		545EA4F21EEFC4D0004C5CB3 /* KYPageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA4EF1EEFC4D0004C5CB3 /* KYPageStyle.swift */; };
-		545EA4F31EEFC4D0004C5CB3 /* KYPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA4F01EEFC4D0004C5CB3 /* KYPageView.swift */; };
 		545EA5011EEFD6BA004C5CB3 /* KYNetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA5001EEFD6BA004C5CB3 /* KYNetWorkTool.swift */; };
 		545EA5031EEFDD3A004C5CB3 /* KYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA5021EEFDD3A004C5CB3 /* KYCommon.swift */; };
 		545EA5051EEFDF2B004C5CB3 /* KYProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA5041EEFDF2B004C5CB3 /* KYProgressHUD.swift */; };
@@ -100,13 +113,27 @@
 		547EFA0A1EF7B9B00036753F /* KYFocusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EF9F61EF7B9B00036753F /* KYFocusCell.xib */; };
 		547EFA0B1EF7B9B00036753F /* KYSlideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EF9F71EF7B9B00036753F /* KYSlideCollectionViewCell.swift */; };
 		547EFA0C1EF7B9B00036753F /* KYSlideCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EF9F81EF7B9B00036753F /* KYSlideCollectionViewCell.xib */; };
-		549BCD8C1EF3B6CB0097E916 /* KYPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549BCD8B1EF3B6CB0097E916 /* KYPageCollectionViewCell.swift */; };
 		549BCD8E1EF3BFF70097E916 /* KYLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549BCD8D1EF3BFF70097E916 /* KYLayout.swift */; };
 		549BCD941EF3C8730097E916 /* KYFocusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549BCD931EF3C8730097E916 /* KYFocusModel.swift */; };
 		54EB17DE1EF2684D005D6791 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB17DD1EF2684D005D6791 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5408211F1EFA13F30035C2F2 /* KYDaRenStepOneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYDaRenStepOneCell.swift; sourceTree = "<group>"; };
+		540821201EFA13F30035C2F2 /* KYDaRenStepOneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYDaRenStepOneCell.xib; sourceTree = "<group>"; };
+		540821231EFA14090035C2F2 /* KYDaRenStepTwoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYDaRenStepTwoCell.swift; sourceTree = "<group>"; };
+		540821241EFA14090035C2F2 /* KYDaRenStepTwoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYDaRenStepTwoCell.xib; sourceTree = "<group>"; };
+		540821271EFA142D0035C2F2 /* DaRenStepThreeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaRenStepThreeCell.swift; sourceTree = "<group>"; };
+		540821281EFA142D0035C2F2 /* DaRenStepThreeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DaRenStepThreeCell.xib; sourceTree = "<group>"; };
+		540821311EFA26220035C2F2 /* KYDaRenToolsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYDaRenToolsModel.swift; sourceTree = "<group>"; };
+		540821331EFA26380035C2F2 /* KYDaRenMaterialModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYDaRenMaterialModel.swift; sourceTree = "<group>"; };
+		540821351EFA26490035C2F2 /* KYDaRenStepModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYDaRenStepModel.swift; sourceTree = "<group>"; };
+		540821371EFA26910035C2F2 /* KYDaRenPicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYDaRenPicModel.swift; sourceTree = "<group>"; };
+		540821391EFA5AB40035C2F2 /* KYStepTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYStepTableViewCell.swift; sourceTree = "<group>"; };
+		5408213A1EFA5AB40035C2F2 /* KYStepTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYStepTableViewCell.xib; sourceTree = "<group>"; };
+		5408213E1EFA7E8A0035C2F2 /* KYPageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYPageCollectionViewCell.swift; sourceTree = "<group>"; };
+		5408213F1EFA7E8A0035C2F2 /* KYPageStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYPageStyle.swift; sourceTree = "<group>"; };
+		540821401EFA7E8A0035C2F2 /* KYPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYPageView.swift; sourceTree = "<group>"; };
 		543085BE1EEE6F590093E766 /* KYAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYAdViewController.swift; sourceTree = "<group>"; };
 		543085BF1EEE6F590093E766 /* KYAdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYAdViewController.xib; sourceTree = "<group>"; };
 		543085C41EEE6F590093E766 /* KYFairTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFairTableViewController.swift; sourceTree = "<group>"; };
@@ -121,8 +148,6 @@
 		543085E41EEE6F590093E766 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		543085E91EEE6F590093E766 /* KYCommonTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCommonTool.swift; sourceTree = "<group>"; };
 		543085EC1EEE6F590093E766 /* KYTutorialTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYTutorialTableViewController.swift; sourceTree = "<group>"; };
-		545EA4EF1EEFC4D0004C5CB3 /* KYPageStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYPageStyle.swift; sourceTree = "<group>"; };
-		545EA4F01EEFC4D0004C5CB3 /* KYPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYPageView.swift; sourceTree = "<group>"; };
 		545EA5001EEFD6BA004C5CB3 /* KYNetWorkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYNetWorkTool.swift; sourceTree = "<group>"; };
 		545EA5021EEFDD3A004C5CB3 /* KYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCommon.swift; sourceTree = "<group>"; };
 		545EA5041EEFDF2B004C5CB3 /* KYProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYProgressHUD.swift; sourceTree = "<group>"; };
@@ -228,7 +253,6 @@
 		547EF9F61EF7B9B00036753F /* KYFocusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYFocusCell.xib; sourceTree = "<group>"; };
 		547EF9F71EF7B9B00036753F /* KYSlideCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYSlideCollectionViewCell.swift; sourceTree = "<group>"; };
 		547EF9F81EF7B9B00036753F /* KYSlideCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYSlideCollectionViewCell.xib; sourceTree = "<group>"; };
-		549BCD8B1EF3B6CB0097E916 /* KYPageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYPageCollectionViewCell.swift; sourceTree = "<group>"; };
 		549BCD8D1EF3BFF70097E916 /* KYLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYLayout.swift; sourceTree = "<group>"; };
 		549BCD931EF3C8730097E916 /* KYFocusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFocusModel.swift; sourceTree = "<group>"; };
 		54EB17DD1EF2684D005D6791 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -249,6 +273,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5408213D1EFA7E8A0035C2F2 /* KYPageView */ = {
+			isa = PBXGroup;
+			children = (
+				5408213E1EFA7E8A0035C2F2 /* KYPageCollectionViewCell.swift */,
+				5408213F1EFA7E8A0035C2F2 /* KYPageStyle.swift */,
+				540821401EFA7E8A0035C2F2 /* KYPageView.swift */,
+			);
+			path = KYPageView;
+			sourceTree = "<group>";
+		};
 		543085BB1EEE6F590093E766 /* Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -398,6 +432,10 @@
 				547EF9C91EF7643D0036753F /* KYDaRenModel.swift */,
 				547EF9D51EF798260036753F /* KYEventModel.swift */,
 				547EF9E11EF7AF0E0036753F /* KYSlideShopModel.swift */,
+				540821311EFA26220035C2F2 /* KYDaRenToolsModel.swift */,
+				540821331EFA26380035C2F2 /* KYDaRenMaterialModel.swift */,
+				540821351EFA26490035C2F2 /* KYDaRenStepModel.swift */,
+				540821371EFA26910035C2F2 /* KYDaRenPicModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -602,21 +640,10 @@
 		543086081EEE89200093E766 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				5408213D1EFA7E8A0035C2F2 /* KYPageView */,
 				547E26201EF92133003F4DB8 /* XWTransition */,
-				545EA4ED1EEFC4D0004C5CB3 /* Classes */,
 			);
 			path = lib;
-			sourceTree = "<group>";
-		};
-		545EA4ED1EEFC4D0004C5CB3 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				549BCD8B1EF3B6CB0097E916 /* KYPageCollectionViewCell.swift */,
-				545EA4EF1EEFC4D0004C5CB3 /* KYPageStyle.swift */,
-				545EA4F01EEFC4D0004C5CB3 /* KYPageView.swift */,
-			);
-			name = Classes;
-			path = "../../../../../../../../维护框架/KYPageView/KYPageView/KYPageView/Classes";
 			sourceTree = "<group>";
 		};
 		547E166F1EE94D7B0020E0A7 = {
@@ -803,6 +830,14 @@
 				547EF9F61EF7B9B00036753F /* KYFocusCell.xib */,
 				547EF9F71EF7B9B00036753F /* KYSlideCollectionViewCell.swift */,
 				547EF9F81EF7B9B00036753F /* KYSlideCollectionViewCell.xib */,
+				5408211F1EFA13F30035C2F2 /* KYDaRenStepOneCell.swift */,
+				540821201EFA13F30035C2F2 /* KYDaRenStepOneCell.xib */,
+				540821231EFA14090035C2F2 /* KYDaRenStepTwoCell.swift */,
+				540821241EFA14090035C2F2 /* KYDaRenStepTwoCell.xib */,
+				540821271EFA142D0035C2F2 /* DaRenStepThreeCell.swift */,
+				540821281EFA142D0035C2F2 /* DaRenStepThreeCell.xib */,
+				540821391EFA5AB40035C2F2 /* KYStepTableViewCell.swift */,
+				5408213A1EFA5AB40035C2F2 /* KYStepTableViewCell.xib */,
 			);
 			path = PageViewCell;
 			sourceTree = "<group>";
@@ -887,16 +922,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5408212A1EFA142D0035C2F2 /* DaRenStepThreeCell.xib in Resources */,
+				5408213C1EFA5AB40035C2F2 /* KYStepTableViewCell.xib in Resources */,
 				547E16831EE94D7B0020E0A7 /* Assets.xcassets in Resources */,
 				547E26661EF92133003F4DB8 /* restrictedshine.tiff in Resources */,
 				547EFA081EF7B9B00036753F /* KYFeaturedCell.xib in Resources */,
 				547EFA041EF7B9B00036753F /* KYDarenCell.xib in Resources */,
+				540821221EFA13F30035C2F2 /* KYDaRenStepOneCell.xib in Resources */,
 				543085F01EEE6F590093E766 /* KYAdViewController.xib in Resources */,
 				547EFA0C1EF7B9B00036753F /* KYSlideCollectionViewCell.xib in Resources */,
 				547EF9FA1EF7B9B00036753F /* KYAdvanceView.xib in Resources */,
 				547E261D1EF90316003F4DB8 /* KYTutorialPicCell.xib in Resources */,
 				547EFA0A1EF7B9B00036753F /* KYFocusCell.xib in Resources */,
 				547E26651EF92133003F4DB8 /* mask.jpg in Resources */,
+				540821261EFA14090035C2F2 /* KYDaRenStepTwoCell.xib in Resources */,
 				547EFA011EF7B9B00036753F /* KYNavigationView.xib in Resources */,
 				547EFA061EF7B9B00036753F /* KYEventCell.xib in Resources */,
 				543085F91EEE6F590093E766 /* KYNewFeatureCell.xib in Resources */,
@@ -962,40 +1001,46 @@
 				543085F61EEE6F590093E766 /* KYMyTableViewController.swift in Sources */,
 				547EF9CA1EF7643D0036753F /* KYDaRenModel.swift in Sources */,
 				547E26751EF92133003F4DB8 /* XWFilterAnimator+XWMask.m in Sources */,
+				540821251EFA14090035C2F2 /* KYDaRenStepTwoCell.swift in Sources */,
 				547EF9FE1EF7B9B00036753F /* KYFeaturedView.swift in Sources */,
 				547E261F1EF9119D003F4DB8 /* KYTutoriaPicModel.swift in Sources */,
 				547E26761EF92133003F4DB8 /* XWFilterAnimator+XWMod.m in Sources */,
+				540821361EFA26490035C2F2 /* KYDaRenStepModel.swift in Sources */,
 				547EF9FF1EF7B9B00036753F /* KYFocusView.swift in Sources */,
 				543085FC1EEE6F590093E766 /* KYTutorialTableViewController.swift in Sources */,
 				547E26691EF92133003F4DB8 /* XWCoolAnimator+XWFold.m in Sources */,
+				540821341EFA26380035C2F2 /* KYDaRenMaterialModel.swift in Sources */,
 				5470E22F1EF0F75300282FA0 /* KYPageRouter.swift in Sources */,
 				547E266F1EF92133003F4DB8 /* XWCoolAnimator.m in Sources */,
 				543085F31EEE6F590093E766 /* KYHomController.swift in Sources */,
 				547EF9FD1EF7B9B00036753F /* KYEventView.swift in Sources */,
 				547E26681EF92133003F4DB8 /* XWCoolAnimator+XWExplode.m in Sources */,
+				540821421EFA7E8A0035C2F2 /* KYPageStyle.swift in Sources */,
 				547E26671EF92133003F4DB8 /* XWCircleSpreadAnimator.m in Sources */,
+				540821321EFA26220035C2F2 /* KYDaRenToolsModel.swift in Sources */,
 				547E26151EF8F385003F4DB8 /* KYTutoriaVideoController.swift in Sources */,
 				547E26781EF92133003F4DB8 /* XWFilterAnimator+XWRipple.m in Sources */,
 				545EA50E1EEFEFF2004C5CB3 /* KYHotModel.swift in Sources */,
 				5470E22B1EF0F62500282FA0 /* KYSlideLessonController.swift in Sources */,
 				545EA50C1EEFEFD7004C5CB3 /* KYSlideModel.swift in Sources */,
 				547E26601EF92133003F4DB8 /* UINavigationController+XWTransition.m in Sources */,
+				540821411EFA7E8A0035C2F2 /* KYPageCollectionViewCell.swift in Sources */,
+				5408213B1EFA5AB40035C2F2 /* KYStepTableViewCell.swift in Sources */,
 				549BCD941EF3C8730097E916 /* KYFocusModel.swift in Sources */,
 				547EF9E21EF7AF0E0036753F /* KYSlideShopModel.swift in Sources */,
 				547E26611EF92133003F4DB8 /* UIViewController+XWTransition.m in Sources */,
-				549BCD8C1EF3B6CB0097E916 /* KYPageCollectionViewCell.swift in Sources */,
 				543085F81EEE6F590093E766 /* KYNewFeatureCell.swift in Sources */,
 				545EA5031EEFDD3A004C5CB3 /* KYCommon.swift in Sources */,
 				545EA5101EEFF007004C5CB3 /* KYNavigationModel.swift in Sources */,
 				547E26621EF92133003F4DB8 /* XWInteractiveTransition.m in Sources */,
 				547E26191EF8F4EA003F4DB8 /* KYContainerView.swift in Sources */,
 				547E26771EF92133003F4DB8 /* XWFilterAnimator+XWPageCurl.m in Sources */,
+				540821431EFA7E8A0035C2F2 /* KYPageView.swift in Sources */,
 				547E26111EF8B9A0003F4DB8 /* KYNavTitleView.swift in Sources */,
 				547E267C1EF92133003F4DB8 /* XWMagicMoveAnimator.m in Sources */,
 				547E26701EF92133003F4DB8 /* XWDrawerAnimator.m in Sources */,
 				545EA5071EEFE630004C5CB3 /* KYConfig.swift in Sources */,
 				545EA5051EEFDF2B004C5CB3 /* KYProgressHUD.swift in Sources */,
-				545EA4F21EEFC4D0004C5CB3 /* KYPageStyle.swift in Sources */,
 				547E26791EF92133003F4DB8 /* XWFilterAnimator+XWSwipe.m in Sources */,
 				547EF9FC1EF7B9B00036753F /* KYEventNewView.swift in Sources */,
 				543085EF1EEE6F590093E766 /* KYAdViewController.swift in Sources */,
@@ -1005,10 +1050,11 @@
 				5470E2291EF0F60800282FA0 /* KYSlideEventController.swift in Sources */,
 				547E266D1EF92133003F4DB8 /* XWCoolAnimator+XWPortal.m in Sources */,
 				547EFA031EF7B9B00036753F /* KYDarenCell.swift in Sources */,
+				540821381EFA26910035C2F2 /* KYDaRenPicModel.swift in Sources */,
 				547E26731EF92133003F4DB8 /* XWFilterAnimator+XWCopyMachine.m in Sources */,
 				543085F21EEE6F590093E766 /* KYHandTableViewController.swift in Sources */,
-				545EA4F31EEFC4D0004C5CB3 /* KYPageView.swift in Sources */,
 				547E26171EF8F41E003F4DB8 /* KYTutoriSubController.swift in Sources */,
+				540821291EFA142D0035C2F2 /* DaRenStepThreeCell.swift in Sources */,
 				549BCD8E1EF3BFF70097E916 /* KYLayout.swift in Sources */,
 				547E26131EF8F2EE003F4DB8 /* KYTutorialPicController.swift in Sources */,
 				547EFA0B1EF7B9B00036753F /* KYSlideCollectionViewCell.swift in Sources */,
@@ -1029,6 +1075,7 @@
 				547E26711EF92133003F4DB8 /* XWFilterAnimator+XWBarSwipe.m in Sources */,
 				547EF9D61EF798260036753F /* KYEventModel.swift in Sources */,
 				543085FA1EEE6F590093E766 /* AppDelegate.swift in Sources */,
+				540821211EFA13F30035C2F2 /* KYDaRenStepOneCell.swift in Sources */,
 				547E267B1EF92133003F4DB8 /* XWFilterTransitionView.m in Sources */,
 				543085FB1EEE6F590093E766 /* KYCommonTool.swift in Sources */,
 				543085F51EEE6F590093E766 /* KYTabBarController.swift in Sources */,

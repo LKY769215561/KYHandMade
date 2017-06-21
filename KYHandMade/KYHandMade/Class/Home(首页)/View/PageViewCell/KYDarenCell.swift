@@ -90,12 +90,19 @@ class KYDarenCell: UITableViewCell {
     
     @IBAction func gaunzhuBtnClick(_ sender: Any) {
         
-        
+        KYProgressHUD.showWithStatus("开发中...")
     }
     
     func imageViewClick(tap : UITapGestureRecognizer) {
         
-        print(tap.view?.tag)
+        guard let list = _darenModel?.list else {
+            return
+        }
+        let dict = list[(tap.view?.tag)!]
+        let animator = XWCoolAnimator.xw_animator(with: .scanningFromLeft)
+        let picVC = KYDaRenPicController(collectionViewLayout: UICollectionViewLayout())
+        picVC.tagCpunt = dict["hand_id"] as? String
+        KYPageRouter.getCurrentVC()?.xw_present(picVC, with: animator)
         
     }
     

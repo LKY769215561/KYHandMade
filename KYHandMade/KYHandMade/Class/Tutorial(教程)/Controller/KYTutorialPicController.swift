@@ -72,6 +72,17 @@ class KYTutorialPicController: UIViewController {
         
         self.picModels.removeAll()
 
+
+//        guard let oreder = oreder else {
+//            return
+//        }
+        
+//        guard let cateId = cateId else {
+//            return
+//        }
+//        guard let pubtime = pubtime else {
+//            return
+//        }
         
         let paramet : [String : Any] = [
             
@@ -83,6 +94,8 @@ class KYTutorialPicController: UIViewController {
             "cate_id" : cateId ,
             "pub_time" : pubtime
         ]
+        
+        
        KYNetWorkTool.shared.get(HomeBaseURL, parameters: paramet) { (success, result, error) in
         
         self.collectionView.mj_header.endRefreshing()
@@ -104,12 +117,12 @@ class KYTutorialPicController: UIViewController {
             self.collectionView.reloadData()
         }
         }
-        
-        
-        
     }
     
     func loadMoreData() {
+        
+
+        
         let paramet : [String : Any] = [
             
             "c" : "Course" ,
@@ -175,7 +188,7 @@ extension KYTutorialPicController : UICollectionViewDelegate{
        
         let picModel = picModels[indexPath.item]
         let animator = XWCoolAnimator.xw_animator(with: .foldFromRight)
-        let picVC = KYDaRenPicController()
+        let picVC = KYDaRenPicController(collectionViewLayout: UICollectionViewLayout())
         picVC.tagCpunt = picModel.hand_id
         xw_present(picVC, with: animator)
         
