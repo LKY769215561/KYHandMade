@@ -50,30 +50,51 @@ class KYHandView: UIView {
     
     func loadNewData()  {
         
-        let param : [String : Any] = [
+//        let param : [String : Any] = [
+//        
+//          "c":"HandCircle",
+//          "a":"list",
+//          "order":"hot",
+//          "vid":"18",
+//          "cate_id":"1",
+//        ]
+//        
+//        
+//        KYNetWorkTool.shared.get(HomeBaseURL, parameters: param) { (success, result, error) in
+//            
+//            self.tableView.mj_header.endRefreshing()
+//            
+//            print(result?.dictionaryObject)
+//            
+//        }
         
-          "c":"HandCircle",
-          "a":"list",
-          "order":"hot",
-          "vid":"18",
-          "cate_id":"1",
-        ]
         
+      DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) { 
         
-        KYNetWorkTool.shared.get(HomeBaseURL, parameters: param) { (success, result, error) in
-            
             self.tableView.mj_header.endRefreshing()
-            
-            print(result?.dictionaryObject)
-            
+        
+            let filePath = Bundle.main.path(forResource: "handData.json", ofType: nil, inDirectory: nil, forLocalization: nil)
+            guard let filePath2 = filePath else{
+                return
+            }
+            let data = NSData(contentsOfFile: filePath2)
+            let result = KYCommonTool.dataToObj(data: data) as! [String : AnyObject]
+            let publicDict = result["data"] as! [String : AnyObject]
+            let dictList = publicDict["list"] as! [[String : AnyObject]]
+        
+            for dict in dictList{
+                let handModel =  KYHandModel(dict : dict)
+                self.handModels.append(handModel)
+            }
+            self.tableView.reloadData()
         }
         
         
-        
-        tableView.reloadData()
+       
     }
     func loadMoreData()  {
         
+        tableView.mj_footer.endRefreshing()
         tableView.reloadData()
     }
 }
@@ -86,9 +107,14 @@ extension KYHandView : UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: KYHandViewCellId) as! KYHandCell
-        cell.handModel = handModels[indexPath.row]
-        return cell
+        var cell = tableView.dequeueReusableCell(withIdentifier: KYHandViewCellId) as? KYHandCell
+        
+        if cell == nil {
+            cell = KYHandCell(style: .default, reuseIdentifier: KYHandViewCellId)
+        }
+        
+        cell?.handModel = handModels[indexPath.row]
+        return cell!
     }
     
 }
@@ -96,7 +122,7 @@ extension KYHandView : UITableViewDataSource{
 extension KYHandView : UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 200
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

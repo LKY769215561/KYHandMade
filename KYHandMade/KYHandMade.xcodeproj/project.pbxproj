@@ -54,6 +54,7 @@
 		5479355D1EFB60DF0024C563 /* KYHandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5479355C1EFB60DF0024C563 /* KYHandView.swift */; };
 		5479355F1EFB6CDF0024C563 /* KYHandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5479355E1EFB6CDF0024C563 /* KYHandModel.swift */; };
 		547935611EFB6D220024C563 /* KYHandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547935601EFB6D220024C563 /* KYHandCell.swift */; };
+		547935631EFB99E40024C563 /* handData.json in Resources */ = {isa = PBXBuildFile; fileRef = 547935621EFB99E40024C563 /* handData.json */; };
 		547E16831EE94D7B0020E0A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 547E16821EE94D7B0020E0A7 /* Assets.xcassets */; };
 		547E26111EF8B9A0003F4DB8 /* KYNavTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547E26101EF8B9A0003F4DB8 /* KYNavTitleView.swift */; };
 		547E26131EF8F2EE003F4DB8 /* KYTutorialPicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547E26121EF8F2EE003F4DB8 /* KYTutorialPicController.swift */; };
@@ -169,6 +170,7 @@
 		5479355C1EFB60DF0024C563 /* KYHandView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYHandView.swift; sourceTree = "<group>"; };
 		5479355E1EFB6CDF0024C563 /* KYHandModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYHandModel.swift; sourceTree = "<group>"; };
 		547935601EFB6D220024C563 /* KYHandCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYHandCell.swift; sourceTree = "<group>"; };
+		547935621EFB99E40024C563 /* handData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = handData.json; sourceTree = "<group>"; };
 		547E16781EE94D7B0020E0A7 /* KYHandMade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KYHandMade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		547E16821EE94D7B0020E0A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		547E16871EE94D7B0020E0A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 		543085C71EEE6F590093E766 /* Hand(手工圈) */ = {
 			isa = PBXGroup;
 			children = (
+				547935621EFB99E40024C563 /* handData.json */,
 				543085C81EEE6F590093E766 /* Controller */,
 				543085CA1EEE6F590093E766 /* Model */,
 				543085CB1EEE6F590093E766 /* View */,
@@ -947,6 +950,7 @@
 				540821261EFA14090035C2F2 /* KYDaRenStepTwoCell.xib in Resources */,
 				547EFA011EF7B9B00036753F /* KYNavigationView.xib in Resources */,
 				547EFA061EF7B9B00036753F /* KYEventCell.xib in Resources */,
+				547935631EFB99E40024C563 /* handData.json in Resources */,
 				543085F91EEE6F590093E766 /* KYNewFeatureCell.xib in Resources */,
 				547E26641EF92133003F4DB8 /* line.png in Resources */,
 			);

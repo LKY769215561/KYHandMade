@@ -15,8 +15,6 @@ struct KYPageStyle {
     //  选项卡条背景色
     var titleViewBG : UIColor = UIColor.white
 
-
-    
     //  选项卡条高度
     var tabHeight:CGFloat = 40
     
@@ -54,4 +52,11 @@ struct KYPageStyle {
     // MARK:选项卡内容区
     //  背景色
     var contentViewBG : UIColor = UIColor.lightGray
+    
+    
+    var bottomLineY : CGFloat = 0
+    
+    init() {
+       bottomLineY = tabHeight - bottomLineHeight 
+    }
 }

@@ -56,6 +56,13 @@ class KYCommonTool: NSObject {
        UIApplication.shared.openURL(url2)
     }
     
+   class  func dataToObj(data:NSData?) -> Any? {
+    
+        let aa =  try? JSONSerialization.jsonObject(with: data as! Data, options: .mutableContainers)
+        return aa
+
+    }
+    
     
 }
 

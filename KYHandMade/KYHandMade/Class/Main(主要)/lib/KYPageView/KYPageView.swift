@@ -102,8 +102,7 @@ class KYPageView: UIView {
         let labelH : CGFloat = style.tabHeight
         let labelY : CGFloat = 0
         var labelX : CGFloat = 0
-        
-        
+    
         for (i, titleLabel) in titleLabels.enumerated(){
             
             if style.isScrollEnable
@@ -112,21 +111,17 @@ class KYPageView: UIView {
                 
                 labelX  += style.titleMargin
                 titleLabel.frame = CGRect(x:labelX,y:labelY,width:labelW,height:labelH)
-                labelX = titleLabel.frame.maxX
+                labelX += labelW
+                
             }else
             {
                 labelX = labelW * CGFloat(i)
                 titleLabel.frame = CGRect(x:labelX,y:labelY,width:labelW,height:labelH)
             }
-            
-            if i == lastIndex
+        
+            if i == 0
             {
-                bottomLine.frame = CGRect(x:labelX, y:titleLabel.frame.maxY-style.bottomLineHeight, width:labelW, height:style.bottomLineHeight);
-                
-                if style.isEqueToTitleLength
-                {
-                    //bottomLine.width = la
-                }
+                bottomLine.frame = CGRect(x:style.titleMargin, y:style.bottomLineY, width:labelW, height:style.bottomLineHeight);
             }
         }
         
@@ -181,7 +176,7 @@ class KYPageView: UIView {
 
         lastIndex = currentIndex
         UIView.animate(withDuration: 0.25) {
-            self.bottomLine.frame = CGRect(x:selecteLabel.frame.origin.x, y:selecteLabel.frame.maxY-self.style.bottomLineHeight, width:selecteLabel.frame.width , height:self.style.bottomLineHeight);
+            self.bottomLine.frame = CGRect(x:selecteLabel.frame.origin.x, y:self.style.bottomLineY, width:selecteLabel.frame.width , height:self.style.bottomLineHeight);
         }
     }
 
