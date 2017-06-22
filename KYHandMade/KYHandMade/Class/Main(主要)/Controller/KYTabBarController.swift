@@ -33,7 +33,7 @@ class KYTabBarController: UITabBarController {
         kImgKey    : "icon_ketang_",
         kSelImgKey : "icon_ketang_s"],
         
-        [kClassKey  : "KYHandTableViewController",
+        [kClassKey  : "KYHandController",
         kTitleKey  : "手工圈",
         kImgKey    : "icon_shougongquan_",
         kSelImgKey : "icon_shougongquan_s"],

@@ -26,7 +26,7 @@
 		543085EF1EEE6F590093E766 /* KYAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085BE1EEE6F590093E766 /* KYAdViewController.swift */; };
 		543085F01EEE6F590093E766 /* KYAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 543085BF1EEE6F590093E766 /* KYAdViewController.xib */; };
 		543085F11EEE6F590093E766 /* KYFairTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085C41EEE6F590093E766 /* KYFairTableViewController.swift */; };
-		543085F21EEE6F590093E766 /* KYHandTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085C91EEE6F590093E766 /* KYHandTableViewController.swift */; };
+		543085F21EEE6F590093E766 /* KYHandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085C91EEE6F590093E766 /* KYHandController.swift */; };
 		543085F31EEE6F590093E766 /* KYHomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085CE1EEE6F590093E766 /* KYHomController.swift */; };
 		543085F41EEE6F590093E766 /* KYNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085D31EEE6F590093E766 /* KYNavgationController.swift */; };
 		543085F51EEE6F590093E766 /* KYTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085D41EEE6F590093E766 /* KYTabBarController.swift */; };
@@ -51,6 +51,9 @@
 		5470E22B1EF0F62500282FA0 /* KYSlideLessonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5470E22A1EF0F62500282FA0 /* KYSlideLessonController.swift */; };
 		5470E22F1EF0F75300282FA0 /* KYPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5470E22E1EF0F75300282FA0 /* KYPageRouter.swift */; };
 		5470E2311EF10E4C00282FA0 /* KYLessonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5470E2301EF10E4C00282FA0 /* KYLessonData.swift */; };
+		5479355D1EFB60DF0024C563 /* KYHandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5479355C1EFB60DF0024C563 /* KYHandView.swift */; };
+		5479355F1EFB6CDF0024C563 /* KYHandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5479355E1EFB6CDF0024C563 /* KYHandModel.swift */; };
+		547935611EFB6D220024C563 /* KYHandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547935601EFB6D220024C563 /* KYHandCell.swift */; };
 		547E16831EE94D7B0020E0A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 547E16821EE94D7B0020E0A7 /* Assets.xcassets */; };
 		547E26111EF8B9A0003F4DB8 /* KYNavTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547E26101EF8B9A0003F4DB8 /* KYNavTitleView.swift */; };
 		547E26131EF8F2EE003F4DB8 /* KYTutorialPicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547E26121EF8F2EE003F4DB8 /* KYTutorialPicController.swift */; };
@@ -137,7 +140,7 @@
 		543085BE1EEE6F590093E766 /* KYAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYAdViewController.swift; sourceTree = "<group>"; };
 		543085BF1EEE6F590093E766 /* KYAdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYAdViewController.xib; sourceTree = "<group>"; };
 		543085C41EEE6F590093E766 /* KYFairTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFairTableViewController.swift; sourceTree = "<group>"; };
-		543085C91EEE6F590093E766 /* KYHandTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYHandTableViewController.swift; sourceTree = "<group>"; };
+		543085C91EEE6F590093E766 /* KYHandController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYHandController.swift; sourceTree = "<group>"; };
 		543085CE1EEE6F590093E766 /* KYHomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYHomController.swift; sourceTree = "<group>"; };
 		543085D31EEE6F590093E766 /* KYNavgationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYNavgationController.swift; sourceTree = "<group>"; };
 		543085D41EEE6F590093E766 /* KYTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYTabBarController.swift; sourceTree = "<group>"; };
@@ -163,6 +166,9 @@
 		5470E22A1EF0F62500282FA0 /* KYSlideLessonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYSlideLessonController.swift; sourceTree = "<group>"; };
 		5470E22E1EF0F75300282FA0 /* KYPageRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYPageRouter.swift; sourceTree = "<group>"; };
 		5470E2301EF10E4C00282FA0 /* KYLessonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYLessonData.swift; sourceTree = "<group>"; };
+		5479355C1EFB60DF0024C563 /* KYHandView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYHandView.swift; sourceTree = "<group>"; };
+		5479355E1EFB6CDF0024C563 /* KYHandModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYHandModel.swift; sourceTree = "<group>"; };
+		547935601EFB6D220024C563 /* KYHandCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYHandCell.swift; sourceTree = "<group>"; };
 		547E16781EE94D7B0020E0A7 /* KYHandMade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KYHandMade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		547E16821EE94D7B0020E0A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		547E16871EE94D7B0020E0A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -378,7 +384,7 @@
 		543085C81EEE6F590093E766 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				543085C91EEE6F590093E766 /* KYHandTableViewController.swift */,
+				543085C91EEE6F590093E766 /* KYHandController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -386,6 +392,7 @@
 		543085CA1EEE6F590093E766 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5479355E1EFB6CDF0024C563 /* KYHandModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -393,6 +400,8 @@
 		543085CB1EEE6F590093E766 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5479355C1EFB60DF0024C563 /* KYHandView.swift */,
+				547935601EFB6D220024C563 /* KYHandCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1042,6 +1051,7 @@
 				545EA5071EEFE630004C5CB3 /* KYConfig.swift in Sources */,
 				545EA5051EEFDF2B004C5CB3 /* KYProgressHUD.swift in Sources */,
 				547E26791EF92133003F4DB8 /* XWFilterAnimator+XWSwipe.m in Sources */,
+				5479355F1EFB6CDF0024C563 /* KYHandModel.swift in Sources */,
 				547EF9FC1EF7B9B00036753F /* KYEventNewView.swift in Sources */,
 				543085EF1EEE6F590093E766 /* KYAdViewController.swift in Sources */,
 				547E266E1EF92133003F4DB8 /* XWCoolAnimator+XWScanning.m in Sources */,
@@ -1052,7 +1062,8 @@
 				547EFA031EF7B9B00036753F /* KYDarenCell.swift in Sources */,
 				540821381EFA26910035C2F2 /* KYDaRenPicModel.swift in Sources */,
 				547E26731EF92133003F4DB8 /* XWFilterAnimator+XWCopyMachine.m in Sources */,
-				543085F21EEE6F590093E766 /* KYHandTableViewController.swift in Sources */,
+				5479355D1EFB60DF0024C563 /* KYHandView.swift in Sources */,
+				543085F21EEE6F590093E766 /* KYHandController.swift in Sources */,
 				547E26171EF8F41E003F4DB8 /* KYTutoriSubController.swift in Sources */,
 				540821291EFA142D0035C2F2 /* DaRenStepThreeCell.swift in Sources */,
 				549BCD8E1EF3BFF70097E916 /* KYLayout.swift in Sources */,
@@ -1085,6 +1096,7 @@
 				547E26741EF92133003F4DB8 /* XWFilterAnimator+XWFlash.m in Sources */,
 				547EF9D01EF77CA60036753F /* KYDaRenPicController.swift in Sources */,
 				547E266C1EF92133003F4DB8 /* XWCoolAnimator+XWPageFlip.m in Sources */,
+				547935611EFB6D220024C563 /* KYHandCell.swift in Sources */,
 				547E267A1EF92133003F4DB8 /* XWFilterAnimator.m in Sources */,
 				54EB17DE1EF2684D005D6791 /* UIViewExtension.swift in Sources */,
 				547E266A1EF92133003F4DB8 /* XWCoolAnimator+XWLines.m in Sources */,

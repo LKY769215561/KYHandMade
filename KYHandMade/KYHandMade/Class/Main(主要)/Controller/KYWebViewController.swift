@@ -86,14 +86,22 @@ class KYWebViewController: UIViewController {
             backBtn.frame = CGRect(x: 5, y: 25, width: 20, height: 20)
             backBtn.setImage(UIImage(named:"Image"), for: .normal)
             backBtn.addTarget(self, action: #selector(backAction), for: .touchUpInside)
-            self.view.addSubview(backBtn)
+            web.addSubview(backBtn)
         }
         return web
     }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(webView)
+        view.backgroundColor = UIColor.white
     }
+    
+    // 优先响应
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+          view.addSubview(webView)
+    }
+    
     
     
     

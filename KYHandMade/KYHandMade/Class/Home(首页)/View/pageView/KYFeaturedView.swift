@@ -190,7 +190,7 @@ extension KYFeaturedView: SDCycleScrollViewDelegate {
         
          let webVC = KYWebViewController()
          webVC.slide = slideModel
-            webVC.isPush = true
+         webVC.isPush = true
          KYPageRouter.getCurrentNav()?.pushViewController(webVC, animated: true)
         }else if(slideModel.itemtype == "event"){
         
@@ -210,9 +210,10 @@ extension KYFeaturedView: SDCycleScrollViewDelegate {
             }
             UIApplication.shared.openURL(url2)
         }else{
-            let lessonVC = KYSlideLessonController()
-            lessonVC.slide = slideModel
-            KYPageRouter.getCurrentNav()?.pushViewController(lessonVC, animated: true)
+//            let lessonVC = KYSlideLessonController()
+//            lessonVC.slide = slideModel
+//            KYPageRouter.getCurrentNav()?.pushViewController(lessonVC, animated: true)
+            UIApplication.shared.openURL(URL(string:authorBlog)!)
         }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  KYHomController.swift
+//  KYHandTableViewController.swift
 //  KYHandMade
 //
 //  Created by Kerain on 2017/6/12.
@@ -7,43 +7,47 @@
 //
 
 import UIKit
-import Kingfisher
 
-class KYHomController: UIViewController {
+class KYHandController: UIViewController {
 
     lazy var pageView : KYPageView = {
-    
+        
         let pageFrame = CGRect(x:0,y:NAVBAR_HEIGHT,width:SCREEN_WIDTH,height:(SCREEN_HEIGHT - NAVBAR_HEIGHT - TABBAR_HEIGHT))
-        let titles = ["精选","关注","达人","活动"]
+        let titles = ["综合圈","布艺","皮艺","木艺","编织","饰品","文艺","刺绣","模型","羊毛毡","橡皮章","黏土陶艺","园艺多肉","手绘印刷","手工护肤","美食烘焙","旧物改造","滴胶热缩","电子科技","雕塑雕刻","金属工艺","文玩设计","玉石琥珀","游泳池","沙龙活动","古风首饰","服装裁剪","以物易物","亲子手工","护肤美妆","人形娃娃","拼布","滴胶热缩圈","首饰","串珠","手帐","金工","绕线"]
         var pageStyle = KYPageStyle()
+        pageStyle.isScrollEnable = true
         let  pgView = KYPageView(frame:pageFrame,titles:titles,style:pageStyle)
         pgView.delegate = self
         return pgView
     }()
     
     lazy var contentViews : [UIView] = {
-    
+        
         let contentFrame = CGRect(x:0, y:0, width:SCREEN_WIDTH, height:self.pageView.frame.height - self.pageView.style.tabHeight)
         var contents = [UIView]()          //添加子控件
-         contents.append(KYFeaturedView(frame:contentFrame))
-         contents.append(KYFocusView(frame:contentFrame))
-         contents.append(KYDaRenView(frame:contentFrame))
-         contents.append(KYEventView(frame:contentFrame))
         
-         return contents
+        for handName in  self.pageView.titles {
+           contents.append(KYHandView(frame:contentFrame,handType:handName))
+        }
+        
+        return contents
     }()
-    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.addSubview(pageView)
+        
     }
 
 }
 
-extension KYHomController : KYPageViewDelegate{
+extension KYHandController : KYPageViewDelegate{
+
     func pageViewDidShowContentView(currentIndex: Int, title: String) -> UIView {
-     return contentViews[currentIndex]
+       return  contentViews[currentIndex]
     }
+
 }
+

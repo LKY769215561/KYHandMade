@@ -18,8 +18,6 @@ class KYSlideEventController: UIViewController {
         let pageFrame = CGRect(x:0,y:NAVBAR_HEIGHT,width:SCREEN_WIDTH,height:(SCREEN_HEIGHT - NAVBAR_HEIGHT))
         let titles = ["活动介绍","最新作品","投票最多"]
         var pageStyle = KYPageStyle()
-        pageStyle.isScrollEnable = false
-        
         let  pgView = KYPageView(frame:pageFrame,titles:titles,style:pageStyle)
         pgView.delegate = self
         return pgView
