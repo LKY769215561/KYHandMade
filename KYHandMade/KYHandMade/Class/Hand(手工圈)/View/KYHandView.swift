@@ -79,9 +79,7 @@ class KYHandView: UIView {
             }
             let data = NSData(contentsOfFile: filePath2)
             let result = KYCommonTool.dataToObj(data: data) as! [String : AnyObject]
-            let publicDict = result["data"] as! [String : AnyObject]
-            let dictList = publicDict["list"] as! [[String : AnyObject]]
-        
+            let dictList = result["data"]?["list"] as! [[String : AnyObject]]
             for dict in dictList{
                 let handModel =  KYHandModel(dict : dict)
                 self.handModels.append(handModel)

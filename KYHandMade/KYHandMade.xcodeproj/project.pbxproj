@@ -119,6 +119,10 @@
 		547EFA0C1EF7B9B00036753F /* KYSlideCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EF9F81EF7B9B00036753F /* KYSlideCollectionViewCell.xib */; };
 		549BCD8E1EF3BFF70097E916 /* KYLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549BCD8D1EF3BFF70097E916 /* KYLayout.swift */; };
 		549BCD941EF3C8730097E916 /* KYFocusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549BCD931EF3C8730097E916 /* KYFocusModel.swift */; };
+		54AB814D1EFCB02100CF8EC5 /* KYLaudModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB814C1EFCB02100CF8EC5 /* KYLaudModel.swift */; };
+		54AB814F1EFCB08900CF8EC5 /* KYCommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB814E1EFCB08900CF8EC5 /* KYCommentModel.swift */; };
+		54AB81511EFCB23600CF8EC5 /* KYPicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB81501EFCB23600CF8EC5 /* KYPicModel.swift */; };
+		54AB81531EFCB2F100CF8EC5 /* KYVipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB81521EFCB2F100CF8EC5 /* KYVipModel.swift */; };
 		54EB17DE1EF2684D005D6791 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB17DD1EF2684D005D6791 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -263,6 +267,10 @@
 		547EF9F81EF7B9B00036753F /* KYSlideCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYSlideCollectionViewCell.xib; sourceTree = "<group>"; };
 		549BCD8D1EF3BFF70097E916 /* KYLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYLayout.swift; sourceTree = "<group>"; };
 		549BCD931EF3C8730097E916 /* KYFocusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFocusModel.swift; sourceTree = "<group>"; };
+		54AB814C1EFCB02100CF8EC5 /* KYLaudModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYLaudModel.swift; sourceTree = "<group>"; };
+		54AB814E1EFCB08900CF8EC5 /* KYCommentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCommentModel.swift; sourceTree = "<group>"; };
+		54AB81501EFCB23600CF8EC5 /* KYPicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYPicModel.swift; sourceTree = "<group>"; };
+		54AB81521EFCB2F100CF8EC5 /* KYVipModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYVipModel.swift; sourceTree = "<group>"; };
 		54EB17DD1EF2684D005D6791 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		5FC183425314ED4C1FE5D2E7 /* Pods-KYHandMade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KYHandMade.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KYHandMade/Pods-KYHandMade.debug.xcconfig"; sourceTree = "<group>"; };
 		BCC62D6337226E72EE2A3997 /* Pods-KYHandMade.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KYHandMade.release.xcconfig"; path = "Pods/Target Support Files/Pods-KYHandMade/Pods-KYHandMade.release.xcconfig"; sourceTree = "<group>"; };
@@ -396,6 +404,10 @@
 			isa = PBXGroup;
 			children = (
 				5479355E1EFB6CDF0024C563 /* KYHandModel.swift */,
+				54AB814C1EFCB02100CF8EC5 /* KYLaudModel.swift */,
+				54AB814E1EFCB08900CF8EC5 /* KYCommentModel.swift */,
+				54AB81501EFCB23600CF8EC5 /* KYPicModel.swift */,
+				54AB81521EFCB2F100CF8EC5 /* KYVipModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1013,6 +1025,7 @@
 			files = (
 				543085F61EEE6F590093E766 /* KYMyTableViewController.swift in Sources */,
 				547EF9CA1EF7643D0036753F /* KYDaRenModel.swift in Sources */,
+				54AB81531EFCB2F100CF8EC5 /* KYVipModel.swift in Sources */,
 				547E26751EF92133003F4DB8 /* XWFilterAnimator+XWMask.m in Sources */,
 				540821251EFA14090035C2F2 /* KYDaRenStepTwoCell.swift in Sources */,
 				547EF9FE1EF7B9B00036753F /* KYFeaturedView.swift in Sources */,
@@ -1040,6 +1053,7 @@
 				540821411EFA7E8A0035C2F2 /* KYPageCollectionViewCell.swift in Sources */,
 				5408213B1EFA5AB40035C2F2 /* KYStepTableViewCell.swift in Sources */,
 				549BCD941EF3C8730097E916 /* KYFocusModel.swift in Sources */,
+				54AB814D1EFCB02100CF8EC5 /* KYLaudModel.swift in Sources */,
 				547EF9E21EF7AF0E0036753F /* KYSlideShopModel.swift in Sources */,
 				547E26611EF92133003F4DB8 /* UIViewController+XWTransition.m in Sources */,
 				543085F81EEE6F590093E766 /* KYNewFeatureCell.swift in Sources */,
@@ -1084,6 +1098,7 @@
 				547E261C1EF90316003F4DB8 /* KYTutorialPicCell.swift in Sources */,
 				543085F11EEE6F590093E766 /* KYFairTableViewController.swift in Sources */,
 				547EFA071EF7B9B00036753F /* KYFeaturedCell.swift in Sources */,
+				54AB814F1EFCB08900CF8EC5 /* KYCommentModel.swift in Sources */,
 				545EA50A1EEFEBF9004C5CB3 /* KYFeaturedModel.swift in Sources */,
 				545EA5121EEFF016004C5CB3 /* KYAdvanceModel.swift in Sources */,
 				547EFA021EF7B9B00036753F /* KYWebView.swift in Sources */,
@@ -1101,6 +1116,7 @@
 				547EF9D01EF77CA60036753F /* KYDaRenPicController.swift in Sources */,
 				547E266C1EF92133003F4DB8 /* XWCoolAnimator+XWPageFlip.m in Sources */,
 				547935611EFB6D220024C563 /* KYHandCell.swift in Sources */,
+				54AB81511EFCB23600CF8EC5 /* KYPicModel.swift in Sources */,
 				547E267A1EF92133003F4DB8 /* XWFilterAnimator.m in Sources */,
 				54EB17DE1EF2684D005D6791 /* UIViewExtension.swift in Sources */,
 				547E266A1EF92133003F4DB8 /* XWCoolAnimator+XWLines.m in Sources */,
