@@ -14,4 +14,5 @@ target 'KYHandMade' do
  pod 'DOPDropDownMenu', '~> 0.1.1'
  pod 'DynamicColor', '~> 3.3'
  pod 'FMDB'
+ pod 'SDAutoLayout', '~> 2.1.8'
 end

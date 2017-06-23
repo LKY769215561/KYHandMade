@@ -29,9 +29,10 @@ extension UIView {
             frame.origin.y = newValue
         }
     }
+
     
     /// 获取或设置 width
-    public var width: CGFloat {
+    public var width_ky: CGFloat {
         get {
             return frame.size.width
         }
@@ -41,7 +42,7 @@ extension UIView {
     }
     
     /// 获取或设置 height
-    public var height: CGFloat {
+    public var height_ky: CGFloat {
         get {
             return frame.size.height
         }
@@ -51,7 +52,7 @@ extension UIView {
     }
     
     /// 获取或设置 size
-    public var size: CGSize {
+    public var size_ky: CGSize {
         get {
             return frame.size
         }
@@ -61,7 +62,7 @@ extension UIView {
     }
     
     /// 获取或设置 origin
-    public var origin: CGPoint {
+    public var origin_ky: CGPoint {
         get {
             return frame.origin
         }
@@ -70,19 +71,17 @@ extension UIView {
         }
     }
     
-    public var bottom: CGFloat {
+    public var bottom_ky: CGFloat {
         get {
             return frame.origin.y + frame.size.height
         }
     }
     
-    public var right : CGFloat{
+    public var right_ky : CGFloat{
     
         get{
         return self.frame.maxX
         }
     }
-    
-    
-    
+ 
 }

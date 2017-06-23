@@ -242,7 +242,7 @@ extension KYFeaturedView : UITableViewDelegate{
         let webVC = KYWebViewController()
         webVC.isPush = false
         webVC.hotData = featureDataModel?.dataHotArray[indexPath.row]
-        KYPageRouter.getCurrentVC()?.xw_present(webVC, with: animator)
+        KYPageRouter.getCurrentVC().xw_present(webVC, with: animator)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

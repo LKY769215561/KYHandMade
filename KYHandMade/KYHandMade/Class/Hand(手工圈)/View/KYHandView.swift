@@ -23,6 +23,7 @@ class KYHandView: UIView {
         table.register(NSClassFromString("KYHandCell"), forCellReuseIdentifier: KYHandViewCellId)
         table.dataSource = self
         table.delegate = self
+        table.estimatedRowHeight = 200
         table.mj_header = setupJianDaoHeaderRefresh(self, action: #selector(loadNewData))
         table.mj_footer = setupFooterRefresh(self, action: #selector(loadMoreData))
         return table
@@ -31,7 +32,7 @@ class KYHandView: UIView {
      init(frame: CGRect,handType:String) {
         super.init(frame: frame)
         self.handType = handType
-
+      
         addSubview(tableView)
     }
     
@@ -110,7 +111,6 @@ extension KYHandView : UITableViewDataSource{
         if cell == nil {
             cell = KYHandCell(style: .default, reuseIdentifier: KYHandViewCellId)
         }
-        
         cell?.handModel = handModels[indexPath.row]
         return cell!
     }
@@ -120,7 +120,7 @@ extension KYHandView : UITableViewDataSource{
 extension KYHandView : UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return cellHeight(for: indexPath, cellContentViewWidth: SCREEN_WIDTH, tableView: tableView)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

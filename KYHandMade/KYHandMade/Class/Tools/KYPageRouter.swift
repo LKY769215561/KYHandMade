@@ -18,11 +18,10 @@ class KYPageRouter: NSObject {
         return  APP.window?.rootViewController as! KYTabBarController
    }
     
-    class func getCurrentVC() -> UIViewController? {
+    class func getCurrentVC() -> UIViewController {
         
         let current = getCurrentNav()
-        return current?.viewControllers.last as! UIViewController
-        
+        return (current?.viewControllers.last!)!
     }
     
     

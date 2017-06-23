@@ -102,7 +102,7 @@ class KYDarenCell: UITableViewCell {
         let animator = XWCoolAnimator.xw_animator(with: .scanningFromLeft)
         let picVC = KYDaRenPicController(collectionViewLayout: UICollectionViewLayout())
         picVC.tagCpunt = dict["hand_id"] as? String
-        KYPageRouter.getCurrentVC()?.xw_present(picVC, with: animator)
+        KYPageRouter.getCurrentVC().xw_present(picVC, with: animator)
         
     }
     
