@@ -11,9 +11,6 @@ import UIKit
 let   featureCellId = "featureCell"
 
 class KYNewFeatureController: UICollectionViewController {
-
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

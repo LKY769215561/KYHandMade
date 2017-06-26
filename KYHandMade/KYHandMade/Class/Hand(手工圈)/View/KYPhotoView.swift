@@ -29,12 +29,8 @@ class KYPhotoView: UIView {
     var picModels : [KYPicModel]?{
     
         set{
-        
-
             _picModels = newValue
-            
             let imageCount = (_picModels?.count)!
-            
             for imageView in imageViews{
                 imageView.removeFromSuperview()
             }
@@ -61,7 +57,8 @@ class KYPhotoView: UIView {
             let margin : CGFloat = 5
             
             let column = getColumnCount()
-            let row = getRowCount()
+           
+            var  imageViewBottm : CGFloat = 100
             for (index,pic) in (_picModels?.enumerated())!
             {
                let columnIndex = index % column
@@ -71,18 +68,20 @@ class KYPhotoView: UIView {
                 imageView.tag = index
                let url =  URL(string:pic.url!)
                
-                let tap = UITapGestureRecognizer(target: self, action: #selector(imageViewTap(tap:)))
-                imageView.addGestureRecognizer(tap)
-                imageView.kf.setImage(with: url, placeholder: UIImage(named:"001"), options: nil, progressBlock: nil, completionHandler: nil)
+               let tap = UITapGestureRecognizer(target: self, action: #selector(imageViewTap(tap:)))
+               imageView.addGestureRecognizer(tap)
+               imageView.kf.setImage(with: url, placeholder: UIImage(named:"001"), options: nil, progressBlock: nil, completionHandler: nil)
                let itemX = CGFloat(columnIndex) * (itemW + margin)
                let itemY = CGFloat(rowIndex) * (itemH + margin)
                imageView.frame = CGRect(x: itemX, y: itemY, width: itemW, height: itemH)
                addSubview(imageView)
+                
+                if pic == _picModels?.last {
+                    imageViewBottm = imageView.bottom
+                }
             }
-            
            width_sd = CGFloat(column) * itemW + CGFloat((column - 1)) * margin
-           height_sd = CGFloat(row) * itemH + CGFloat(row + 1) * margin
-            
+           height_sd = imageViewBottm + margin
            fixedWidth = width_sd as NSNumber
            fixedHeight = height_sd as NSNumber
             
@@ -97,27 +96,10 @@ class KYPhotoView: UIView {
     
     
     func getColumnCount() -> Int {
-        
-   
-        
-        if (picModels?.count)! < 3 {
-            return (picModels?.count)!
-        }else if ((picModels?.count)! <= 4){
-            return 2
-        }else{
-             return 3
-        }
+
+        return 3
     }
     
-    func getRowCount() -> Int {
-        if (picModels?.count)! <= 3 {
-            return 1
-        }else if ((picModels?.count)! <= 6){
-            return 2
-        }else{
-            return 3
-        }
-    }
     
     func imageViewTap(tap : UITapGestureRecognizer) {
         

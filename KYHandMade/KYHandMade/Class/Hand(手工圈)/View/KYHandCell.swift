@@ -61,9 +61,7 @@ class KYHandCell: UITableViewCell {
  
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        photoView.backgroundColor = UIColor.orange
-        
+
         let childViews : [UIView] = [iconImageView,timeLabel,nameLabel,contenLabel,photoView]
         contentView.sd_addSubviews(childViews)
         
@@ -78,7 +76,7 @@ class KYHandCell: UITableViewCell {
         
         iconImageView.sd_layout()
         .leftSpaceToView(contentView,margin)?
-        .topSpaceToView(contenLabel,margin)?
+        .topSpaceToView(contentView,margin)?
         .widthIs(40)?
         .heightIs(40)
         iconImageView.sd_cornerRadiusFromWidthRatio = 0.5
