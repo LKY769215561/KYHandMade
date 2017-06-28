@@ -23,6 +23,20 @@
 		540821411EFA7E8A0035C2F2 /* KYPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5408213E1EFA7E8A0035C2F2 /* KYPageCollectionViewCell.swift */; };
 		540821421EFA7E8A0035C2F2 /* KYPageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5408213F1EFA7E8A0035C2F2 /* KYPageStyle.swift */; };
 		540821431EFA7E8A0035C2F2 /* KYPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540821401EFA7E8A0035C2F2 /* KYPageView.swift */; };
+		541395901F0386D0002AC315 /* KYFairHotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5413958E1F0386D0002AC315 /* KYFairHotCell.swift */; };
+		541395911F0386D0002AC315 /* KYFairHotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5413958F1F0386D0002AC315 /* KYFairHotCell.xib */; };
+		541395941F0386E8002AC315 /* KYFairBestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541395921F0386E8002AC315 /* KYFairBestCell.swift */; };
+		541395951F0386E8002AC315 /* KYFairBestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 541395931F0386E8002AC315 /* KYFairBestCell.xib */; };
+		541395981F0386FA002AC315 /* KYFariTopicBestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541395961F0386FA002AC315 /* KYFariTopicBestCell.swift */; };
+		541395991F0386FA002AC315 /* KYFariTopicBestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 541395971F0386FA002AC315 /* KYFariTopicBestCell.xib */; };
+		5413959C1F03870A002AC315 /* KYFariTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5413959A1F03870A002AC315 /* KYFariTopicCell.swift */; };
+		5413959D1F03870A002AC315 /* KYFariTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5413959B1F03870A002AC315 /* KYFariTopicCell.xib */; };
+		541395A01F038728002AC315 /* KYFairSectionHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5413959E1F038728002AC315 /* KYFairSectionHeadView.swift */; };
+		541395A11F038728002AC315 /* KYFairSectionHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5413959F1F038728002AC315 /* KYFairSectionHeadView.xib */; };
+		541395A31F038B91002AC315 /* KYFariDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541395A21F038B91002AC315 /* KYFariDataModel.swift */; };
+		541395A51F038D5E002AC315 /* KYFariHotDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541395A41F038D5E002AC315 /* KYFariHotDataModel.swift */; };
+		541395A71F038DDF002AC315 /* KYFariBestDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541395A61F038DDF002AC315 /* KYFariBestDataModel.swift */; };
+		541395A91F038E4F002AC315 /* KYFariTopicDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541395A81F038E4F002AC315 /* KYFariTopicDataModel.swift */; };
 		543085EF1EEE6F590093E766 /* KYAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085BE1EEE6F590093E766 /* KYAdViewController.swift */; };
 		543085F01EEE6F590093E766 /* KYAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 543085BF1EEE6F590093E766 /* KYAdViewController.xib */; };
 		543085F11EEE6F590093E766 /* KYFairTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085C41EEE6F590093E766 /* KYFairTableViewController.swift */; };
@@ -143,6 +157,20 @@
 		5408213E1EFA7E8A0035C2F2 /* KYPageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYPageCollectionViewCell.swift; sourceTree = "<group>"; };
 		5408213F1EFA7E8A0035C2F2 /* KYPageStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYPageStyle.swift; sourceTree = "<group>"; };
 		540821401EFA7E8A0035C2F2 /* KYPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYPageView.swift; sourceTree = "<group>"; };
+		5413958E1F0386D0002AC315 /* KYFairHotCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFairHotCell.swift; sourceTree = "<group>"; };
+		5413958F1F0386D0002AC315 /* KYFairHotCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYFairHotCell.xib; sourceTree = "<group>"; };
+		541395921F0386E8002AC315 /* KYFairBestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFairBestCell.swift; sourceTree = "<group>"; };
+		541395931F0386E8002AC315 /* KYFairBestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYFairBestCell.xib; sourceTree = "<group>"; };
+		541395961F0386FA002AC315 /* KYFariTopicBestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFariTopicBestCell.swift; sourceTree = "<group>"; };
+		541395971F0386FA002AC315 /* KYFariTopicBestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYFariTopicBestCell.xib; sourceTree = "<group>"; };
+		5413959A1F03870A002AC315 /* KYFariTopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFariTopicCell.swift; sourceTree = "<group>"; };
+		5413959B1F03870A002AC315 /* KYFariTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYFariTopicCell.xib; sourceTree = "<group>"; };
+		5413959E1F038728002AC315 /* KYFairSectionHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFairSectionHeadView.swift; sourceTree = "<group>"; };
+		5413959F1F038728002AC315 /* KYFairSectionHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYFairSectionHeadView.xib; sourceTree = "<group>"; };
+		541395A21F038B91002AC315 /* KYFariDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFariDataModel.swift; sourceTree = "<group>"; };
+		541395A41F038D5E002AC315 /* KYFariHotDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFariHotDataModel.swift; sourceTree = "<group>"; };
+		541395A61F038DDF002AC315 /* KYFariBestDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFariBestDataModel.swift; sourceTree = "<group>"; };
+		541395A81F038E4F002AC315 /* KYFariTopicDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFariTopicDataModel.swift; sourceTree = "<group>"; };
 		543085BE1EEE6F590093E766 /* KYAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYAdViewController.swift; sourceTree = "<group>"; };
 		543085BF1EEE6F590093E766 /* KYAdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYAdViewController.xib; sourceTree = "<group>"; };
 		543085C41EEE6F590093E766 /* KYFairTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFairTableViewController.swift; sourceTree = "<group>"; };
@@ -372,6 +400,10 @@
 		543085C51EEE6F590093E766 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				541395A21F038B91002AC315 /* KYFariDataModel.swift */,
+				541395A41F038D5E002AC315 /* KYFariHotDataModel.swift */,
+				541395A61F038DDF002AC315 /* KYFariBestDataModel.swift */,
+				541395A81F038E4F002AC315 /* KYFariTopicDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -379,6 +411,16 @@
 		543085C61EEE6F590093E766 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5413958E1F0386D0002AC315 /* KYFairHotCell.swift */,
+				5413958F1F0386D0002AC315 /* KYFairHotCell.xib */,
+				541395921F0386E8002AC315 /* KYFairBestCell.swift */,
+				541395931F0386E8002AC315 /* KYFairBestCell.xib */,
+				541395961F0386FA002AC315 /* KYFariTopicBestCell.swift */,
+				541395971F0386FA002AC315 /* KYFariTopicBestCell.xib */,
+				5413959A1F03870A002AC315 /* KYFariTopicCell.swift */,
+				5413959B1F03870A002AC315 /* KYFariTopicCell.xib */,
+				5413959E1F038728002AC315 /* KYFairSectionHeadView.swift */,
+				5413959F1F038728002AC315 /* KYFairSectionHeadView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -949,6 +991,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				541395951F0386E8002AC315 /* KYFairBestCell.xib in Resources */,
 				5408212A1EFA142D0035C2F2 /* DaRenStepThreeCell.xib in Resources */,
 				5408213C1EFA5AB40035C2F2 /* KYStepTableViewCell.xib in Resources */,
 				547E16831EE94D7B0020E0A7 /* Assets.xcassets in Resources */,
@@ -956,10 +999,14 @@
 				547EFA081EF7B9B00036753F /* KYFeaturedCell.xib in Resources */,
 				547EFA041EF7B9B00036753F /* KYDarenCell.xib in Resources */,
 				540821221EFA13F30035C2F2 /* KYDaRenStepOneCell.xib in Resources */,
+				5413959D1F03870A002AC315 /* KYFariTopicCell.xib in Resources */,
 				543085F01EEE6F590093E766 /* KYAdViewController.xib in Resources */,
+				541395A11F038728002AC315 /* KYFairSectionHeadView.xib in Resources */,
 				547EFA0C1EF7B9B00036753F /* KYSlideCollectionViewCell.xib in Resources */,
 				547EF9FA1EF7B9B00036753F /* KYAdvanceView.xib in Resources */,
+				541395991F0386FA002AC315 /* KYFariTopicBestCell.xib in Resources */,
 				547E261D1EF90316003F4DB8 /* KYTutorialPicCell.xib in Resources */,
+				541395911F0386D0002AC315 /* KYFairHotCell.xib in Resources */,
 				547EFA0A1EF7B9B00036753F /* KYFocusCell.xib in Resources */,
 				547E26651EF92133003F4DB8 /* mask.jpg in Resources */,
 				540821261EFA14090035C2F2 /* KYDaRenStepTwoCell.xib in Resources */,
@@ -1029,6 +1076,7 @@
 				543085F61EEE6F590093E766 /* KYMyTableViewController.swift in Sources */,
 				547EF9CA1EF7643D0036753F /* KYDaRenModel.swift in Sources */,
 				54AB81531EFCB2F100CF8EC5 /* KYVipModel.swift in Sources */,
+				541395A31F038B91002AC315 /* KYFariDataModel.swift in Sources */,
 				547E26751EF92133003F4DB8 /* XWFilterAnimator+XWMask.m in Sources */,
 				540821251EFA14090035C2F2 /* KYDaRenStepTwoCell.swift in Sources */,
 				547EF9FE1EF7B9B00036753F /* KYFeaturedView.swift in Sources */,
@@ -1060,26 +1108,33 @@
 				547EF9E21EF7AF0E0036753F /* KYSlideShopModel.swift in Sources */,
 				547E26611EF92133003F4DB8 /* UIViewController+XWTransition.m in Sources */,
 				543085F81EEE6F590093E766 /* KYNewFeatureCell.swift in Sources */,
+				541395A71F038DDF002AC315 /* KYFariBestDataModel.swift in Sources */,
 				545EA5031EEFDD3A004C5CB3 /* KYCommon.swift in Sources */,
 				545EA5101EEFF007004C5CB3 /* KYNavigationModel.swift in Sources */,
+				541395981F0386FA002AC315 /* KYFariTopicBestCell.swift in Sources */,
 				547E26621EF92133003F4DB8 /* XWInteractiveTransition.m in Sources */,
+				541395A51F038D5E002AC315 /* KYFariHotDataModel.swift in Sources */,
 				547E26191EF8F4EA003F4DB8 /* KYContainerView.swift in Sources */,
 				547E26771EF92133003F4DB8 /* XWFilterAnimator+XWPageCurl.m in Sources */,
 				540821431EFA7E8A0035C2F2 /* KYPageView.swift in Sources */,
 				547E26111EF8B9A0003F4DB8 /* KYNavTitleView.swift in Sources */,
 				547E267C1EF92133003F4DB8 /* XWMagicMoveAnimator.m in Sources */,
+				541395A91F038E4F002AC315 /* KYFariTopicDataModel.swift in Sources */,
 				547E26701EF92133003F4DB8 /* XWDrawerAnimator.m in Sources */,
 				545EA5071EEFE630004C5CB3 /* KYConfig.swift in Sources */,
 				545EA5051EEFDF2B004C5CB3 /* KYProgressHUD.swift in Sources */,
 				547E26791EF92133003F4DB8 /* XWFilterAnimator+XWSwipe.m in Sources */,
 				5479355F1EFB6CDF0024C563 /* KYHandModel.swift in Sources */,
+				541395901F0386D0002AC315 /* KYFairHotCell.swift in Sources */,
 				547EF9FC1EF7B9B00036753F /* KYEventNewView.swift in Sources */,
 				543085EF1EEE6F590093E766 /* KYAdViewController.swift in Sources */,
 				547E266E1EF92133003F4DB8 /* XWCoolAnimator+XWScanning.m in Sources */,
+				541395941F0386E8002AC315 /* KYFairBestCell.swift in Sources */,
 				5470E2271EF0F5E700282FA0 /* KYWebViewController.swift in Sources */,
 				54AB81551EFCC54100CF8EC5 /* KYPhotoView.swift in Sources */,
 				547E26631EF92133003F4DB8 /* XWTransitionAnimator.m in Sources */,
 				5470E2291EF0F60800282FA0 /* KYSlideEventController.swift in Sources */,
+				5413959C1F03870A002AC315 /* KYFariTopicCell.swift in Sources */,
 				547E266D1EF92133003F4DB8 /* XWCoolAnimator+XWPortal.m in Sources */,
 				547EFA031EF7B9B00036753F /* KYDarenCell.swift in Sources */,
 				540821381EFA26910035C2F2 /* KYDaRenPicModel.swift in Sources */,
@@ -1110,6 +1165,7 @@
 				547EF9D61EF798260036753F /* KYEventModel.swift in Sources */,
 				543085FA1EEE6F590093E766 /* AppDelegate.swift in Sources */,
 				540821211EFA13F30035C2F2 /* KYDaRenStepOneCell.swift in Sources */,
+				541395A01F038728002AC315 /* KYFairSectionHeadView.swift in Sources */,
 				547E267B1EF92133003F4DB8 /* XWFilterTransitionView.m in Sources */,
 				543085FB1EEE6F590093E766 /* KYCommonTool.swift in Sources */,
 				543085F51EEE6F590093E766 /* KYTabBarController.swift in Sources */,

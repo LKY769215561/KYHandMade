@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="KYFariTopicCell" customModule="KYHandMade" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="226"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="226"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GW3-JK-cfo">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="170"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="170" id="vtN-a0-JOu"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSA-Ts-lPb">
+                        <rect key="frame" x="0.0" y="170" width="343" height="56"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="pSA-Ts-lPb" secondAttribute="trailing" id="DIw-9t-T4A"/>
+                <constraint firstAttribute="trailing" secondItem="GW3-JK-cfo" secondAttribute="trailing" id="ODo-2W-CQv"/>
+                <constraint firstItem="GW3-JK-cfo" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="a1a-RB-qF3"/>
+                <constraint firstAttribute="bottom" secondItem="pSA-Ts-lPb" secondAttribute="bottom" id="cvZ-yN-bI4"/>
+                <constraint firstItem="pSA-Ts-lPb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fas-wA-qEs"/>
+                <constraint firstItem="GW3-JK-cfo" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nle-i0-Ohv"/>
+                <constraint firstItem="pSA-Ts-lPb" firstAttribute="top" secondItem="GW3-JK-cfo" secondAttribute="bottom" id="nzA-RR-JDB"/>
+            </constraints>
+            <size key="customSize" width="343" height="226"/>
+            <connections>
+                <outlet property="bgImageVIew" destination="GW3-JK-cfo" id="rk8-2h-hpn"/>
+                <outlet property="titleLabel" destination="pSA-Ts-lPb" id="Z8z-4Y-H6L"/>
+            </connections>
+            <point key="canvasLocation" x="104.5" y="40"/>
+        </collectionViewCell>
+    </objects>
+</document>

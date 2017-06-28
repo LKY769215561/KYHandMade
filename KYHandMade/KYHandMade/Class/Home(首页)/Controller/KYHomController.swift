@@ -37,6 +37,7 @@ class KYHomController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationItem.title = "首页"
         view.addSubview(pageView)
     }
 

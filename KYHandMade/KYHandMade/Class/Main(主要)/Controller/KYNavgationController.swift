@@ -14,7 +14,6 @@ class KYNavgationController: UINavigationController {
         super.viewDidLoad()
 
        UINavigationBar.appearance().barTintColor = UIColor(red: 0.92, green: 0.34, blue: 0.32, alpha: 1)
-       // UINavigationBar.appearance().tintColor = UIColor.red
     }
 
 }

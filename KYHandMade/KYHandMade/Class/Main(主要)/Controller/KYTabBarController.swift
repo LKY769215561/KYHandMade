@@ -70,9 +70,8 @@ class KYTabBarController: UITabBarController {
             let selImage = UIImage(named : dict[kSelImgKey]!)
             let item = UITabBarItem(title: title, image:image, selectedImage:selImage)
             item.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.orange], for: .selected)
-            
+            // 设置底部tabbar 字体
             nav.tabBarItem = item
-            
             addChildViewController(nav)
             
         }

@@ -26,6 +26,7 @@ class KYHandView: UIView {
         table.estimatedRowHeight = 200
         table.mj_header = setupJianDaoHeaderRefresh(self, action: #selector(loadNewData))
         table.mj_footer = setupFooterRefresh(self, action: #selector(loadMoreData))
+        table.mj_header.beginRefreshing()
         return table
     }()
     
