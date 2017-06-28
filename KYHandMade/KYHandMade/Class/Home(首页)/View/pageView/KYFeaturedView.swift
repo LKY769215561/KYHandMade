@@ -199,13 +199,17 @@ extension KYFeaturedView: SDCycleScrollViewDelegate {
             KYPageRouter.getCurrentNav()?.pushViewController(eventVC, animated: true)
             
         }else if(slideModel.itemtype == "web_out"){
-            KYCommonTool.openUrl(str: slideModel.hand_id)
+            //KYCommonTool.openUrl(str: slideModel.hand_id)
+            guard let handId = slideModel.hand_id else {
+                return
+            }
+            KYPageRouter.openAuthorWebView(webURL:handId)
             
         }else{
 //            let lessonVC = KYSlideLessonController()
 //            lessonVC.slide = slideModel
 //            KYPageRouter.getCurrentNav()?.pushViewController(lessonVC, animated: true)
-            KYCommonTool.openUrl(str: authorBlog)
+            KYPageRouter.openAuthorWebView(webURL:authorBlog)
         }
     }
 }

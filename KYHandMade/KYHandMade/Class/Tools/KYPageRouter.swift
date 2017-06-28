@@ -24,5 +24,12 @@ class KYPageRouter: NSObject {
         return (current?.viewControllers.last!)!
     }
     
+    class func openAuthorWebView(webURL : String) {
+         let animator = XWCoolAnimator.xw_animator(with: .explode)
+         let webVC = KYWebViewController()
+         webVC.isPush = false
+         webVC.webView.webView.loadRequest(URLRequest(url:URL(string:webURL)!))
+         getCurrentVC().xw_present(webVC, with: animator)
+    }
     
 }

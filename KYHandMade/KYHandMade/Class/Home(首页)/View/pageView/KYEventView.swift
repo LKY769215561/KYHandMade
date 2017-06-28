@@ -140,8 +140,8 @@ extension KYEventView : UITableViewDelegate{
         let eventModel = eventModels[indexPath.row]
         
         let slidVC = KYSlideEventController()
-         slidVC.handId = eventModel.c_id
-      KYPageRouter.getCurrentNav()?.pushViewController(slidVC, animated: true)
+        slidVC.handId = eventModel.c_id
+        KYPageRouter.getCurrentNav()?.pushViewController(slidVC, animated: true)
     }
 
 }

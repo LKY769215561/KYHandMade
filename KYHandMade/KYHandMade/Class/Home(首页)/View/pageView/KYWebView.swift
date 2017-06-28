@@ -109,7 +109,20 @@ class KYWebView: UIView {
     }
     
     
-    private   lazy  var webView : UIWebView = {
+    var _topicModel : KYFariTopicDataModel?
+    var topicModel : KYFariTopicDataModel?{
+        
+        set{
+            _topicModel = newValue
+            loadURL(urlStr: topicModel?.mob_h5_url, title:nil)
+        }
+        get{
+            return _topicModel
+        }
+    }
+    
+    
+    public   lazy  var webView : UIWebView = {
     
         let webV = UIWebView(frame: self.bounds)
         webV.delegate = self
@@ -136,6 +149,7 @@ class KYWebView: UIView {
         guard let url2 = url else {
             return
         }
+        KYPageRouter.getCurrentVC().navigationItem.title = title
         webView.loadRequest(URLRequest(url:url2))
 
     }

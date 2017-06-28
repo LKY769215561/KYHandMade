@@ -83,10 +83,10 @@ extension KYFocusView : UICollectionViewDelegate{
         
         if indexPath.item % 2 == 0
         {
-             KYCommonTool.openUrl(str:authorBlog)
+              KYPageRouter.openAuthorWebView(webURL: authorBlog)
         }else
         {
-            KYCommonTool.openUrl(str: authorGithub)
+             KYPageRouter.openAuthorWebView(webURL: authorGithub)
         }
         
     }

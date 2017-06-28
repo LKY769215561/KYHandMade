@@ -72,6 +72,7 @@ class KYTabBarController: UITabBarController {
             item.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.orange], for: .selected)
             // 设置底部tabbar 字体
             nav.tabBarItem = item
+            childVC.navigationItem.title = title
             addChildViewController(nav)
             
         }

@@ -57,8 +57,6 @@ class KYFairTableViewController: UIViewController {
                 "vid":"18",
                 "a":"product"
         ]
-        
-        
         KYNetWorkTool.shared.get(HomeBaseURL, parameters: param) { (success, result, error) in
             
             self.collectionView.mj_header.endRefreshing()
@@ -195,7 +193,26 @@ extension KYFairTableViewController : UICollectionViewDataSource{
 extension KYFairTableViewController : UICollectionViewDelegate{
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath)
+        
+        if indexPath.section == 0 {
+            
+            KYPageRouter.openAuthorWebView(webURL: authorBlog)
+            
+        }else if indexPath.section == 1{
+            
+             KYPageRouter.openAuthorWebView(webURL: authorGithub)
+        
+        }else if indexPath.section == 2{
+             KYPageRouter.openAuthorWebView(webURL: authorBlog)
+        }else if indexPath.section == 3{
+            
+            let topicModel = fariDataModel?.topicArray[indexPath.item]
+            let animator = XWCoolAnimator.xw_animator(with: .pageMiddleFlipFromLeft)
+            let webVC = KYWebViewController()
+            webVC.isPush = false
+            webVC.topicModel = topicModel
+            KYPageRouter.getCurrentVC().xw_present(webVC, with: animator)
+        }
     }
 }
 

@@ -43,22 +43,12 @@ class KYCommonTool: NSObject {
         
     }
     
-   class func openUrl(str:String?) {
-        
-        guard let urlStr = str else {
-            return
-        }
-        let url = URL(string:urlStr)
-    
-        guard let url2 = url else {
-            return
-        }
-       UIApplication.shared.openURL(url2)
-    }
-    
    class  func dataToObj(data:NSData?) -> Any? {
     
-        let aa =  try? JSONSerialization.jsonObject(with: data as! Data, options: .mutableContainers)
+        guard let data = data  else {
+            return  nil
+        }
+        let aa =  try? JSONSerialization.jsonObject(with: data as Data, options: .mutableContainers)
         return aa
 
     }

@@ -10,6 +10,7 @@ import UIKit
 
 class KYWebViewController: UIViewController {
     
+    
     // 秒杀
     var _navgationModel : KYNavigationModel?
     var navgationModel : KYNavigationModel?{
@@ -68,11 +69,23 @@ class KYWebViewController: UIViewController {
         }
     }
     
+    var _topicModel : KYFariTopicDataModel?
+    var topicModel : KYFariTopicDataModel?{
+        
+        set{
+            _topicModel = newValue
+            webView.topicModel = _topicModel
+        }
+        get{
+            return _topicModel
+        }
+    }
+    
     
     var isPush : Bool = true
     
 
-   lazy var webView: KYWebView = {
+ public  lazy var webView: KYWebView = {
     
     var web : KYWebView
         if self.isPush
@@ -101,9 +114,6 @@ class KYWebViewController: UIViewController {
         super.viewDidAppear(animated)
           view.addSubview(webView)
     }
-    
-    
-    
     
     func backAction() {
         dismiss(animated: true, completion: nil)
