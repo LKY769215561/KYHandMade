@@ -207,7 +207,7 @@ extension KYFairTableViewController : UICollectionViewDelegate{
         }else if indexPath.section == 3{
             
             let topicModel = fariDataModel?.topicArray[indexPath.item]
-            let animator = XWCoolAnimator.xw_animator(with: .pageMiddleFlipFromLeft)
+            let animator = XWCoolAnimator.xw_animator(with: .pageMiddleFlipFromRight)
             let webVC = KYWebViewController()
             webVC.isPush = false
             webVC.topicModel = topicModel

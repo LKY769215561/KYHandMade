@@ -90,7 +90,7 @@ class KYDarenCell: UITableViewCell {
     
     @IBAction func gaunzhuBtnClick(_ sender: Any) {
         
-        KYProgressHUD.showWithStatus("开发中...")
+        KYProgressHUD.showInfoWithStatus("开发中...")
     }
     
     func imageViewClick(tap : UITapGestureRecognizer) {

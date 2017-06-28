@@ -44,7 +44,7 @@
 		543085F31EEE6F590093E766 /* KYHomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085CE1EEE6F590093E766 /* KYHomController.swift */; };
 		543085F41EEE6F590093E766 /* KYNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085D31EEE6F590093E766 /* KYNavgationController.swift */; };
 		543085F51EEE6F590093E766 /* KYTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085D41EEE6F590093E766 /* KYTabBarController.swift */; };
-		543085F61EEE6F590093E766 /* KYMyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085D91EEE6F590093E766 /* KYMyTableViewController.swift */; };
+		543085F61EEE6F590093E766 /* KYMyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085D91EEE6F590093E766 /* KYMyViewController.swift */; };
 		543085F71EEE6F590093E766 /* KYNewFeatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085DE1EEE6F590093E766 /* KYNewFeatureController.swift */; };
 		543085F81EEE6F590093E766 /* KYNewFeatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543085E11EEE6F590093E766 /* KYNewFeatureCell.swift */; };
 		543085F91EEE6F590093E766 /* KYNewFeatureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 543085E21EEE6F590093E766 /* KYNewFeatureCell.xib */; };
@@ -139,6 +139,8 @@
 		54AB81531EFCB2F100CF8EC5 /* KYVipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB81521EFCB2F100CF8EC5 /* KYVipModel.swift */; };
 		54AB81551EFCC54100CF8EC5 /* KYPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB81541EFCC54100CF8EC5 /* KYPhotoView.swift */; };
 		54EB17DE1EF2684D005D6791 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB17DD1EF2684D005D6791 /* UIViewExtension.swift */; };
+		A18B68D81F03E6D40021BB34 /* KYMyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18B68D61F03E6D40021BB34 /* KYMyCell.swift */; };
+		A18B68D91F03E6D40021BB34 /* KYMyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A18B68D71F03E6D40021BB34 /* KYMyCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -178,7 +180,7 @@
 		543085CE1EEE6F590093E766 /* KYHomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYHomController.swift; sourceTree = "<group>"; };
 		543085D31EEE6F590093E766 /* KYNavgationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYNavgationController.swift; sourceTree = "<group>"; };
 		543085D41EEE6F590093E766 /* KYTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYTabBarController.swift; sourceTree = "<group>"; };
-		543085D91EEE6F590093E766 /* KYMyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYMyTableViewController.swift; sourceTree = "<group>"; };
+		543085D91EEE6F590093E766 /* KYMyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYMyViewController.swift; sourceTree = "<group>"; };
 		543085DE1EEE6F590093E766 /* KYNewFeatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYNewFeatureController.swift; sourceTree = "<group>"; };
 		543085E11EEE6F590093E766 /* KYNewFeatureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYNewFeatureCell.swift; sourceTree = "<group>"; };
 		543085E21EEE6F590093E766 /* KYNewFeatureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYNewFeatureCell.xib; sourceTree = "<group>"; };
@@ -303,6 +305,8 @@
 		54AB81541EFCC54100CF8EC5 /* KYPhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYPhotoView.swift; sourceTree = "<group>"; };
 		54EB17DD1EF2684D005D6791 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		5FC183425314ED4C1FE5D2E7 /* Pods-KYHandMade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KYHandMade.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KYHandMade/Pods-KYHandMade.debug.xcconfig"; sourceTree = "<group>"; };
+		A18B68D61F03E6D40021BB34 /* KYMyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYMyCell.swift; sourceTree = "<group>"; };
+		A18B68D71F03E6D40021BB34 /* KYMyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYMyCell.xib; sourceTree = "<group>"; };
 		BCC62D6337226E72EE2A3997 /* Pods-KYHandMade.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KYHandMade.release.xcconfig"; path = "Pods/Target Support Files/Pods-KYHandMade/Pods-KYHandMade.release.xcconfig"; sourceTree = "<group>"; };
 		C164B324D2D51207744875E1 /* Pods_KYHandMade.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KYHandMade.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -557,8 +561,7 @@
 			isa = PBXGroup;
 			children = (
 				543085D81EEE6F590093E766 /* Controller */,
-				543085DA1EEE6F590093E766 /* Model */,
-				543085DB1EEE6F590093E766 /* View */,
+				A18B68D51F03E6B20021BB34 /* View */,
 			);
 			path = "My(我的)";
 			sourceTree = "<group>";
@@ -566,23 +569,9 @@
 		543085D81EEE6F590093E766 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				543085D91EEE6F590093E766 /* KYMyTableViewController.swift */,
+				543085D91EEE6F590093E766 /* KYMyViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		543085DA1EEE6F590093E766 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		543085DB1EEE6F590093E766 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		543085DC1EEE6F590093E766 /* NewFeature(新特性) */ = {
@@ -911,6 +900,15 @@
 			path = PageViewCell;
 			sourceTree = "<group>";
 		};
+		A18B68D51F03E6B20021BB34 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A18B68D61F03E6D40021BB34 /* KYMyCell.swift */,
+				A18B68D71F03E6D40021BB34 /* KYMyCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EC879C8DB671CE6F51E5DC5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1003,6 +1001,7 @@
 				543085F01EEE6F590093E766 /* KYAdViewController.xib in Resources */,
 				541395A11F038728002AC315 /* KYFairSectionHeadView.xib in Resources */,
 				547EFA0C1EF7B9B00036753F /* KYSlideCollectionViewCell.xib in Resources */,
+				A18B68D91F03E6D40021BB34 /* KYMyCell.xib in Resources */,
 				547EF9FA1EF7B9B00036753F /* KYAdvanceView.xib in Resources */,
 				541395991F0386FA002AC315 /* KYFariTopicBestCell.xib in Resources */,
 				547E261D1EF90316003F4DB8 /* KYTutorialPicCell.xib in Resources */,
@@ -1073,7 +1072,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				543085F61EEE6F590093E766 /* KYMyTableViewController.swift in Sources */,
+				543085F61EEE6F590093E766 /* KYMyViewController.swift in Sources */,
 				547EF9CA1EF7643D0036753F /* KYDaRenModel.swift in Sources */,
 				54AB81531EFCB2F100CF8EC5 /* KYVipModel.swift in Sources */,
 				541395A31F038B91002AC315 /* KYFariDataModel.swift in Sources */,
@@ -1168,6 +1167,7 @@
 				541395A01F038728002AC315 /* KYFairSectionHeadView.swift in Sources */,
 				547E267B1EF92133003F4DB8 /* XWFilterTransitionView.m in Sources */,
 				543085FB1EEE6F590093E766 /* KYCommonTool.swift in Sources */,
+				A18B68D81F03E6D40021BB34 /* KYMyCell.swift in Sources */,
 				543085F51EEE6F590093E766 /* KYTabBarController.swift in Sources */,
 				545EA5011EEFD6BA004C5CB3 /* KYNetWorkTool.swift in Sources */,
 				547EFA051EF7B9B00036753F /* KYEventCell.swift in Sources */,

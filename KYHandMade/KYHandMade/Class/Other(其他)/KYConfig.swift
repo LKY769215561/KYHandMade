@@ -94,6 +94,19 @@ func setupJianDaoHeaderRefresh(_ target: AnyObject, action: Selector) -> MJRefre
     return headerRefresh!
 }
 
+
+func scaledToSize(image : UIImage?, size : CGSize) -> UIImage {
+    
+    guard let image = image else {
+        return UIImage()
+    }
+    UIGraphicsBeginImageContextWithOptions(size, false, 2)
+    image.draw(in: CGRect(x:0, y:0, width:size.width, height: size.height))
+    let newImage = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    return newImage!
+}
+
 extension String{
 
     func checkNotNull() -> Bool {

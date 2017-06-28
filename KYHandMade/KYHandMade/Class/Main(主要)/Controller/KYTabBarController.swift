@@ -43,7 +43,7 @@ class KYTabBarController: UITabBarController {
         kImgKey    : "icon_shiji_",
         kSelImgKey : "icon_shiji_s"],
         
-        [kClassKey  : "KYMyTableViewController",
+        [kClassKey  : "KYMyViewController",
         kTitleKey  : "我的",
         kImgKey    : "icon_wode_",
         kSelImgKey : "icon_wode_s"]
