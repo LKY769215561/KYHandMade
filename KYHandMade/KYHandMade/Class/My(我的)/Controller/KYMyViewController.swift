@@ -10,12 +10,14 @@ import UIKit
 
 private let MyCellId = "MyCellId"
 
+private let headViewHeight : CGFloat = 200
+
 class KYMyViewController: UIViewController {
 
     
-    private lazy var tableView : UITableView = {
+    fileprivate lazy var tableView : UITableView = {
       
-       let tab = UITableView(frame: CGRect(x:0, y: NAVBAR_HEIGHT, width:SCREEN_WIDTH, height:SCREEN_HEIGHT-NAVBAR_HEIGHT-TABBAR_HEIGHT), style: .grouped)
+       let tab = UITableView(frame: CGRect(x:0, y: 0, width:SCREEN_WIDTH, height:SCREEN_HEIGHT-NAVBAR_HEIGHT-TABBAR_HEIGHT), style: .grouped)
         tab.register(UINib(nibName:"KYMyCell", bundle:nil), forCellReuseIdentifier: MyCellId)
         tab.dataSource = self
         tab.delegate = self
@@ -23,9 +25,10 @@ class KYMyViewController: UIViewController {
         return tab
     }()
     
-    fileprivate lazy var headView : UIImageView = {
+    fileprivate lazy var headImageView : UIImageView = {
     
-        let bgImageView = UIImageView(frame: CGRect(x:0, y: 0, width: SCREEN_WIDTH, height:200))
+        let bgImageView = UIImageView(frame: CGRect(x:0, y: 0, width: SCREEN_WIDTH, height:headViewHeight))
+        bgImageView.contentMode = .scaleAspectFill
         bgImageView.image = UIImage(named:"me_BG")
 
         let authouImageView = UIImageView(image :  UIImage(named:"author"))
@@ -41,12 +44,40 @@ class KYMyViewController: UIViewController {
         return bgImageView
     
     }()
+    fileprivate lazy var headView : UIView = {
+        let bgView = UIView(frame: CGRect(x:0, y: 0, width: SCREEN_WIDTH, height:headViewHeight))
+        bgView.addSubview(self.headImageView)
+        return bgView
+    }()
     
+    
+    fileprivate lazy var titleLabel : UILabel = {
+    
+        let label =  UILabel()
+        label.size = CGSize(width: 150, height: 44)
+        label.center = CGPoint(x:SCREEN_WIDTH/2, y:44/2+20)
+        label.text = "我的"
+        label.textAlignment = .center
+        return label
+    }()
+    
+    
+    fileprivate lazy var navigationView : UIView = {
+      
+        let barView = UIView(frame: CGRect(x:0, y:0, width: SCREEN_WIDTH, height:NAVBAR_HEIGHT))
+        barView.backgroundColor = UIColor.white.withAlphaComponent(0.85)
+        barView.addSubview(self.titleLabel)
+        barView.alpha = 0
+        return barView
+    }()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+
+        
+        // 添加内容视图
         view.addSubview(tableView)
         
         
@@ -54,10 +85,13 @@ class KYMyViewController: UIViewController {
         
     }
     
-
-    
-
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // 去掉背景图片 底部线条
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        view.addSubview(navigationView)
+    }
 }
 
 extension KYMyViewController : UITableViewDataSource{
@@ -116,8 +150,29 @@ extension KYMyViewController : UITableViewDataSource{
 extension KYMyViewController : UITableViewDelegate{
  
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let offsetY = scrollView.contentInset.top + scrollView.contentOffset.y
+        let progressChange = offsetY / 80
+        
+        if offsetY < 0 {
+            headImageView.y = offsetY
+            headImageView.height = headViewHeight - offsetY
+        }
+        print(progressChange)
+        
+        if progressChange >= 1
+        {
+           self.navigationView.alpha = progressChange - 1
+        }else
+        {
+           self.navigationView.alpha = 0
+        }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+        KYPageRouter.openAuthorWebView(webURL: authorBlog)
     }
 
 }

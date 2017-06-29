@@ -16,8 +16,11 @@ class KYMyCell: UITableViewCell {
     
     @IBOutlet weak var subLabel: UILabel!
     
-
-    
+   
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        selectionStyle = .none
+    }
     
     
 }
