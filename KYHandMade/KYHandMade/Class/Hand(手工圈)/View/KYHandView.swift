@@ -41,13 +41,13 @@ class KYHandView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func willMove(toWindow newWindow: UIWindow?) {
-        print(self.handType+"toWindow")
-    }
-    
-    override func willMove(toSuperview newSuperview: UIView?) {
-        print(self.handType+"toSuperview")
-    }
+//    override func willMove(toWindow newWindow: UIWindow?) {
+//        print(self.handType+"toWindow")
+//    }
+//    
+//    override func willMove(toSuperview newSuperview: UIView?) {
+//        print(self.handType+"toSuperview")
+//    }
     
     
     func loadNewData()  {

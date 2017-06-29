@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 private let MyCellId = "MyCellId"
 
@@ -80,8 +81,8 @@ class KYMyViewController: UIViewController {
         // 添加内容视图
         view.addSubview(tableView)
         
-        
-     
+        let cache = KingfisherManager.shared.cache.diskCachePath
+     print(cache)
         
     }
     
