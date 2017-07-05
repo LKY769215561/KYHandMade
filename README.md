@@ -27,8 +27,6 @@
 
 ## 首页
 
-![image](http://upload-images.jianshu.io/upload_images/694556-008f1914321d34da.gif?imageMogr2/auto-orient/strip)
-
 ![gif](http://upload-images.jianshu.io/upload_images/694556-008f1914321d34da.gif?imageMogr2/auto-orient/strip)
 ### 教程
 
