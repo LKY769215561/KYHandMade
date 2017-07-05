@@ -14,14 +14,10 @@ import SwiftyJSON
 typealias NetworkFinished = (_ success: Bool,_ result:JSON?,_ error:NSError?) -> ()
 
 class KYNetWorkTool: NSObject {
-
-    /// 网络工具类单例
     
    static let shared = KYNetWorkTool()
     
 }
-
-
 // MARK: - 基础请求方法
 extension KYNetWorkTool{
 
@@ -76,8 +72,4 @@ extension KYNetWorkTool{
            finished(false,nil,error as NSError?)
         }
     }
-    
-
-    
-
 }

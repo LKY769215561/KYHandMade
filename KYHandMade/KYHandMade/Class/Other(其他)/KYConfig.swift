@@ -107,21 +107,6 @@ func scaledToSize(image : UIImage?, size : CGSize) -> UIImage {
     return newImage!
 }
 
-extension String{
-
-    func checkNotNull() -> Bool {
-        
-        if self == "null" || self == "NSNull"
-        {
-          return false
-        }else
-        {
-          return (self as NSString).length > 0
-        }
-    }
-
-}
-
 func randomColor() -> UIColor {
     let red = CGFloat(arc4random_uniform(255))/CGFloat(255.0)
     let green = CGFloat( arc4random_uniform(255))/CGFloat(255.0)

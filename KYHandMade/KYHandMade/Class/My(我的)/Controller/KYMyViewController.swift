@@ -18,7 +18,7 @@ class KYMyViewController: UIViewController {
     
     fileprivate lazy var tableView : UITableView = {
       
-       let tab = UITableView(frame: CGRect(x:0, y: 0, width:SCREEN_WIDTH, height:SCREEN_HEIGHT-NAVBAR_HEIGHT-TABBAR_HEIGHT), style: .grouped)
+       let tab = UITableView(frame: CGRect(x:0, y: 0, width:SCREEN_WIDTH, height:SCREEN_HEIGHT-TABBAR_HEIGHT), style: .grouped)
         tab.register(UINib(nibName:"KYMyCell", bundle:nil), forCellReuseIdentifier: MyCellId)
         tab.dataSource = self
         tab.delegate = self
@@ -81,8 +81,7 @@ class KYMyViewController: UIViewController {
         // 添加内容视图
         view.addSubview(tableView)
         
-        let cache = KingfisherManager.shared.cache.diskCachePath
-     print(cache)
+        //let cache = KingfisherManager.shared.cache.diskCachePath
         
     }
     
@@ -109,6 +108,14 @@ extension KYMyViewController : UITableViewDataSource{
         }else{
             return 1
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 20
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -160,7 +167,6 @@ extension KYMyViewController : UITableViewDelegate{
             headImageView.y = offsetY
             headImageView.height = headViewHeight - offsetY
         }
-        print(progressChange)
         
         if progressChange >= 1
         {

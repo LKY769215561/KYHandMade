@@ -93,7 +93,7 @@ class KYDaRenView: UIView {
             if success
             {
                 let infoStr =  (result?["info"].stringValue)!
-                if infoStr.checkNotNull()
+                if (infoStr as NSString).length > 0
                 {
                    KYProgressHUD.showInfoWithStatus(infoStr)
                 }else
