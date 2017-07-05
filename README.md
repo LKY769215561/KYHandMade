@@ -29,7 +29,7 @@
 
 ![image](http://upload-images.jianshu.io/upload_images/694556-008f1914321d34da.gif?imageMogr2/auto-orient/strip)
 
-
+![gif](http://upload-images.jianshu.io/upload_images/694556-008f1914321d34da.gif?imageMogr2/auto-orient/strip)
 ### 教程
 
 ![image](http://upload-images.jianshu.io/upload_images/694556-76e3f73e1e80742a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
