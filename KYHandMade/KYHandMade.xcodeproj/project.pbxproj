@@ -131,6 +131,7 @@
 		547EFA0A1EF7B9B00036753F /* KYFocusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EF9F61EF7B9B00036753F /* KYFocusCell.xib */; };
 		547EFA0B1EF7B9B00036753F /* KYSlideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EF9F71EF7B9B00036753F /* KYSlideCollectionViewCell.swift */; };
 		547EFA0C1EF7B9B00036753F /* KYSlideCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547EF9F81EF7B9B00036753F /* KYSlideCollectionViewCell.xib */; };
+		548D21F91F0F7E5800D07EE1 /* KYHandMoreChildController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548D21F81F0F7E5800D07EE1 /* KYHandMoreChildController.swift */; };
 		549BCD8E1EF3BFF70097E916 /* KYLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549BCD8D1EF3BFF70097E916 /* KYLayout.swift */; };
 		549BCD941EF3C8730097E916 /* KYFocusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549BCD931EF3C8730097E916 /* KYFocusModel.swift */; };
 		54AB814D1EFCB02100CF8EC5 /* KYLaudModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB814C1EFCB02100CF8EC5 /* KYLaudModel.swift */; };
@@ -296,6 +297,7 @@
 		547EF9F61EF7B9B00036753F /* KYFocusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYFocusCell.xib; sourceTree = "<group>"; };
 		547EF9F71EF7B9B00036753F /* KYSlideCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYSlideCollectionViewCell.swift; sourceTree = "<group>"; };
 		547EF9F81EF7B9B00036753F /* KYSlideCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYSlideCollectionViewCell.xib; sourceTree = "<group>"; };
+		548D21F81F0F7E5800D07EE1 /* KYHandMoreChildController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYHandMoreChildController.swift; sourceTree = "<group>"; };
 		549BCD8D1EF3BFF70097E916 /* KYLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYLayout.swift; sourceTree = "<group>"; };
 		549BCD931EF3C8730097E916 /* KYFocusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYFocusModel.swift; sourceTree = "<group>"; };
 		54AB814C1EFCB02100CF8EC5 /* KYLaudModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYLaudModel.swift; sourceTree = "<group>"; };
@@ -444,6 +446,7 @@
 			isa = PBXGroup;
 			children = (
 				543085C91EEE6F590093E766 /* KYHandController.swift */,
+				548D21F81F0F7E5800D07EE1 /* KYHandMoreChildController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -613,35 +616,11 @@
 			children = (
 				54EB17DD1EF2684D005D6791 /* UIViewExtension.swift */,
 				543085E41EEE6F590093E766 /* AppDelegate.swift */,
-				543085E51EEE6F590093E766 /* Controller */,
-				543085E61EEE6F590093E766 /* Model */,
-				543085E71EEE6F590093E766 /* View */,
 				545EA5021EEFDD3A004C5CB3 /* KYCommon.swift */,
 				545EA5061EEFE630004C5CB3 /* KYConfig.swift */,
 				545EA5081EEFE880004C5CB3 /* bridging.h */,
 			);
 			path = "Other(其他)";
-			sourceTree = "<group>";
-		};
-		543085E51EEE6F590093E766 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		543085E61EEE6F590093E766 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		543085E71EEE6F590093E766 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		543085E81EEE6F590093E766 /* Tools */ = {
@@ -1159,6 +1138,7 @@
 				54AB814F1EFCB08900CF8EC5 /* KYCommentModel.swift in Sources */,
 				545EA50A1EEFEBF9004C5CB3 /* KYFeaturedModel.swift in Sources */,
 				545EA5121EEFF016004C5CB3 /* KYAdvanceModel.swift in Sources */,
+				548D21F91F0F7E5800D07EE1 /* KYHandMoreChildController.swift in Sources */,
 				547EFA021EF7B9B00036753F /* KYWebView.swift in Sources */,
 				547E26711EF92133003F4DB8 /* XWFilterAnimator+XWBarSwipe.m in Sources */,
 				547EF9D61EF798260036753F /* KYEventModel.swift in Sources */,

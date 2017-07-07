@@ -15,4 +15,5 @@
 
 #import "XWCoolAnimator.h"
 #import "UIViewController+XWTransition.h"
+#import "XWCircleSpreadAnimator.h"
 #endif /* bridging_h */
