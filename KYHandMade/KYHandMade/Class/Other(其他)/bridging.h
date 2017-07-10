@@ -9,11 +9,10 @@
 #ifndef bridging_h
 #define bridging_h
 
-//#import <MJRefresh/MJRefresh.h>
-
-
 
 #import "XWCoolAnimator.h"
 #import "UIViewController+XWTransition.h"
 #import "XWCircleSpreadAnimator.h"
+#import "WHKit.h"
+
 #endif /* bridging_h */
