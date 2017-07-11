@@ -69,6 +69,7 @@
 		5470E22B1EF0F62500282FA0 /* KYSlideLessonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5470E22A1EF0F62500282FA0 /* KYSlideLessonController.swift */; };
 		5470E22F1EF0F75300282FA0 /* KYPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5470E22E1EF0F75300282FA0 /* KYPageRouter.swift */; };
 		5470E2311EF10E4C00282FA0 /* KYLessonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5470E2301EF10E4C00282FA0 /* KYLessonData.swift */; };
+		5472803E1F14AFE2003025C5 /* LXReorderableCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5472803D1F14AFE2003025C5 /* LXReorderableCollectionViewFlowLayout.m */; };
 		5479355D1EFB60DF0024C563 /* KYHandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5479355C1EFB60DF0024C563 /* KYHandView.swift */; };
 		5479355F1EFB6CDF0024C563 /* KYHandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5479355E1EFB6CDF0024C563 /* KYHandModel.swift */; };
 		547935611EFB6D220024C563 /* KYHandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547935601EFB6D220024C563 /* KYHandCell.swift */; };
@@ -234,6 +235,8 @@
 		5470E22A1EF0F62500282FA0 /* KYSlideLessonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYSlideLessonController.swift; sourceTree = "<group>"; };
 		5470E22E1EF0F75300282FA0 /* KYPageRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYPageRouter.swift; sourceTree = "<group>"; };
 		5470E2301EF10E4C00282FA0 /* KYLessonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYLessonData.swift; sourceTree = "<group>"; };
+		5472803C1F14AFE2003025C5 /* LXReorderableCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXReorderableCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		5472803D1F14AFE2003025C5 /* LXReorderableCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXReorderableCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		5479355C1EFB60DF0024C563 /* KYHandView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYHandView.swift; sourceTree = "<group>"; };
 		5479355E1EFB6CDF0024C563 /* KYHandModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYHandModel.swift; sourceTree = "<group>"; };
 		547935601EFB6D220024C563 /* KYHandCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYHandCell.swift; sourceTree = "<group>"; };
@@ -699,6 +702,8 @@
 		543085E31EEE6F590093E766 /* Other(其他) */ = {
 			isa = PBXGroup;
 			children = (
+				5472803C1F14AFE2003025C5 /* LXReorderableCollectionViewFlowLayout.h */,
+				5472803D1F14AFE2003025C5 /* LXReorderableCollectionViewFlowLayout.m */,
 				543085E41EEE6F590093E766 /* AppDelegate.swift */,
 				545EA5021EEFDD3A004C5CB3 /* KYCommon.swift */,
 				545EA5061EEFE630004C5CB3 /* KYConfig.swift */,
@@ -1226,6 +1231,7 @@
 				547E26681EF92133003F4DB8 /* XWCoolAnimator+XWExplode.m in Sources */,
 				540821421EFA7E8A0035C2F2 /* KYPageStyle.swift in Sources */,
 				547E26671EF92133003F4DB8 /* XWCircleSpreadAnimator.m in Sources */,
+				5472803E1F14AFE2003025C5 /* LXReorderableCollectionViewFlowLayout.m in Sources */,
 				540821321EFA26220035C2F2 /* KYDaRenToolsModel.swift in Sources */,
 				549E4F2F1F135F7100053E25 /* UIView+WHView.m in Sources */,
 				547E26151EF8F385003F4DB8 /* KYTutoriaVideoController.swift in Sources */,

@@ -9,7 +9,7 @@
 import UIKit
 
 
-private let itemSize = CGSize(width:(SCREEN_WIDTH - 5 * 10) * 0.25, height: 40)
+private let itemSize = CGSize(width:(SCREEN_WIDTH - 50) * 0.25, height: 40)
 private let MoreChildCellId = "MoreChildCellId"
 private let MoreChildHeaderView = "MoreChildHeaderView"
 
@@ -28,7 +28,7 @@ class KYHandMoreChildController: UIViewController {
     
     lazy var collectionView : UICollectionView = {
     
-        let layout = UICollectionViewFlowLayout()
+        let layout = LXReorderableCollectionViewFlowLayout()
         layout.itemSize = itemSize
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10
@@ -48,6 +48,15 @@ class KYHandMoreChildController: UIViewController {
     
      lazy var zeroChildArray : [String] = ["手工课官方"]
     
+    
+    lazy var animLabel : UILabel = {
+    
+        let copyCell = UILabel()
+        copyCell.backgroundColor = UIColor.white
+        copyCell.textAlignment = .center
+        return copyCell
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -57,7 +66,7 @@ class KYHandMoreChildController: UIViewController {
        
         automaticallyAdjustsScrollViewInsets = false
         view.addSubview(collectionView)
-       // view.addSubview(closeBtn)
+        view.addSubview(closeBtn)
     }
     
 
@@ -66,8 +75,63 @@ class KYHandMoreChildController: UIViewController {
        dismiss(animated: true, completion: nil)
     }
     
+    func addAmationWithCellFrame(frame:CGRect,titleStr : String) {
+       
+        animLabel.frame = frame
+        animLabel.text = titleStr
+        collectionView.addSubview(animLabel)
+        
+        
+        let startPoint = frame.origin
+        
+        let margin = (SCREEN_WIDTH - itemSize.width * 4) / 3
+        let endPointX = CGFloat((zeroChildArray.count - 1)  % 4) * (itemSize.width + margin)
+        let endPointY = CGFloat((zeroChildArray.count - 1) / 4) * (itemSize.height + 10)
+        
+        let endPoint = CGPoint(x: endPointX, y: endPointY)
+        
+        
+        let path = UIBezierPath()
+        path.move(to: startPoint)
+        path.addQuadCurve(to: endPoint, controlPoint: startPoint)
+        
+        
+        let keyAnimation = CAKeyframeAnimation(keyPath:"position")
+        keyAnimation.path = path.cgPath
+        keyAnimation.rotationMode = kCAAnimationRotateAuto
+        
+        let alphaAnimation = CABasicAnimation(keyPath:"alpha")
+        alphaAnimation.duration = 0.5
+        alphaAnimation.fromValue = 1.0
+        alphaAnimation.toValue = 0.1
+        alphaAnimation.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseOut)
+        
+        let group = CAAnimationGroup()
+        group.animations = [keyAnimation,alphaAnimation]
+        group.duration = 0.8
+        group.isRemovedOnCompletion = false
+        group.fillMode = kCAFillModeForwards
+        group.delegate = self
+        group.setValue("groupsAnimation", forKey: "animationName")
+        animLabel.layer.add(group, forKey: nil)
+    
+        
+    }
+    
 
 }
+
+extension KYHandMoreChildController : LXReorderableCollectionViewDataSource{
+
+    func collectionView(_ collectionView: UICollectionView!, itemAt fromIndexPath: IndexPath!, willMoveTo toIndexPath: IndexPath!) {
+        
+        print(toIndexPath)
+        
+    }
+    
+
+}
+
 extension KYHandMoreChildController : UICollectionViewDataSource{
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -124,9 +188,28 @@ extension KYHandMoreChildController : UICollectionViewDelegate{
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        print(indexPath.item)
+        if indexPath.section == 1{
+           
+            let titleStr = moreChildArray[indexPath.item]
+            moreChildArray.remove(at: indexPath.item)
+            zeroChildArray.append(titleStr)
+            
+            let selectedCell = collectionView.cellForItem(at :indexPath)!
+            addAmationWithCellFrame(frame: selectedCell.frame,titleStr: titleStr)
+        }
     }
     
 }
+
+extension KYHandMoreChildController : CAAnimationDelegate{
+
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+       
+        collectionView.reloadData()
+        animLabel.removeFromSuperview()
+    }
+    
+}
+
 
 

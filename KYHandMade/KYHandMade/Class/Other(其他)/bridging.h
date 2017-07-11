@@ -14,5 +14,6 @@
 #import "UIViewController+XWTransition.h"
 #import "XWCircleSpreadAnimator.h"
 #import "WHKit.h"
+#import "LXReorderableCollectionViewFlowLayout.h"
 
 #endif /* bridging_h */
