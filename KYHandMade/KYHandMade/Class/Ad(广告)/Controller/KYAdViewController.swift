@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KYAdViewController: UIViewController {
+class KYAdViewController: UIViewController,Nibloadable {
 
 
     @IBOutlet weak var adImageView: UIImageView!

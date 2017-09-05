@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KYDarenCell: UITableViewCell {
+class KYDarenCell: UITableViewCell ,Reusable {
 
 
     @IBOutlet weak var guanzhuBtn: UIButton!
@@ -28,9 +28,12 @@ class KYDarenCell: UITableViewCell {
      
         set{
            _darenModel = newValue
-            
-            let url = URL(string:(_darenModel?.avatar)!)
-            iconImageView.kf.setImage(with: url)
+          
+            guard let avatar = _darenModel?.avatar else {
+                return
+            }
+            iconImageView.kf.setImage(with: URL(string:avatar))
+          
             nameLabel.text  = _darenModel?.nick_name
             
             guard   let courseCount = _darenModel?.course_count else{
@@ -50,6 +53,7 @@ class KYDarenCell: UITableViewCell {
             }
             
             for (index, dict) in list.enumerated() {
+                
                 let tap = UITapGestureRecognizer(target: self, action: #selector(imageViewClick(tap:)))
                
                 let imageView = imageViews[index]

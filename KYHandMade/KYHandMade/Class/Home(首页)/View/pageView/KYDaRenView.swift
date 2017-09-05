@@ -20,6 +20,8 @@ class KYDaRenView: UIView {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName:"KYDarenCell", bundle :nil), forCellReuseIdentifier: KYDarenCellId)
+
+        //tableView.registerCell(KYDarenCell.self)
         tableView.mj_header = setupJianDaoHeaderRefresh(self, action: #selector(loadNewData))
         tableView.mj_footer = setupFooterRefresh(self, action: #selector(loadMoreData))
         tableView.mj_header.beginRefreshing()
@@ -34,7 +36,7 @@ class KYDaRenView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-       
+    
         addSubview(tableView)
         
     }
@@ -132,8 +134,9 @@ extension KYDaRenView : UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let darenCell = tableView.dequeueReusableCell(withIdentifier: KYDarenCellId) as! KYDarenCell
+
+       // let darenCell = tableView.dequeueReusableCell(indexPath: indexPath) as KYDarenCell
+        let darenCell = tableView.dequeueReusableCell(withIdentifier:KYDarenCellId , for: indexPath) as! KYDarenCell
         darenCell.darenModel = darenModels[indexPath.row]
         return darenCell
         

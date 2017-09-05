@@ -8,11 +8,12 @@
 
 import UIKit
 import SDCycleScrollView
+import Alamofire
 
 
 let KYFeaturedViewCellId = "KYFeaturedViewCellId"
 class KYFeaturedView: UIView {
-
+    
     // 头部
     lazy var featureHeader : UIView = {
       
@@ -47,8 +48,8 @@ class KYFeaturedView: UIView {
         let navView = UIView(frame: CGRect(x:0, y:self.cycleScorllView.bottom, width: SCREEN_WIDTH, height:navgationItemW))
         for ( i,navgationModel) in featureModel.dataNavigationArray.enumerated() {
             
- 
-            let navgationItem = Bundle.main.loadNibNamed("KYNavigationView", owner: nil, options: nil)?.first as! KYNavigationView
+
+            let navgationItem = KYNavigationView.loadFromNib()
             navgationItem.tag = i
             navgationItem.frame = CGRect(x:CGFloat(i)*navgationItemW, y:0, width: navgationItemW, height:navgationItemW)
             navgationItem.navgationModel = navgationModel
@@ -67,7 +68,8 @@ class KYFeaturedView: UIView {
         let navView = UIView(frame: CGRect(x:0, y:self.cycleScorllView.bottom, width: SCREEN_WIDTH, height:advanceItemW))
 
         for ( i,advanceModel) in featureModel.dataAdvanceArray.enumerated() {
-            let advanceItem = Bundle.main.loadNibNamed("KYAdvanceView", owner: nil, options: nil)?.first as! KYAdvanceView
+            
+            let advanceItem = KYAdvanceView.loadFromNib()
             advanceItem.tag = i
             advanceItem.frame = CGRect(x:CGFloat(i)*advanceItemW, y:0, width: advanceItemW, height:advanceItemW)
             advanceItem.advanceModel = advanceModel
@@ -121,6 +123,8 @@ class KYFeaturedView: UIView {
         
         addSubview(tableView)
       
+    
+        
     }
     
 
@@ -133,8 +137,7 @@ class KYFeaturedView: UIView {
             "a" : "indexNewest",
             "vid" : "18"
         ]
-        
-        
+    
         KYNetWorkTool.shared.get(HomeBaseURL, parameters: paramet) { (success, result, error) in
             
             self.tableView.mj_header.endRefreshing()
@@ -199,16 +202,12 @@ extension KYFeaturedView: SDCycleScrollViewDelegate {
             KYPageRouter.getCurrentNav()?.pushViewController(eventVC, animated: true)
             
         }else if(slideModel.itemtype == "web_out"){
-            //KYCommonTool.openUrl(str: slideModel.hand_id)
             guard let handId = slideModel.hand_id else {
                 return
             }
             KYPageRouter.openAuthorWebView(webURL:handId)
             
         }else{
-//            let lessonVC = KYSlideLessonController()
-//            lessonVC.slide = slideModel
-//            KYPageRouter.getCurrentNav()?.pushViewController(lessonVC, animated: true)
             KYPageRouter.openAuthorWebView(webURL:authorBlog)
         }
     }
@@ -280,3 +279,5 @@ extension KYFeaturedView : UITableViewDelegate{
     
 
 }
+
+

@@ -59,17 +59,10 @@ extension KYNetWorkTool{
     fileprivate func handle(response : DataResponse<Any>,finished:@escaping NetworkFinished)
     {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        switch response.result
-        {
-        case .success(let value):
-       
-            let json = JSON(value)
-            finished(true, json, nil)
-            
-        case .failure(let error):
-        
+        guard let result = response.result.value else {
             KYProgressHUD.showErrorWithStatus("失败了,赶紧跑")
-           finished(false,nil,error as NSError?)
+            return
         }
+        finished(true, JSON(result), nil)
     }
 }

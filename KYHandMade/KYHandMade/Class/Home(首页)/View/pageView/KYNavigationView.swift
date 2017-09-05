@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class KYNavigationView: UIView {
+class KYNavigationView: UIView ,Nibloadable{
 
     @IBOutlet weak var navLabel: UILabel!
     @IBOutlet weak var navImageView: UIImageView!

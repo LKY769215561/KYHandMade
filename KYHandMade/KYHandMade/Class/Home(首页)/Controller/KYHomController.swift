@@ -39,7 +39,6 @@ class KYHomController: UIViewController {
         super.viewDidLoad()
         view.addSubview(pageView)
     }
-
 }
 
 extension KYHomController : KYPageViewDelegate{

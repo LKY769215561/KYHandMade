@@ -34,7 +34,7 @@ class KYCommonTool: NSObject {
         
         if (lastVer as! String) == currentVersion
         {
-            return KYAdViewController()
+            return KYAdViewController.loadFromNib()
         }else
         {
             UserDefaults.standard.set(currentVersion, forKey:KYVersionKey)

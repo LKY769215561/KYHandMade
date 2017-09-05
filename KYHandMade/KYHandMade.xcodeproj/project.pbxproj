@@ -168,6 +168,8 @@
 		54AB81511EFCB23600CF8EC5 /* KYPicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB81501EFCB23600CF8EC5 /* KYPicModel.swift */; };
 		54AB81531EFCB2F100CF8EC5 /* KYVipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB81521EFCB2F100CF8EC5 /* KYVipModel.swift */; };
 		54AB81551EFCC54100CF8EC5 /* KYPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB81541EFCC54100CF8EC5 /* KYPhotoView.swift */; };
+		54EAF79C1F17468A00F7CA1D /* KYProtocolFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF79B1F17468A00F7CA1D /* KYProtocolFile.swift */; };
+		54EAF79E1F17552200F7CA1D /* KYExtensionFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF79D1F17552200F7CA1D /* KYExtensionFile.swift */; };
 		A18B68D81F03E6D40021BB34 /* KYMyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18B68D61F03E6D40021BB34 /* KYMyCell.swift */; };
 		A18B68D91F03E6D40021BB34 /* KYMyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A18B68D71F03E6D40021BB34 /* KYMyCell.xib */; };
 /* End PBXBuildFile section */
@@ -390,6 +392,8 @@
 		54AB81501EFCB23600CF8EC5 /* KYPicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYPicModel.swift; sourceTree = "<group>"; };
 		54AB81521EFCB2F100CF8EC5 /* KYVipModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYVipModel.swift; sourceTree = "<group>"; };
 		54AB81541EFCC54100CF8EC5 /* KYPhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYPhotoView.swift; sourceTree = "<group>"; };
+		54EAF79B1F17468A00F7CA1D /* KYProtocolFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYProtocolFile.swift; sourceTree = "<group>"; };
+		54EAF79D1F17552200F7CA1D /* KYExtensionFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYExtensionFile.swift; sourceTree = "<group>"; };
 		5FC183425314ED4C1FE5D2E7 /* Pods-KYHandMade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KYHandMade.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KYHandMade/Pods-KYHandMade.debug.xcconfig"; sourceTree = "<group>"; };
 		A18B68D61F03E6D40021BB34 /* KYMyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYMyCell.swift; sourceTree = "<group>"; };
 		A18B68D71F03E6D40021BB34 /* KYMyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KYMyCell.xib; sourceTree = "<group>"; };
@@ -708,6 +712,8 @@
 				545EA5021EEFDD3A004C5CB3 /* KYCommon.swift */,
 				545EA5061EEFE630004C5CB3 /* KYConfig.swift */,
 				545EA5081EEFE880004C5CB3 /* bridging.h */,
+				54EAF79B1F17468A00F7CA1D /* KYProtocolFile.swift */,
+				54EAF79D1F17552200F7CA1D /* KYExtensionFile.swift */,
 			);
 			path = "Other(其他)";
 			sourceTree = "<group>";
@@ -1222,6 +1228,7 @@
 				543085FC1EEE6F590093E766 /* KYTutorialTableViewController.swift in Sources */,
 				547E26691EF92133003F4DB8 /* XWCoolAnimator+XWFold.m in Sources */,
 				540821341EFA26380035C2F2 /* KYDaRenMaterialModel.swift in Sources */,
+				54EAF79C1F17468A00F7CA1D /* KYProtocolFile.swift in Sources */,
 				5470E22F1EF0F75300282FA0 /* KYPageRouter.swift in Sources */,
 				549E4F2C1F135F7100053E25 /* UINavigationController+WHNavigationController.m in Sources */,
 				547E266F1EF92133003F4DB8 /* XWCoolAnimator.m in Sources */,
@@ -1260,6 +1267,7 @@
 				541395A51F038D5E002AC315 /* KYFariHotDataModel.swift in Sources */,
 				547E26191EF8F4EA003F4DB8 /* KYContainerView.swift in Sources */,
 				547E26771EF92133003F4DB8 /* XWFilterAnimator+XWPageCurl.m in Sources */,
+				54EAF79E1F17552200F7CA1D /* KYExtensionFile.swift in Sources */,
 				540821431EFA7E8A0035C2F2 /* KYPageView.swift in Sources */,
 				547E26111EF8B9A0003F4DB8 /* KYNavTitleView.swift in Sources */,
 				549E4F311F135F7100053E25 /* WHMethods.m in Sources */,

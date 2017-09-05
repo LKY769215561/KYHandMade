@@ -8,12 +8,10 @@
 
 import UIKit
 
-class KYAdvanceView: UIView {
+class KYAdvanceView: UIView ,Nibloadable{
 
     @IBOutlet weak var adImageView: UIImageView!
 
-
-    
     var _advanceModel : KYAdvanceModel?
     var advanceModel : KYAdvanceModel?{
     
@@ -31,9 +29,8 @@ class KYAdvanceView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+    
         let tap = UITapGestureRecognizer(target:self, action: #selector(advanceItemAction(tap:)))
-        
         addGestureRecognizer(tap)
     }
     

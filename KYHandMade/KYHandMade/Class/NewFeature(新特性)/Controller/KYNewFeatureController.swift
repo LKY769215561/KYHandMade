@@ -10,7 +10,7 @@ import UIKit
 
 let   featureCellId = "featureCell"
 
-class KYNewFeatureController: UICollectionViewController {
+class KYNewFeatureController: UICollectionViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,7 @@ extension KYNewFeatureController{
       
         if indexPath.item == 4 {
             
-            UIApplication.shared.keyWindow?.rootViewController = KYAdViewController()
+            UIApplication.shared.keyWindow?.rootViewController = KYAdViewController.loadFromNib()
             let anim = CATransition()
             anim.type = "rippleEffect"
             anim.duration = 1
