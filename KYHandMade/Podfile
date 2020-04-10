@@ -1,18 +1,18 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+ platform :ios, '9.0'
 
 target 'KYHandMade' do
 
   use_frameworks!
- pod 'SwiftyJSON', '~> 3.1.4'
- pod 'Alamofire', '~> 4.4.0'
- pod 'Kingfisher', '~> 3.9.1'
- pod 'SnapKit', '~> 3.2.0'
- pod 'SVProgressHUD', '~> 2.0.3'
- pod 'SDCycleScrollView','~> 1.64'
- pod 'MJRefresh', '~> 3.1.0'
- pod 'DOPDropDownMenu', '~> 0.1.1'
- pod 'DynamicColor', '~> 3.3'
+ pod 'SwiftyJSON'
+ pod 'Alamofire'
+ pod 'Kingfisher'
+ pod 'SnapKit'
+ pod 'SVProgressHUD'
+ pod 'SDCycleScrollView'
+ pod 'MJRefresh'
+ pod 'DOPDropDownMenu'
+ pod 'DynamicColor'
  pod 'FMDB'
- pod 'SDAutoLayout', '~> 2.1.8'
+ pod 'SDAutoLayout'
 end

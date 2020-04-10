@@ -45,8 +45,8 @@ public extension DynamicColor {
    - Parameter colorspace: The color space used to mix the colors. By default it uses the RBG color space.
    - Returns: A color object corresponding to the two colors object mixed together.
    */
-  public final func mixed(withColor color: DynamicColor, weight: CGFloat = 0.5, inColorSpace colorspace: DynamicColorSpace = .rgb) -> DynamicColor {
-    let normalizedWeight = clip(weight, 0, 1)
+  final func mixed(withColor color: DynamicColor, weight: CGFloat = 0.5, inColorSpace colorspace: DynamicColorSpace = .rgb) -> DynamicColor {
+    let normalizedWeight = clip(weight, 0.0, 1.0)
 
     switch colorspace {
     case .lab:
@@ -66,7 +66,7 @@ public extension DynamicColor {
    - Parameter amount: Float between 0.0 and 1.0. The default amount is equal to 0.2.
    - Returns: A lighter DynamicColor.
    */
-  public final func tinted(amount: CGFloat = 0.2) -> DynamicColor {
+  final func tinted(amount: CGFloat = 0.2) -> DynamicColor {
     return mixed(withColor: .white, weight: amount)
   }
 
@@ -76,8 +76,8 @@ public extension DynamicColor {
    - Parameter amount: Float between 0.0 and 1.0. The default amount is equal to 0.2.
    - Returns: A darker DynamicColor.
    */
-  public final func shaded(amount: CGFloat = 0.2) -> DynamicColor {
-    return mixed(withColor: DynamicColor(red:0, green:0, blue: 0, alpha:1), weight: amount)
+  final func shaded(amount: CGFloat = 0.2) -> DynamicColor {
+    return mixed(withColor: DynamicColor(red: 0, green: 0, blue: 0, alpha: 1), weight: amount)
   }
 
   // MARK: - Convenient Internal Methods
@@ -86,10 +86,10 @@ public extension DynamicColor {
     let c1 = toLabComponents()
     let c2 = color.toLabComponents()
 
-    let L     = c1.L + weight * (c2.L - c1.L)
-    let a     = c1.a + weight * (c2.a - c1.a)
-    let b     = c1.b + weight * (c2.b - c1.b)
-    let alpha = alphaComponent + weight * (color.alphaComponent - alphaComponent)
+    let L     = c1.L + (weight * (c2.L - c1.L))
+    let a     = c1.a + (weight * (c2.a - c1.a))
+    let b     = c1.b + (weight * (c2.b - c1.b))
+    let alpha = alphaComponent + (weight * (color.alphaComponent - alphaComponent))
 
     return DynamicColor(L: L, a: a, b: b, alpha: alpha)
   }
@@ -98,10 +98,10 @@ public extension DynamicColor {
     let c1 = toHSLComponents()
     let c2 = color.toHSLComponents()
 
-    let h     = c1.h + weight * mixedHue(source: c1.h, target: c2.h)
-    let s     = c1.s + weight * (c2.s - c1.s)
-    let l     = c1.l + weight * (c2.l - c1.l)
-    let alpha = alphaComponent + weight * (color.alphaComponent - alphaComponent)
+    let h     = c1.h + (weight * mixedHue(source: c1.h, target: c2.h))
+    let s     = c1.s + (weight * (c2.s - c1.s))
+    let l     = c1.l + (weight * (c2.l - c1.l))
+    let alpha = alphaComponent + (weight * (color.alphaComponent - alphaComponent))
 
     return DynamicColor(hue: h, saturation: s, lightness: l, alpha: alpha)
   }
@@ -110,10 +110,10 @@ public extension DynamicColor {
     let c1 = toHSBComponents()
     let c2 = color.toHSBComponents()
 
-    let h     = c1.h + weight * mixedHue(source: c1.h, target: c2.h)
-    let s     = c1.s + weight * (c2.s - c1.s)
-    let b     = c1.b + weight * (c2.b - c1.b)
-    let alpha = alphaComponent + weight * (color.alphaComponent - alphaComponent)
+    let h     = c1.h + (weight * mixedHue(source: c1.h, target: c2.h))
+    let s     = c1.s + (weight * (c2.s - c1.s))
+    let b     = c1.b + (weight * (c2.b - c1.b))
+    let alpha = alphaComponent + (weight * (color.alphaComponent - alphaComponent))
 
     return DynamicColor(hue: h, saturation: s, brightness: b, alpha: alpha)
   }
@@ -122,20 +122,20 @@ public extension DynamicColor {
     let c1 = toRGBAComponents()
     let c2 = color.toRGBAComponents()
 
-    let red   = c1.r + weight * (c2.r - c1.r)
-    let green = c1.g + weight * (c2.g - c1.g)
-    let blue  = c1.b + weight * (c2.b - c1.b)
-    let alpha = alphaComponent + weight * (color.alphaComponent - alphaComponent)
+    let red   = c1.r + (weight * (c2.r - c1.r))
+    let green = c1.g + (weight * (c2.g - c1.g))
+    let blue  = c1.b + (weight * (c2.b - c1.b))
+    let alpha = alphaComponent + (weight * (color.alphaComponent - alphaComponent))
 
     return DynamicColor(red: red, green: green, blue: blue, alpha: alpha)
   }
 
   func mixedHue(source: CGFloat, target: CGFloat) -> CGFloat {
-    if target > source && target - source > 180 {
-      return target - source + 360
+    if target > source && target - source > 180.0 {
+      return target - source + 360.0
     }
-    else if target < source && source - target > 180 {
-      return target + 360 - source
+    else if target < source && source - target > 180.0 {
+      return target + 360.0 - source
     }
 
     return target - source

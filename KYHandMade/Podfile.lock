@@ -1,49 +1,64 @@
 PODS:
-  - Alamofire (4.4.0)
+  - Alamofire (4.9.1)
   - DOPDropDownMenu (0.1.1)
-  - DynamicColor (3.3)
-  - FMDB (2.6.2):
-    - FMDB/standard (= 2.6.2)
-  - FMDB/standard (2.6.2)
-  - Kingfisher (3.9.1)
-  - MJRefresh (3.1.12)
-  - SDAutoLayout (2.1.8)
-  - SDCycleScrollView (1.66):
-    - SDWebImage (~> 4.0.0)
-  - SDWebImage (4.0.0):
-    - SDWebImage/Core (= 4.0.0)
-  - SDWebImage/Core (4.0.0)
-  - SnapKit (3.2.0)
-  - SVProgressHUD (2.0.4)
-  - SwiftyJSON (3.1.4)
+  - DynamicColor (4.2.0)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - Kingfisher (4.10.1)
+  - MJRefresh (3.3.1)
+  - SDAutoLayout (2.2.1)
+  - SDCycleScrollView (1.80):
+    - SDWebImage (>= 5.0.0)
+  - SDWebImage (5.7.1):
+    - SDWebImage/Core (= 5.7.1)
+  - SDWebImage/Core (5.7.1)
+  - SnapKit (4.2.0)
+  - SVProgressHUD (2.2.5)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.4.0)
-  - DOPDropDownMenu (~> 0.1.1)
-  - DynamicColor (~> 3.3)
+  - Alamofire
+  - DOPDropDownMenu
+  - DynamicColor
   - FMDB
-  - Kingfisher (~> 3.9.1)
-  - MJRefresh (~> 3.1.0)
-  - SDAutoLayout (~> 2.1.8)
-  - SDCycleScrollView (~> 1.64)
-  - SnapKit (~> 3.2.0)
-  - SVProgressHUD (~> 2.0.3)
-  - SwiftyJSON (~> 3.1.4)
+  - Kingfisher
+  - MJRefresh
+  - SDAutoLayout
+  - SDCycleScrollView
+  - SnapKit
+  - SVProgressHUD
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - DOPDropDownMenu
+    - DynamicColor
+    - FMDB
+    - Kingfisher
+    - MJRefresh
+    - SDAutoLayout
+    - SDCycleScrollView
+    - SDWebImage
+    - SnapKit
+    - SVProgressHUD
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   DOPDropDownMenu: 92edceaee75cd8703d9891b4844d48c0d0a2ae54
-  DynamicColor: 3cdaa1e01c16e93ba744e0630f768373e0fc7a7d
-  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
-  Kingfisher: 6729a0baaa458245bfb8cd5a1296c71c10d6eb6c
-  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
-  SDAutoLayout: 5a4b48d6b8a5172ae8d088d2879e40dd795e6251
-  SDCycleScrollView: e3ade90e9b3159bec04330b208fbfd81c3f3b671
-  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
-  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
-  SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
-  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  DynamicColor: c475f66bda1cabf602f2c54ac1171c0c07148a5a
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
+  SDAutoLayout: 8bf6b3bbc8b01f775d4defbb4fda2ace805461be
+  SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
+  SDWebImage: 5d4cf6afccd9ac1d2ee701ed0c4917cbb1b80536
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 6859c8ed427811c5877719a29a59a3d890885b18
+PODFILE CHECKSUM: 9945cabb5ff5519e747cfab016b1cd14164b77aa
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.9.1

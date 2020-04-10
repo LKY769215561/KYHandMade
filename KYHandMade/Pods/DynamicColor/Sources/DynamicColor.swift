@@ -48,14 +48,14 @@ public extension DynamicColor {
   // MARK: - Manipulating Hexa-decimal Values and Strings
 
   /**
-   Creates a color from an hex string (e.g. "#3498db").
+   Creates a color from an hex string (e.g. "#3498db"). The RGBA string are also supported (e.g. "#3498dbff").
 
    If the given hex string is invalid the initialiser will create a black color.
 
    - parameter hexString: A hexa-decimal color string representation.
    */
-  public convenience init(hexString: String) {
-    let hexString = hexString.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+  convenience init(hexString: String) {
+    let hexString = hexString.trimmingCharacters(in: .whitespacesAndNewlines)
     let scanner   = Scanner(string: hexString)
 
     if hexString.hasPrefix("#") {
@@ -65,7 +65,7 @@ public extension DynamicColor {
     var color: UInt32 = 0
 
     if scanner.scanHexInt32(&color) {
-      self.init(hex: color, useAlpha: hexString.characters.count > 7)
+      self.init(hex: color, useAlpha: hexString.count > 7)
     }
     else {
       self.init(hex: 0x000000)
@@ -78,18 +78,19 @@ public extension DynamicColor {
    - parameter hex: A hexa-decimal UInt32 that represents a color.
    - parameter alphaChannel: If true the given hex-decimal UInt32 includes the alpha channel (e.g. 0xFF0000FF).
    */
-  public convenience init(hex: UInt32, useAlpha alphaChannel: Bool = false) {
-    let mask = 0xFF
+  convenience init(hex: UInt32, useAlpha alphaChannel: Bool = false) {
+    let mask      = UInt32(0xFF)
+    let cappedHex = !alphaChannel && hex > 0xffffff ? 0xffffff : hex
 
-    let r = Int(hex >> (alphaChannel ? 24 : 16)) & mask
-    let g = Int(hex >> (alphaChannel ? 16 : 8)) & mask
-    let b = Int(hex >> (alphaChannel ? 8 : 0)) & mask
-    let a = alphaChannel ? Int(hex) & mask : 255
+    let r = cappedHex >> (alphaChannel ? 24 : 16) & mask
+    let g = cappedHex >> (alphaChannel ? 16 : 8) & mask
+    let b = cappedHex >> (alphaChannel ? 8 : 0) & mask
+    let a = alphaChannel ? cappedHex & mask : 255
 
-    let red   = CGFloat(r) / 255
-    let green = CGFloat(g) / 255
-    let blue  = CGFloat(b) / 255
-    let alpha = CGFloat(a) / 255
+    let red   = CGFloat(r) / 255.0
+    let green = CGFloat(g) / 255.0
+    let blue  = CGFloat(b) / 255.0
+    let alpha = CGFloat(a) / 255.0
 
     self.init(red: red, green: green, blue: blue, alpha: alpha)
   }
@@ -99,24 +100,41 @@ public extension DynamicColor {
 
    - returns: A string similar to this pattern "#f4003b".
    */
-  public final func toHexString() -> String {
-    return String(format:"#%06x", toHex())
+  final func toHexString() -> String {
+    return String(format: "#%06x", toHex())
   }
 
   /**
-   Returns the color representation as an integer.
+   Returns the color representation as an integer (without the alpha channel).
 
    - returns: A UInt32 that represents the hexa-decimal color.
    */
-  public final func toHex() -> UInt32 {
-    func roundToHex(_ x: CGFloat) -> UInt32 {
-      return UInt32(roundf(Float(x) * 255.0))
-    }
-
-    let rgba       = toRGBAComponents()
-    let colorToInt = roundToHex(rgba.r) << 16 | roundToHex(rgba.g) << 8 | roundToHex(rgba.b)
-
-    return colorToInt
+  final func toHex() -> UInt32 {
+    let rgba = toRGBAComponents()
+    
+    return roundToHex(rgba.r) << 16 | roundToHex(rgba.g) << 8 | roundToHex(rgba.b)
+  }
+  
+  /**
+   Returns the RGBA color representation.
+   
+   - returns: A UInt32 that represents the color as an RGBA value.
+   */
+  func toRGBA() -> UInt32 {
+    let rgba = toRGBAComponents()
+    
+    return roundToHex(rgba.r) << 24 | roundToHex(rgba.g) << 16 | roundToHex(rgba.b) << 8 | roundToHex(rgba.a)
+  }
+  
+  /**
+   Returns the AGBR color representation.
+   
+   - returns: A UInt32 that represents the color as an AGBR value.
+   */
+  func toAGBR() -> UInt32 {
+    let rgba = toRGBAComponents()
+    
+    return roundToHex(rgba.a) << 24 | roundToHex(rgba.b) << 16 | roundToHex(rgba.g) << 8 | roundToHex(rgba.r)
   }
 
   // MARK: - Identifying and Comparing Colors
@@ -127,7 +145,7 @@ public extension DynamicColor {
    - parameter hexString: A hexa-decimal color number representation to be compared to the receiver.
    - returns: true if the receiver and the string are equals, otherwise false.
    */
-  public func isEqual(toHexString hexString: String) -> Bool {
+  func isEqual(toHexString hexString: String) -> Bool {
     return self.toHexString() == hexString
   }
 
@@ -137,7 +155,7 @@ public extension DynamicColor {
    - parameter hex: A UInt32 that represents the hexa-decimal color.
    - returns: true if the receiver and the integer are equals, otherwise false.
    */
-  public func isEqual(toHex hex: UInt32) -> Bool {
+  func isEqual(toHex hex: UInt32) -> Bool {
     return self.toHex() == hex
   }
 
@@ -150,9 +168,9 @@ public extension DynamicColor {
 
    - returns: A boolean value to know whether the color is light. If true the color is light, dark otherwise.
    */
-  public func isLight() -> Bool {
+  func isLight() -> Bool {
     let components = toRGBAComponents()
-    let brightness = ((components.r * 299) + (components.g * 587) + (components.b * 114)) / 1000
+    let brightness = ((components.r * 299.0) + (components.g * 587.0) + (components.b * 114.0)) / 1000.0
 
     return brightness >= 0.5
   }
@@ -160,9 +178,9 @@ public extension DynamicColor {
   /**
    A float value representing the luminance of the current color. May vary from 0 to 1.0.
    
-   We use the formula described by W3C in WCAG 2.0. You can read more here: https://www.w3.org/TR/WCAG20/#relativeluminancedef
+   We use the formula described by W3C in WCAG 2.0. You can read more here: https://www.w3.org/TR/WCAG20/#relativeluminancedef.
   */
-  public var luminance: CGFloat {
+  var luminance: CGFloat {
     let components = toRGBAComponents()
 
     let componentsArray = [components.r, components.g, components.b].map { (val) -> CGFloat in
@@ -180,9 +198,9 @@ public extension DynamicColor {
      We use the formula described by W3C in WCAG 2.0. You can read more here: https://www.w3.org/TR/WCAG20-TECHS/G18.html
      NB: the contrast ratio is a relative value. So the contrast between Color1 and Color2 is exactly the same between Color2 and Color1.
      
-     - returns: A CGFloat representing contrast value
+     - returns: A CGFloat representing contrast value.
      */
-  public func contrastRatio(with otherColor: DynamicColor) -> CGFloat {
+  func contrastRatio(with otherColor: DynamicColor) -> CGFloat {
     let otherLuminance = otherColor.luminance
 
     let l1 = max(luminance, otherLuminance)
@@ -205,7 +223,7 @@ public extension DynamicColor {
    
    - returns: true is the contrast ratio between 2 colors exceed the minimum acceptable ratio.
    */
-  public func isContrasting(with otherColor: DynamicColor, inContext context: ContrastDisplayContext = .standard) -> Bool {
+  func isContrasting(with otherColor: DynamicColor, inContext context: ContrastDisplayContext = .standard) -> Bool {
     return self.contrastRatio(with: otherColor) > context.minimumContrastRatio
   }
 }
