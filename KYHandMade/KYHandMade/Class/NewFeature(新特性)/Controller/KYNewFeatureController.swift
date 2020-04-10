@@ -45,7 +45,7 @@ extension KYNewFeatureController{
             
             UIApplication.shared.keyWindow?.rootViewController = KYAdViewController.loadFromNib()
             let anim = CATransition()
-            anim.type = "rippleEffect"
+            anim.type = CATransitionType(rawValue: "rippleEffect")
             anim.duration = 1
             UIApplication.shared.keyWindow?.layer.add(anim, forKey: nil)
         }

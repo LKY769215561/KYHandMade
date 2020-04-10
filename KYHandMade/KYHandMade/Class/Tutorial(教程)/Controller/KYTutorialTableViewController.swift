@@ -35,11 +35,11 @@ class KYTutorialTableViewController: UIViewController {
        let videoVC = KYTutoriaVideoController()
        let subVC = KYTutoriSubController()
         
-       addChildViewController(picVC)
-       addChildViewController(videoVC)
-       addChildViewController(subVC)
+        addChild(picVC)
+        addChild(videoVC)
+        addChild(subVC)
         
-      let  containV = KYContainerView(frame:CGRect(x: 0, y:NAVBAR_HEIGHT, width: SCREEN_WIDTH, height: SCREEN_HEIGHT-NAVBAR_HEIGHT),childVCs:self.childViewControllers,selecdBlock:{ (index) in
+        let  containV = KYContainerView(frame:CGRect(x: 0, y:NAVBAR_HEIGHT, width: SCREEN_WIDTH, height: SCREEN_HEIGHT-NAVBAR_HEIGHT),childVCs:self.children,selecdBlock:{ (index) in
         
         })
         

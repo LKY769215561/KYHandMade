@@ -113,7 +113,7 @@ class KYFeaturedView: UIView {
       tabView.dataSource = self
       tabView.delegate = self
       tabView.register(UINib(nibName:"KYFeaturedCell", bundle:nil), forCellReuseIdentifier: KYFeaturedViewCellId)
-      tabView.mj_header.beginRefreshing()
+      tabView.mj_header?.beginRefreshing()
       return tabView
     
     }()
@@ -140,7 +140,7 @@ class KYFeaturedView: UIView {
     
         KYNetWorkTool.shared.get(HomeBaseURL, parameters: paramet) { (success, result, error) in
             
-            self.tableView.mj_header.endRefreshing()
+            self.tableView.mj_header?.endRefreshing()
             
             if success
             {

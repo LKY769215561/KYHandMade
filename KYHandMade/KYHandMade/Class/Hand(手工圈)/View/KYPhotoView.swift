@@ -101,7 +101,7 @@ class KYPhotoView: UIView {
     }
     
     
-    func imageViewTap(tap : UITapGestureRecognizer) {
+    @objc func imageViewTap(tap : UITapGestureRecognizer) {
         
     
     }

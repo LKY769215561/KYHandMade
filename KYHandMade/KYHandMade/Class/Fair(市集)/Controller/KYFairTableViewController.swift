@@ -24,7 +24,7 @@ class KYFairTableViewController: UIViewController {
     private lazy var collectionView : UICollectionView = {
     
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10);
         let collView = UICollectionView(frame: CGRect(x:0, y:NAVBAR_HEIGHT, width: SCREEN_WIDTH, height:SCREEN_HEIGHT-NAVBAR_HEIGHT-TABBAR_HEIGHT), collectionViewLayout:layout)
         collView.backgroundColor = UIColor.white
         collView.dataSource = self
@@ -33,10 +33,10 @@ class KYFairTableViewController: UIViewController {
         collView.register(UINib(nibName:"KYFairBestCell", bundle:nil), forCellWithReuseIdentifier: KYFariBestId)
         collView.register(UINib(nibName:"KYFariTopicBestCell", bundle:nil), forCellWithReuseIdentifier: KYFariTopicBestId)
         collView.register(UINib(nibName:"KYFariTopicCell", bundle:nil), forCellWithReuseIdentifier: KYFariTopicId)
-        collView.register(UINib(nibName:"KYFairSectionHeadView",bundle:nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: KYFairHeadID)
+        collView.register(UINib(nibName:"KYFairSectionHeadView",bundle:nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: KYFairHeadID)
         collView.mj_header = setupJianDaoHeaderRefresh(self, action: #selector(loadNewData))
         collView.mj_footer = setupFooterRefresh(self, action: #selector(loadMoreData))
-        collView.mj_header.beginRefreshing()
+        collView.mj_header?.beginRefreshing()
         return collView
         
     
@@ -49,7 +49,7 @@ class KYFairTableViewController: UIViewController {
         
     }
 
-    func loadNewData() {
+    @objc func loadNewData() {
         
         let param : [String : Any] = [
          
@@ -59,7 +59,7 @@ class KYFairTableViewController: UIViewController {
         ]
         KYNetWorkTool.shared.get(HomeBaseURL, parameters: param) { (success, result, error) in
             
-            self.collectionView.mj_header.endRefreshing()
+            self.collectionView.mj_header?.endRefreshing()
             
             if success{
             
@@ -77,12 +77,12 @@ class KYFairTableViewController: UIViewController {
         
     }
     
-    func loadMoreData() {
+     @objc func loadMoreData() {
         
         
         guard let lastId = fariDataModel?.last_id else {
             KYProgressHUD.showWithStatus("没有更多数据啦。。。")
-            collectionView.mj_footer.endRefreshingWithNoMoreData()
+            collectionView.mj_footer?.endRefreshingWithNoMoreData()
             return
         }
         
@@ -96,7 +96,7 @@ class KYFairTableViewController: UIViewController {
         
         KYNetWorkTool.shared.get(HomeBaseURL, parameters: param) { (success, result, error) in
             
-            self.collectionView.mj_footer.endRefreshing()
+            self.collectionView.mj_footer?.endRefreshing()
             
             if success{
                 

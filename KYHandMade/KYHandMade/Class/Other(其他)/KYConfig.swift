@@ -39,12 +39,12 @@ let KYCommonBgColor = KYRGB(206, g: 206, b: 206, alpha: 1)
  */
 func setupFooterRefresh(_ target: AnyObject, action: Selector) -> MJRefreshFooter {
     let footerRefresh = MJRefreshBackNormalFooter(refreshingTarget: target, refreshingAction: action)
-    footerRefresh?.isAutomaticallyHidden = true
-    footerRefresh?.setTitle("正在加载", for: MJRefreshState.refreshing)
-    footerRefresh?.setTitle("可以松开了", for: MJRefreshState.pulling)
-    footerRefresh?.setTitle("上拉加载更多", for: MJRefreshState.idle)
-    footerRefresh?.setTitle("没有啦~~~", for: MJRefreshState.noMoreData)
-    return footerRefresh!
+    footerRefresh.isAutomaticallyHidden = true
+    footerRefresh.setTitle("正在加载", for: MJRefreshState.refreshing)
+    footerRefresh.setTitle("可以松开了", for: MJRefreshState.pulling)
+    footerRefresh.setTitle("上拉加载更多", for: MJRefreshState.idle)
+    footerRefresh.setTitle("没有啦~~~", for: MJRefreshState.noMoreData)
+    return footerRefresh
 }
 
 /**
@@ -52,16 +52,16 @@ func setupFooterRefresh(_ target: AnyObject, action: Selector) -> MJRefreshFoote
  */
 func setupHeaderRefresh(_ target: AnyObject, action: Selector) -> MJRefreshNormalHeader {
     let headerRefresh = MJRefreshNormalHeader(refreshingTarget: target, refreshingAction: action)
-    headerRefresh?.lastUpdatedTimeLabel.isHidden = true
-    headerRefresh?.isAutomaticallyChangeAlpha = true
-    headerRefresh?.setTitle("下拉刷新", for: .idle)
-    headerRefresh?.setTitle("松开刷新", for: .pulling)
-    headerRefresh?.setTitle("小客正在为你刷新", for: .refreshing)
+    headerRefresh.lastUpdatedTimeLabel?.isHidden = true
+    headerRefresh.isAutomaticallyChangeAlpha = true
+    headerRefresh.setTitle("下拉刷新", for: .idle)
+    headerRefresh.setTitle("松开刷新", for: .pulling)
+    headerRefresh.setTitle("小客正在为你刷新", for: .refreshing)
     
-    headerRefresh?.stateLabel.font = UIFont.systemFont(ofSize: 15)
-    headerRefresh?.stateLabel.textColor = UIColor.darkGray
+    headerRefresh.stateLabel?.font = UIFont.systemFont(ofSize: 15)
+    headerRefresh.stateLabel?.textColor = UIColor.darkGray
     
-    return headerRefresh!
+    return headerRefresh
 }
 
 /**
@@ -70,14 +70,14 @@ func setupHeaderRefresh(_ target: AnyObject, action: Selector) -> MJRefreshNorma
 func setupJianDaoHeaderRefresh(_ target: AnyObject, action: Selector) -> MJRefreshGifHeader {
     
     let headerRefresh = MJRefreshGifHeader(refreshingTarget: target, refreshingAction: action)
-    headerRefresh?.lastUpdatedTimeLabel.isHidden = true
-    headerRefresh?.isAutomaticallyChangeAlpha = true
-    headerRefresh?.setTitle("下拉刷新", for: .idle)
-    headerRefresh?.setTitle("松开刷新", for: .pulling)
-    headerRefresh?.setTitle("小客正在为你刷新", for: .refreshing)
+    headerRefresh.lastUpdatedTimeLabel?.isHidden = true
+    headerRefresh.isAutomaticallyChangeAlpha = true
+    headerRefresh.setTitle("下拉刷新", for: .idle)
+    headerRefresh.setTitle("松开刷新", for: .pulling)
+    headerRefresh.setTitle("小客正在为你刷新", for: .refreshing)
     
-    headerRefresh?.stateLabel.font = UIFont.systemFont(ofSize: 15)
-    headerRefresh?.stateLabel.textColor = UIColor.darkGray
+    headerRefresh.stateLabel?.font = UIFont.systemFont(ofSize: 15)
+    headerRefresh.stateLabel?.textColor = UIColor.darkGray
     
     var idleImages = [UIImage]()
     
@@ -86,12 +86,12 @@ func setupJianDaoHeaderRefresh(_ target: AnyObject, action: Selector) -> MJRefre
         idleImages.append(UIImage(named:imageName)!)
     }
     
-    headerRefresh?.setImages(idleImages, for: .idle)
-    headerRefresh?.setImages(idleImages, for: .pulling)
-    headerRefresh?.setImages(idleImages, for: .refreshing)
+    headerRefresh.setImages(idleImages, for: .idle)
+    headerRefresh.setImages(idleImages, for: .pulling)
+    headerRefresh.setImages(idleImages, for: .refreshing)
     
     
-    return headerRefresh!
+    return headerRefresh
 }
 
 

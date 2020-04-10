@@ -31,9 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let appearance = UINavigationBar.appearance()
         
-        let textAttrs : [String : Any] = [
-            NSForegroundColorAttributeName : UIColor.white,
-            NSFontAttributeName : UIFont.systemFont(ofSize: 18)
+        let textAttrs : [NSAttributedString.Key : Any] = [
+            NSAttributedString.Key.foregroundColor : UIColor.white,
+            NSAttributedString.Key.font : UIFont.systemFont(ofSize: 18)
         ]
         appearance.titleTextAttributes = textAttrs
         

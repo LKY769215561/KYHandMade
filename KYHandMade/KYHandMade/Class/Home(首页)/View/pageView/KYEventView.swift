@@ -23,7 +23,7 @@ class KYEventView: UIView {
         tableView.register(UINib(nibName:"KYEventCell", bundle :nil), forCellReuseIdentifier: KYEventViewCellId)
         tableView.mj_header = setupJianDaoHeaderRefresh(self, action: #selector(loadNewData))
         tableView.mj_footer = setupFooterRefresh(self, action: #selector(loadMoreData))
-        tableView.mj_header.beginRefreshing()
+        tableView.mj_header?.beginRefreshing()
         return tableView
     }()
     
@@ -41,7 +41,7 @@ class KYEventView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func loadNewData () {
+    @objc func loadNewData () {
         
         eventModels.removeAll()
         
@@ -54,7 +54,7 @@ class KYEventView: UIView {
         
         KYNetWorkTool.shared.get(HomeBaseURL, parameters: paramet) { (success, result, error) in
            
-            self.tableView.mj_header.endRefreshing()
+            self.tableView.mj_header?.endRefreshing()
             
             if success{
                 let data = result?["data"].arrayObject as? [[String : AnyObject]]
@@ -80,7 +80,7 @@ class KYEventView: UIView {
         
     }
     
-    func loadMoreData () {
+    @objc func loadMoreData () {
 
         guard let lastEvenId = self.laseId else {
             return
@@ -95,7 +95,7 @@ class KYEventView: UIView {
         ]
         KYNetWorkTool.shared.get(HomeBaseURL, parameters: paramet) { (success, result, error) in
             
-            self.tableView.mj_footer.endRefreshing()
+            self.tableView.mj_footer?.endRefreshing()
             
             if success{
                 let data = result?["data"].arrayObject as? [[String : AnyObject]]

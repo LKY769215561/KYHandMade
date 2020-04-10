@@ -31,10 +31,17 @@ class KYFocusCell: UICollectionViewCell {
     
         set{
             _focusModel = newValue
-            iconImageView.image = UIImage(named:(_focusModel?.iconStr)!)
-            contentImageVIew.image = UIImage(named:(_focusModel?.contentImage)!)
-            nameLabel.text = _focusModel?.nameStr
-            subLael.text = _focusModel?.contenStr
+            if let str = _focusModel?.iconStr{
+                iconImageView.image = UIImage(named:str)
+             
+                nameLabel.text = _focusModel?.nameStr
+                subLael.text = _focusModel?.contenStr
+            }
+            if let str2 = _focusModel?.contentImage {
+                   contentImageVIew.image = UIImage(named:str2)
+            }
+            
+
         }
         get{
         

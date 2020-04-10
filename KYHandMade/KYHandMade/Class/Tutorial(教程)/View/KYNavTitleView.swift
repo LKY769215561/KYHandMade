@@ -53,7 +53,7 @@ class KYNavTitleView: UIView {
     }
     
 
-    func buttonClick(btn : UIButton) {
+    @objc func buttonClick(btn : UIButton) {
       
         guard let block = self.clickBlock else {
             return

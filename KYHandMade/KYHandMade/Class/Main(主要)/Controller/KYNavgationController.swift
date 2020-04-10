@@ -26,7 +26,7 @@ extension KYNavgationController : UINavigationBarDelegate{
         viewController.automaticallyAdjustsScrollViewInsets = false
         
         
-        if childViewControllers.count >= 1
+        if children.count >= 1
         {
             viewController.hidesBottomBarWhenPushed = true;
             viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named:"Image"), style: .plain, target: self, action:#selector(back))
@@ -41,7 +41,7 @@ extension KYNavgationController : UINavigationBarDelegate{
     }
     
 
-    func back() {
+    @objc func back() {
         
         popViewController(animated: true)
         

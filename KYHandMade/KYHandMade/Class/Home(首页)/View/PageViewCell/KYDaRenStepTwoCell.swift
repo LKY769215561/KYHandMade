@@ -23,7 +23,7 @@ class KYDaRenStepTwoCell: UICollectionViewCell {
         
         tableView.rowHeight = 50
         tableView.sectionHeaderHeight = 40
-        tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
+        tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         tableView.register(UINib(nibName:"KYStepTableViewCell", bundle : nil), forCellReuseIdentifier: KYStepTableViewCellId)
         tableView.tableFooterView = UIView()
         

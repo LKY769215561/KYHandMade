@@ -39,7 +39,7 @@ class KYNavigationView: UIView ,Nibloadable{
     }
     
     
-    func navgationItemAction(tap : UITapGestureRecognizer) {
+    @objc func navgationItemAction(tap : UITapGestureRecognizer) {
         let webVC = KYWebViewController()
         webVC.navgationModel = navgationModel
         webVC.isPush = false

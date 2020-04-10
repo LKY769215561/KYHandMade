@@ -97,7 +97,7 @@ class KYDarenCell: UITableViewCell ,Reusable {
         KYProgressHUD.showInfoWithStatus("开发中...")
     }
     
-    func imageViewClick(tap : UITapGestureRecognizer) {
+    @objc func imageViewClick(tap : UITapGestureRecognizer) {
         
         guard let list = _darenModel?.list else {
             return

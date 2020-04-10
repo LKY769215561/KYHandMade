@@ -35,7 +35,7 @@ class KYAdvanceView: UIView ,Nibloadable{
     }
     
     
-    func advanceItemAction(tap : UITapGestureRecognizer) {
+    @objc func advanceItemAction(tap : UITapGestureRecognizer) {
         let webVC = KYWebViewController()
         webVC.advanceModel = self.advanceModel
         webVC.isPush = true

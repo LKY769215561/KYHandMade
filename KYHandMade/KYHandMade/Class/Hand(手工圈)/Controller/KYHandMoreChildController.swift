@@ -34,12 +34,12 @@ class KYHandMoreChildController: UIViewController {
         layout.minimumInteritemSpacing = 10
         let collView = UICollectionView(frame: CGRect(x:0, y: NAVBAR_HEIGHT, width: SCREEN_WIDTH, height:SCREEN_HEIGHT-NAVBAR_HEIGHT), collectionViewLayout: layout)
         collView.register(UINib(nibName:"KYHandMoreCell", bundle: nil), forCellWithReuseIdentifier: MoreChildCellId)
-        collView.register(UINib(nibName:"KYHandMoreHeadView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: MoreChildHeaderView)
+        collView.register(UINib(nibName:"KYHandMoreHeadView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MoreChildHeaderView)
         collView.dataSource = self
         collView.delegate = self
         collView.backgroundColor = UIColor.lightGray
         collView.showsVerticalScrollIndicator = false
-        collView.contentInset = UIEdgeInsetsMake(0, 0,5, 0)
+        collView.contentInset = UIEdgeInsets(top: 0, left: 0,bottom: 5, right: 0)
         return collView
     }()
     
@@ -70,7 +70,7 @@ class KYHandMoreChildController: UIViewController {
     }
     
 
-    func popAction() {
+    @objc func popAction() {
         
        dismiss(animated: true, completion: nil)
     }
@@ -98,19 +98,19 @@ class KYHandMoreChildController: UIViewController {
         
         let keyAnimation = CAKeyframeAnimation(keyPath:"position")
         keyAnimation.path = path.cgPath
-        keyAnimation.rotationMode = kCAAnimationRotateAuto
+        keyAnimation.rotationMode = CAAnimationRotationMode.rotateAuto
         
         let alphaAnimation = CABasicAnimation(keyPath:"alpha")
         alphaAnimation.duration = 0.5
         alphaAnimation.fromValue = 1.0
         alphaAnimation.toValue = 0.1
-        alphaAnimation.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseOut)
+        alphaAnimation.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeOut)
         
         let group = CAAnimationGroup()
         group.animations = [keyAnimation,alphaAnimation]
         group.duration = 0.8
         group.isRemovedOnCompletion = false
-        group.fillMode = kCAFillModeForwards
+        group.fillMode = CAMediaTimingFillMode.forwards
         group.delegate = self
         group.setValue("groupsAnimation", forKey: "animationName")
         animLabel.layer.add(group, forKey: nil)

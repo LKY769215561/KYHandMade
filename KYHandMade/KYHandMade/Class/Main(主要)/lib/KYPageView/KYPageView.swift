@@ -107,7 +107,7 @@ class KYPageView: UIView {
             
             if style.isScrollEnable
             {
-                labelW = (titleLabel.text! as NSString).boundingRect(with: CGSize(width:CGFloat(MAXFLOAT),height:0), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName : style.titleFont], context: nil).width
+                labelW = (titleLabel.text! as NSString).boundingRect(with: CGSize(width:CGFloat(MAXFLOAT),height:0), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : style.titleFont], context: nil).width
                 
                 labelX  += style.titleMargin
                 titleLabel.frame = CGRect(x:labelX,y:labelY,width:labelW,height:labelH)
@@ -135,7 +135,7 @@ class KYPageView: UIView {
     }
     
     
-    func titleLabelClick(_ tap:UITapGestureRecognizer) {
+    @objc func titleLabelClick(_ tap:UITapGestureRecognizer) {
         
         guard let selecteLabel = tap.view as? UILabel else {
             return

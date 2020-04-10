@@ -65,7 +65,7 @@ class KYHandController: UIViewController {
     }
     
     
-    func addButtonClick(btn : UIButton) {
+    @objc func addButtonClick(btn : UIButton) {
         
        let animator = XWCircleSpreadAnimator.xw_animator(withStartCenter: btn.center, radius: 20)
        let navVc = UINavigationController(rootViewController:KYHandMoreChildController())

@@ -41,14 +41,14 @@ class KYTutorialPicController: UIViewController {
         layout.itemSize = CGSize(width: SCREEN_WIDTH*0.43, height: SCREEN_WIDTH*0.43*1.5)
     
         let collView = UICollectionView(frame:CGRect(x:0, y:40, width:SCREEN_WIDTH, height:SCREEN_HEIGHT-40-NAVBAR_HEIGHT-TABBAR_HEIGHT), collectionViewLayout:layout)
-        layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         collView.backgroundColor = UIColor.white
         collView.dataSource = self
         collView.delegate = self
         collView.register(UINib(nibName:"KYTutorialPicCell", bundle:nil), forCellWithReuseIdentifier: KYTutorialPicCellId)
         collView.mj_header = setupJianDaoHeaderRefresh(self, action: #selector(loadNewData))
         collView.mj_footer = setupFooterRefresh(self, action: #selector(loadMoreData))
-        collView.mj_header.beginRefreshing()
+        collView.mj_header?.beginRefreshing()
         return collView
         
     }()
@@ -67,7 +67,7 @@ class KYTutorialPicController: UIViewController {
         view.addSubview(collectionView)
     }
     
-    func loadNewData() {
+    @objc func loadNewData() {
     
         
         self.picModels.removeAll()
@@ -98,7 +98,7 @@ class KYTutorialPicController: UIViewController {
         
        KYNetWorkTool.shared.get(HomeBaseURL, parameters: paramet) { (success, result, error) in
         
-        self.collectionView.mj_header.endRefreshing()
+        self.collectionView.mj_header?.endRefreshing()
         if success{
         
             let data  = result?.dictionaryObject?["data"] as? [[String : AnyObject]]
@@ -119,7 +119,7 @@ class KYTutorialPicController: UIViewController {
         }
     }
     
-    func loadMoreData() {
+    @objc func loadMoreData() {
         
 
         
@@ -156,11 +156,11 @@ class KYTutorialPicController: UIViewController {
                 if lastPicModel?.last_id == nil
                 {
                 
-                   self.collectionView.mj_footer.endRefreshingWithNoMoreData()
+                    self.collectionView.mj_footer?.endRefreshingWithNoMoreData()
                 }else
                 {
                      self.lastId = lastPicModel?.last_id
-                     self.collectionView.mj_footer.endRefreshing()
+                    self.collectionView.mj_footer?.endRefreshing()
                 }
                 self.collectionView.reloadData()
             }

@@ -24,7 +24,7 @@ class KYDaRenView: UIView {
         //tableView.registerCell(KYDarenCell.self)
         tableView.mj_header = setupJianDaoHeaderRefresh(self, action: #selector(loadNewData))
         tableView.mj_footer = setupFooterRefresh(self, action: #selector(loadMoreData))
-        tableView.mj_header.beginRefreshing()
+        tableView.mj_header!.beginRefreshing()
         return tableView
     }()
     
@@ -42,7 +42,7 @@ class KYDaRenView: UIView {
     }
     
     
-    func loadNewData() {
+    @objc func loadNewData() {
         
         
         darenModels.removeAll()
@@ -55,7 +55,7 @@ class KYDaRenView: UIView {
     
         KYNetWorkTool.shared.post(HomeDarenURL, parameters: paramet) { (success, result, error) in
          
-            self.tableView.mj_header.endRefreshing()
+            self.tableView.mj_header?.endRefreshing()
             
             if success
             {
@@ -80,7 +80,7 @@ class KYDaRenView: UIView {
         
     }
     
-    func loadMoreData() {
+    @objc func loadMoreData() {
         let paramet : [String : Any] = [
             
             "act" : "down" ,
@@ -90,7 +90,7 @@ class KYDaRenView: UIView {
         
         KYNetWorkTool.shared.post(HomeDarenURL, parameters: paramet) { (success, result, error) in
             
-            self.tableView.mj_footer.endRefreshing()
+            self.tableView.mj_footer?.endRefreshing()
             
             if success
             {

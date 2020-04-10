@@ -115,7 +115,7 @@ class KYWebViewController: UIViewController {
           view.addSubview(webView)
     }
     
-    func backAction() {
+    @objc func backAction() {
         dismiss(animated: true, completion: nil)
     }
     

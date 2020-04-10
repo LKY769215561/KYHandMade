@@ -92,7 +92,7 @@ class KYDaRenPicController: UICollectionViewController {
         }
     }
     
-    func backAction() {
+    @objc func backAction() {
         dismiss(animated: true, completion: nil)
     }
 

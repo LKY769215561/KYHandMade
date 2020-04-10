@@ -15,18 +15,18 @@ class KYEventNewView: UIView {
 
     private lazy var  collectionView : UICollectionView = {
     
-    let layout = UICollectionViewFlowLayout()
-    layout.itemSize = CGSize(width: SCREEN_WIDTH*0.43, height: SCREEN_WIDTH*0.43*1.25)
-    let collView = UICollectionView(frame: self.bounds, collectionViewLayout:layout)
-    layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
-    collView.backgroundColor = UIColor.white
-    collView.dataSource = self
-    collView.delegate = self
-    collView.register(UINib(nibName:"KYSlideCollectionViewCell", bundle:nil), forCellWithReuseIdentifier: KYEventNewViewCellId)
-    collView.mj_header = setupJianDaoHeaderRefresh(self, action: #selector(loadNewData))
-    collView.mj_footer = setupFooterRefresh(self, action: #selector(loadMoreData))
-    collView.mj_header.beginRefreshing()
-    return collView
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: SCREEN_WIDTH*0.43, height: SCREEN_WIDTH*0.43*1.25)
+        let collView = UICollectionView(frame: self.bounds, collectionViewLayout:layout)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        collView.backgroundColor = UIColor.white
+        collView.dataSource = self
+        collView.delegate = self
+        collView.register(UINib(nibName:"KYSlideCollectionViewCell", bundle:nil), forCellWithReuseIdentifier: KYEventNewViewCellId)
+        collView.mj_header = setupJianDaoHeaderRefresh(self, action: #selector(loadNewData))
+        collView.mj_footer = setupFooterRefresh(self, action: #selector(loadMoreData))
+        collView.mj_header?.beginRefreshing()
+        return collView
     
     }()
     
@@ -55,7 +55,7 @@ class KYEventNewView: UIView {
 
     
     
-    func loadNewData() {
+    @objc func loadNewData() {
         shopModels.removeAll()
         
         let paramet : [String : Any] = [
@@ -69,7 +69,7 @@ class KYEventNewView: UIView {
         
         KYNetWorkTool.shared.get(HomeBaseURL, parameters: paramet) { (success, result, error) in
             
-            self.collectionView.mj_header.endRefreshing()
+            self.collectionView.mj_header?.endRefreshing()
             if success{
                 let data = result?["data"].arrayObject as? [[String : AnyObject]]
                 
@@ -92,7 +92,7 @@ class KYEventNewView: UIView {
         
     }
     
-    func loadMoreData() {
+    @objc func loadMoreData() {
         
         guard let lastEvenId = self.lastId else {
             return
@@ -110,7 +110,7 @@ class KYEventNewView: UIView {
         
         KYNetWorkTool.shared.get(HomeBaseURL, parameters: paramet) { (success, result, error) in
             
-            self.collectionView.mj_footer.endRefreshing()
+            self.collectionView.mj_footer?.endRefreshing()
             
             if success{
                 let data = result?["data"].arrayObject as? [[String : AnyObject]]

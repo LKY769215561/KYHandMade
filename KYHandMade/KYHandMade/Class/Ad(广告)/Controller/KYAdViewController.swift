@@ -22,7 +22,7 @@ class KYAdViewController: UIViewController,Nibloadable {
     }
 
     
-    func removeAdImageView(){
+    @objc func removeAdImageView(){
         
         UIView.animate(withDuration: 0.3, animations: {
             

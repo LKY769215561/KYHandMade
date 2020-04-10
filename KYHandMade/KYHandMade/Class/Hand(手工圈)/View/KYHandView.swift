@@ -26,7 +26,7 @@ class KYHandView: UIView {
         table.estimatedRowHeight = 200
         table.mj_header = setupJianDaoHeaderRefresh(self, action: #selector(loadNewData))
         table.mj_footer = setupFooterRefresh(self, action: #selector(loadMoreData))
-        table.mj_header.beginRefreshing()
+        table.mj_header?.beginRefreshing()
         return table
     }()
     
@@ -50,7 +50,7 @@ class KYHandView: UIView {
 //    }
     
     
-    func loadNewData()  {
+    @objc func loadNewData()  {
         
 //        let param : [String : Any] = [
 //        
@@ -73,7 +73,7 @@ class KYHandView: UIView {
         
       DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) { 
         
-            self.tableView.mj_header.endRefreshing()
+        self.tableView.mj_header?.endRefreshing()
         
             let filePath = Bundle.main.path(forResource: "handData.json", ofType: nil, inDirectory: nil, forLocalization: nil)
             guard let filePath2 = filePath else{
@@ -92,9 +92,9 @@ class KYHandView: UIView {
         
        
     }
-    func loadMoreData()  {
+    @objc func loadMoreData()  {
         
-        tableView.mj_footer.endRefreshing()
+        tableView.mj_footer?.endRefreshing()
         tableView.reloadData()
     }
 }
